@@ -43,6 +43,17 @@ npm run serve
 open index.html   # or double-click index.html
 ```
 
+## Live site (GitHub Pages)
+
+A workflow at `.github/workflows/deploy-pages.yml` auto-deploys the site to
+GitHub Pages on every push to `main`. **One-time setup:** in the repo,
+**Settings ▸ Pages ▸ Source** → choose **GitHub Actions**. After the next push
+(or a manual run via the Actions tab), the site goes live at:
+
+```
+https://githubberpro.github.io/jujitsu/
+```
+
 ## Project structure
 
 ```
