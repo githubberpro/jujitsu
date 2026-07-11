@@ -31,6 +31,11 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          # Attempt to enable Pages automatically (works when the plan allows
+          # Pages for this repo — i.e. a public repo, or a private repo on a
+          # paid plan). Otherwise enable it once via Settings ▸ Pages.
+          enablement: true
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
