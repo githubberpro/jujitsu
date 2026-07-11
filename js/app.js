@@ -18,7 +18,8 @@
     { key: "South America", icon: "🌎", blurb: "Brazil — the historic heartland of the sport." },
     { key: "North America", icon: "🌎", blurb: "The USA — the modern no-gi powerhouse." },
     { key: "Europe", icon: "🌍", blurb: "A fast-rising scene led by the UK and Scandinavia." },
-    { key: "Asia", icon: "🌏", blurb: "Japan's pioneers, the UAE-fueled Middle East boom, and a fast-rising Southeast Asian scene." }
+    { key: "Asia", icon: "🌏", blurb: "Japan's pioneers, the UAE-fueled Middle East boom, and a fast-rising Southeast Asian scene." },
+    { key: "Oceania", icon: "🏝️", blurb: "Australia's leg-lock innovators and no-gi disruptors." }
   ];
   const REGION_BY_COUNTRY = {
     "Brazil": "South America",
@@ -28,7 +29,8 @@
     "Japan": "Asia",
     "UAE": "Asia",
     "Philippines": "Asia",
-    "Singapore": "Asia"
+    "Singapore": "Asia",
+    "Australia": "Oceania"
   };
   const regionOf = (p) => REGION_BY_COUNTRY[p.country] || "Other";
 
