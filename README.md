@@ -5,11 +5,12 @@ A self-contained web app that profiles the world's top jiu-jitsu (BJJ / grapplin
 ## Features
 
 ### 🏆 Top Players
-- **16 elite competitor profiles** — Gordon Ryan, Roger Gracie, Marcus "Buchecha" Almeida, Marcelo Garcia, the Ruotolo brothers, Beatriz Mesquita, and more.
+- **20 elite competitor profiles** — Gordon Ryan, Roger Gracie, Marcus "Buchecha" Almeida, Marcelo Garcia, the Ruotolo brothers, Beatriz Mesquita, and more.
+- **Organized by region** — South America, North America, Europe, and **Asia** (Japan's pioneers Yuki Nakai & Masakazu Imanari, plus the UAE's Faisal Al Ketbi), each with its own section header and athlete count.
 - **Attribute ratings** — control, submissions, guard, takedowns, cardio, and finish rate, shown as animated bars.
 - **Strengths & weaknesses** — an honest scouting-style breakdown of each athlete's game.
 - Signature techniques, accolades, team, weight class, belt, and style.
-- **Search** (name, team, country, style) and **filters** (Gi / No-Gi / Women / GOAT-tier).
+- **Search** (name, team, country, style) plus **region filters** and **style filters** (Gi / No-Gi / Women / GOAT-tier) that combine.
 
 ### 📚 Knowledge Base
 - **History & origins** — from Japanese jujutsu and Kano's judo through Maeda, the Gracie family, UFC 1, and the modern era.

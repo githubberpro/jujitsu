@@ -12,6 +12,24 @@
     takedowns: "Takedowns", cardio: "Cardio", subRate: "Finish Rate"
   };
 
+  // Region organization. Region is derived from nationality so there is a single
+  // source of truth in the player data.
+  const REGIONS = [
+    { key: "South America", icon: "🌎", blurb: "Brazil — the historic heartland of the sport." },
+    { key: "North America", icon: "🌎", blurb: "The USA — the modern no-gi powerhouse." },
+    { key: "Europe", icon: "🌍", blurb: "A fast-rising scene led by the UK and Scandinavia." },
+    { key: "Asia", icon: "🌏", blurb: "Japan's pioneers and the UAE-fueled Middle East boom." }
+  ];
+  const REGION_BY_COUNTRY = {
+    "Brazil": "South America",
+    "USA": "North America",
+    "Wales / UK": "Europe",
+    "Norway": "Europe",
+    "Japan": "Asia",
+    "UAE": "Asia"
+  };
+  const regionOf = (p) => REGION_BY_COUNTRY[p.country] || "Other";
+
   /* ---------- Tab navigation ---------- */
   function initTabs() {
     $$("nav.tabs button").forEach((btn) => {
@@ -27,6 +45,7 @@
 
   /* ---------- Players ---------- */
   let activeFilter = "All";
+  let activeRegion = "All";
   let searchTerm = "";
 
   function playerCard(p) {
@@ -55,7 +74,7 @@
   }
 
   function renderPlayers() {
-    const grid = $("#player-grid");
+    const wrap = $("#player-grid");
     const list = window.PLAYERS.filter((p) => {
       const matchFilter =
         activeFilter === "All" ||
@@ -63,6 +82,7 @@
         (activeFilter === "No-Gi" && (p.division === "No-Gi" || p.division === "Both")) ||
         (activeFilter === "GOAT" && p.tier === "GOAT") ||
         (activeFilter === "Women" && ["Beatriz Mesquita", "Ffion Davies", "Gabi Garcia"].includes(p.name));
+      const matchRegion = activeRegion === "All" || regionOf(p) === activeRegion;
       const t = searchTerm.toLowerCase();
       const matchSearch =
         !t ||
@@ -71,14 +91,37 @@
         p.team.toLowerCase().includes(t) ||
         p.country.toLowerCase().includes(t) ||
         p.style.toLowerCase().includes(t);
-      return matchFilter && matchSearch;
+      return matchFilter && matchRegion && matchSearch;
     });
 
-    grid.innerHTML = list.length
-      ? list.map(playerCard).join("")
-      : `<div class="empty">No competitors match your search.</div>`;
+    if (!list.length) {
+      wrap.innerHTML = `<div class="empty">No competitors match your search.</div>`;
+      return;
+    }
 
-    $$(".card", grid).forEach((card) => {
+    // Group into region sections, preserving the canonical region order.
+    const order = REGIONS.map((r) => r.key).concat("Other");
+    const html = order.map((key) => {
+      const meta = REGIONS.find((r) => r.key === key) || { key, icon: "🌐", blurb: "" };
+      const members = list.filter((p) => regionOf(p) === key);
+      if (!members.length) return "";
+      return `
+        <section class="region-section">
+          <div class="region-head">
+            <span class="ricon">${meta.icon}</span>
+            <div class="region-title">
+              <h3>${esc(meta.key)}</h3>
+              ${meta.blurb ? `<span class="rblurb">${esc(meta.blurb)}</span>` : ""}
+            </div>
+            <span class="rcount">${members.length} athlete${members.length > 1 ? "s" : ""}</span>
+          </div>
+          <div class="grid">${members.map(playerCard).join("")}</div>
+        </section>`;
+    }).join("");
+
+    wrap.innerHTML = html;
+
+    $$(".card", wrap).forEach((card) => {
       const open = () => openModal(card.dataset.id);
       card.addEventListener("click", open);
       card.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); } });
@@ -87,9 +130,25 @@
 
   function initPlayerControls() {
     $("#player-search").addEventListener("input", (e) => { searchTerm = e.target.value; renderPlayers(); });
-    $$(".filters .chip").forEach((chip) => {
+
+    // Build region filter chips from the regions actually present in the data.
+    const present = REGIONS.filter((r) => window.PLAYERS.some((p) => regionOf(p) === r.key));
+    const regionBar = $("#region-filters");
+    regionBar.innerHTML =
+      `<button class="chip active" data-region="All">🌐 All Regions</button>` +
+      present.map((r) => `<button class="chip" data-region="${esc(r.key)}">${r.icon} ${esc(r.key)}</button>`).join("");
+    $$(".chip", regionBar).forEach((chip) => {
       chip.addEventListener("click", () => {
-        $$(".filters .chip").forEach((c) => c.classList.remove("active"));
+        $$(".chip", regionBar).forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+        activeRegion = chip.dataset.region;
+        renderPlayers();
+      });
+    });
+
+    $$("#style-filters .chip").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        $$("#style-filters .chip").forEach((c) => c.classList.remove("active"));
         chip.classList.add("active");
         activeFilter = chip.dataset.filter;
         renderPlayers();
@@ -287,9 +346,11 @@
     const goats = window.PLAYERS.filter((p) => p.tier === "GOAT").length;
     const totalTitles = window.PLAYERS.reduce((s, p) => s + p.stats.worldTitles, 0);
     const totalAdcc = window.PLAYERS.reduce((s, p) => s + p.stats.adccGold, 0);
+    const regions = new Set(window.PLAYERS.map(regionOf));
     $("#kpi-players").textContent = window.PLAYERS.length;
     $("#kpi-titles").textContent = totalTitles + "+";
     $("#kpi-adcc").textContent = totalAdcc + "+";
+    $("#kpi-regions").textContent = regions.size;
     $("#kpi-goats").textContent = goats;
   }
 

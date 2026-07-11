@@ -33,6 +33,7 @@
           <div class="kpi"><b id="kpi-players">0</b><span>Athletes profiled</span></div>
           <div class="kpi"><b id="kpi-titles">0</b><span>Combined world titles</span></div>
           <div class="kpi"><b id="kpi-adcc">0</b><span>ADCC golds</span></div>
+          <div class="kpi"><b id="kpi-regions">0</b><span>Regions</span></div>
           <div class="kpi"><b id="kpi-goats">0</b><span>GOAT-tier</span></div>
         </div>
       </div>
@@ -42,16 +43,26 @@
           <span aria-hidden="true">🔎</span>
           <input id="player-search" type="text" placeholder="Search by name, team, country, style…" autocomplete="off" />
         </label>
-        <div class="filters">
-          <button class="chip active" data-filter="All">All</button>
-          <button class="chip" data-filter="Gi">Gi</button>
-          <button class="chip" data-filter="No-Gi">No-Gi</button>
-          <button class="chip" data-filter="Women">Women</button>
-          <button class="chip" data-filter="GOAT">GOAT-tier</button>
+      </div>
+
+      <div class="filter-groups">
+        <div class="filter-row">
+          <span class="filter-label">Region</span>
+          <div id="region-filters" class="filters"></div>
+        </div>
+        <div class="filter-row">
+          <span class="filter-label">Style</span>
+          <div id="style-filters" class="filters">
+            <button class="chip active" data-filter="All">All</button>
+            <button class="chip" data-filter="Gi">Gi</button>
+            <button class="chip" data-filter="No-Gi">No-Gi</button>
+            <button class="chip" data-filter="Women">Women</button>
+            <button class="chip" data-filter="GOAT">GOAT-tier</button>
+          </div>
         </div>
       </div>
 
-      <div id="player-grid" class="grid"></div>
+      <div id="player-grid"></div>
     </section>
 
     <!-- ===== Knowledge ===== -->
