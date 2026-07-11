@@ -174,6 +174,17 @@ main { max-width: 1200px; margin: 0 auto; padding: 30px 22px 80px; }
 .tier-Elite { background: rgba(76,157,255,.16); color: var(--blue); border:1px solid rgba(76,157,255,.35); }
 .tier-Rising { background: rgba(55,211,153,.16); color: var(--green); border:1px solid rgba(55,211,153,.4); }
 
+/* Live jiujitsu.net rank badge */
+.badge-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 5px; }
+.badge-row .subregion { margin-top: 0; }
+.rank-pill {
+  display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: .3px;
+  padding: 3px 9px; border-radius: 20px; color: #fff;
+  background: linear-gradient(135deg, var(--blue), #6db3ff);
+  box-shadow: 0 3px 10px rgba(76,157,255,.3);
+}
+.rank-updated { color: var(--accent-2); font-weight: 600; }
+
 .card .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
 .tag { font-size: 11px; padding: 4px 9px; border-radius: 7px; background: var(--panel-2); color: var(--text-dim); border: 1px solid var(--border); }
 

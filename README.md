@@ -78,11 +78,31 @@ system**. In the app:
 - The footer credits jiujitsu.net as the ranking source.
 
 **Why link out instead of embedding numbers?** jiujitsu.net is protected by
-Cloudflare and returns HTTP 403 to automated requests, so its rankings can't be
-scraped programmatically — and hard-coded numbers would go stale immediately.
-Deep-linking keeps the reference authoritative and always current. The attribute
-bars shown in each profile are an **editorial scouting estimate**, clearly
-labelled as such, not official Elo ratings.
+Cloudflare and returns HTTP 403 to plain automated requests. Deep-linking keeps
+the reference authoritative and always current. The attribute bars shown in each
+profile are an **editorial scouting estimate**, clearly labelled as such, not
+official Elo ratings.
+
+### Automated ranking sync (Tavily)
+
+The app can also display **live rank badges** (`#3 · 1720`) pulled from
+jiujitsu.net, refreshed automatically:
+
+- **`scripts/update-rankings.mjs`** calls the [Tavily](https://tavily.com) API
+  (server-side extract/search, which gets past the Cloudflare block) and writes
+  `data/rankings.js` (`window.RANKINGS`) plus a raw dump `data/rankings-raw.json`.
+- **`.github/workflows/update-rankings.yml`** runs it daily (and on demand),
+  commits any change, and redeploys. The app matches each ranked athlete to a
+  profile by name slug and shows a badge on the card and in the modal.
+
+**One-time setup:** add a repo secret **`TAVILY_API_KEY`**
+(Settings ▸ Secrets and variables ▸ Actions ▸ New repository secret), then run
+the *"Update rankings from jiujitsu.net (Tavily)"* workflow from the Actions tab.
+
+Until the secret is added the sync is a graceful no-op — the app falls back to
+the live per-athlete jiujitsu.net links, so nothing breaks. The committed
+`data/rankings-raw.json` from the first run lets the parser in
+`update-rankings.mjs` be tuned to jiujitsu.net's actual output.
 
 ## Note on the data
 

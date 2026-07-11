@@ -17,6 +17,17 @@
       .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
   const jjNetUrl = (p) => `${JJNET}/athlete/${slugify(p.rankingName || p.name)}`;
 
+  // Live rankings synced from jiujitsu.net via Tavily (data/rankings.js, refreshed
+  // by the scheduled GitHub Actions job). Matched to profiles by name slug.
+  // Absent/empty until the first sync — everything below degrades gracefully.
+  const RANKINGS = (window.RANKINGS && Array.isArray(window.RANKINGS.athletes))
+    ? window.RANKINGS : { athletes: [], updated: null };
+  const rankBySlug = {};
+  RANKINGS.athletes.forEach((a) => {
+    if (a && a.name) rankBySlug[slugify(a.name)] = a;
+  });
+  const rankOf = (p) => rankBySlug[slugify(p.rankingName || p.name)] || null;
+
   const STAT_LABELS = {
     control: "Control", submissions: "Submissions", guard: "Guard",
     takedowns: "Takedowns", cardio: "Cardio", subRate: "Finish Rate"
@@ -63,6 +74,7 @@
   let searchTerm = "";
 
   function playerCard(p) {
+    const r = rankOf(p);
     return `
       <div class="card" data-id="${p.id}" role="button" tabindex="0">
         <span class="tier-badge tier-${p.tier}">${p.tier}</span>
@@ -72,7 +84,10 @@
             <h3>${esc(p.name)}</h3>
             ${p.nickname ? `<div class="nick">"${esc(p.nickname)}"</div>` : ""}
             <div class="meta">${p.flag} ${esc(p.country)} · ${esc(p.team)}</div>
-            ${p.subregion ? `<div class="subregion">📍 ${esc(p.subregion)}</div>` : ""}
+            <div class="badge-row">
+              ${p.subregion ? `<span class="subregion">📍 ${esc(p.subregion)}</span>` : ""}
+              ${r ? `<span class="rank-pill" title="jiujitsu.net ranking (Weisshart Elo)">📊 #${r.rank}${r.rating ? ` · ${r.rating}` : ""}</span>` : ""}
+            </div>
           </div>
         </div>
         <div class="tags">
@@ -202,9 +217,10 @@
       <div class="modal-body">
         <div class="accolades">${p.accolades.map((a) => `<span class="accolade">🏅 ${esc(a)}</span>`).join("")}</div>
 
+        ${(() => { const r = rankOf(p); return `
         <a class="jjnet-link" href="${jjNetUrl(p)}" target="_blank" rel="noopener noreferrer">
-          📊 Current ranking &amp; Elo for ${esc(p.name)} on jiujitsu.net ↗
-        </a>
+          📊 ${r ? `Ranked <b>#${r.rank}</b>${r.rating ? ` · Elo ${r.rating}` : ""} on jiujitsu.net` : `Current ranking &amp; Elo for ${esc(p.name)} on jiujitsu.net`} ↗
+        </a>`; })()}
 
         <div class="stat-block">
           <h4>Attribute Rating <span class="rating-src">— editorial scouting estimate; see jiujitsu.net for official Elo rankings</span></h4>
@@ -384,5 +400,16 @@
     renderKnowledge();
     renderBusiness();
     $("#year").textContent = new Date().getFullYear();
+
+    const ru = $("#rank-updated");
+    if (ru) {
+      if (RANKINGS.updated) {
+        const d = new Date(RANKINGS.updated);
+        const n = RANKINGS.athletes.length;
+        ru.textContent = `Last synced ${d.toISOString().slice(0, 10)}${n ? ` · ${n} ranked athletes` : ""}.`;
+      } else {
+        ru.textContent = "Rankings sync pending — links go to live jiujitsu.net pages meanwhile.";
+      }
+    }
   });
 })();

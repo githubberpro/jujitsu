@@ -1,0 +1,64 @@
+name: Update rankings from jiujitsu.net (Tavily)
+
+# Scheduled build-time sync: pull current rankings from jiujitsu.net via the
+# Tavily API, commit the refreshed data file, and redeploy the site.
+# Requires a repo secret named TAVILY_API_KEY.
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # daily at 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write # to commit the refreshed data/rankings.js
+  pages: write
+  id-token: write
+
+# Share the Pages concurrency group with the deploy workflow so they don't race.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch rankings via Tavily
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        run: node scripts/update-rankings.mjs
+
+      - name: Commit refreshed rankings (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/rankings.js data/rankings-raw.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No ranking changes to commit."
+          else
+            git commit -m "chore: refresh jiujitsu.net rankings via Tavily [skip ci]"
+            git push
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
