@@ -142,6 +142,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 30px 22px 80px; }
 .tier-GOAT { background: linear-gradient(135deg,#ffd24a,#ff8a1f); color:#2a1500; }
 .tier-Legend { background: rgba(168,121,255,.18); color: var(--purple); border:1px solid rgba(168,121,255,.4); }
 .tier-Elite { background: rgba(76,157,255,.16); color: var(--blue); border:1px solid rgba(76,157,255,.35); }
+.tier-Rising { background: rgba(55,211,153,.16); color: var(--green); border:1px solid rgba(55,211,153,.4); }
 
 .card .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
 .tag { font-size: 11px; padding: 4px 9px; border-radius: 7px; background: var(--panel-2); color: var(--text-dim); border: 1px solid var(--border); }

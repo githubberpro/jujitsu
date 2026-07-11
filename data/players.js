@@ -441,5 +441,24 @@ window.PLAYERS = [
     strengths: "Nicknamed the 'Master of Flying Submissions,' Aoki is one of Asia's most influential submission artists — a judo and BJJ black belt whose creative, aggressive attacking style crossed over into a legendary MMA career as a ONE Championship and DREAM lightweight champion. A defining figure for Japanese and pan-Asian grappling.",
     weaknesses: "His legacy is built primarily in MMA and Japanese pro events rather than on the IBJJF/ADCC sport-grappling podium, so his pure-grappling title resume is thin relative to his fame. A submission-hunting style concedes position against elite defensive grapplers.",
     accolades: ["ONE Championship veteran & former champ", "Renowned submission specialist", "Judo & BJJ black belt", "Pan-Asian grappling icon"]
+  },
+  {
+    id: "noah-lim",
+    name: "Noah Lim",
+    nickname: "The Prodigy",
+    country: "Singapore",
+    flag: "🇸🇬",
+    team: "Evolve (Singapore)",
+    subregion: "Southeast Asia",
+    division: "No-Gi",
+    weight: "Featherweight / Lightweight",
+    belt: "Black",
+    style: "Fearless Submission Hunting",
+    tier: "Rising",
+    stats: { adccGold: 0, worldTitles: 0, subRate: 68, control: 78, submissions: 86, guard: 88, takedowns: 78, cardio: 93 },
+    signature: ["Guard attacks", "Submission chains", "Aggressive scrambles"],
+    strengths: "One of Southeast Asia's brightest prospects — a Singaporean teenage phenom out of Evolve who has stepped in against far more experienced grapplers on the ONE Championship submission-grappling stage. Composed and submission-hungry well beyond his years, he is a poster child for the next generation of Asian talent and the region's fast-professionalizing scene.",
+    weaknesses: "Still early in his development with limited elite-level mileage; the jump against seasoned world-class veterans over full-length matches is his proving ground. Physical maturation, positional patience, and consistency against the established global top tier are all still ahead of him.",
+    accolades: ["Singaporean prodigy", "ONE Championship submission grappling competitor", "Evolve standout", "Rising SEA talent"]
   }
 ];
