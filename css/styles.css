@@ -103,6 +103,36 @@ main { max-width: 1200px; margin: 0 auto; padding: 30px 22px 80px; }
 .chip:hover { color: var(--text); border-color: var(--border-2); }
 .chip.active { background: var(--panel-2); color: #fff; border-color: var(--accent); }
 
+/* ===== Ranking source banner ===== */
+.ranking-source {
+  display: flex; align-items: center; gap: 16px; margin-bottom: 22px;
+  padding: 16px 20px; border-radius: 12px;
+  background: linear-gradient(135deg, rgba(76,157,255,.12), rgba(255,90,31,.08));
+  border: 1px solid var(--border-2);
+}
+.ranking-source .rs-icon { font-size: 26px; }
+.ranking-source .rs-text { display: flex; flex-direction: column; gap: 3px; }
+.ranking-source .rs-text b { font-size: 14.5px; }
+.ranking-source .rs-text span { font-size: 12.5px; color: var(--text-dim); line-height: 1.5; }
+.ranking-source a { color: var(--accent-2); }
+.ranking-source .rs-btn {
+  margin-left: auto; white-space: nowrap; font-size: 13px; font-weight: 700;
+  padding: 9px 15px; border-radius: 9px; color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 4px 14px rgba(255,90,31,.3);
+}
+.ranking-source .rs-btn:hover { filter: brightness(1.08); }
+
+/* jiujitsu.net per-athlete link in modal */
+.jjnet-link {
+  display: inline-flex; align-items: center; gap: 6px; margin: 0 0 22px;
+  padding: 10px 15px; border-radius: 10px; font-size: 13.5px; font-weight: 700;
+  color: var(--blue); background: rgba(76,157,255,.12); border: 1px solid rgba(76,157,255,.35);
+  transition: background .15s, border-color .15s;
+}
+.jjnet-link:hover { background: rgba(76,157,255,.2); border-color: var(--blue); }
+.rating-src { font-size: 10.5px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--text-mute); }
+
 /* ===== Filter groups ===== */
 .filter-groups { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
 .filter-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }

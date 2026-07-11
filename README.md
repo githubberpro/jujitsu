@@ -66,6 +66,24 @@ data/business.js    # Business landscape
 server.js           # Minimal static file server
 ```
 
+## Rankings reference — jiujitsu.net
+
+Current, data-driven rankings are referenced from **[jiujitsu.net](https://jiujitsu.net)**,
+which publishes unofficial IBJJF standings using the **Weisshart Elo rating
+system**. In the app:
+
+- A **rankings-source banner** on the Players tab links to jiujitsu.net.
+- **Every athlete profile deep-links** to that competitor's live ranking page
+  (`jiujitsu.net/athlete/<name>`), so the current standing is always one click away.
+- The footer credits jiujitsu.net as the ranking source.
+
+**Why link out instead of embedding numbers?** jiujitsu.net is protected by
+Cloudflare and returns HTTP 403 to automated requests, so its rankings can't be
+scraped programmatically — and hard-coded numbers would go stale immediately.
+Deep-linking keeps the reference authoritative and always current. The attribute
+bars shown in each profile are an **editorial scouting estimate**, clearly
+labelled as such, not official Elo ratings.
+
 ## Note on the data
 
 Athlete records, attribute ratings, and business figures are **directional estimates** compiled from public competition history and industry reporting through roughly 2024–2025. The attribute ratings are an editorial scouting assessment, not official statistics. Verify specifics against primary sources (IBJJF, ADCC, FloGrappling) before relying on them.

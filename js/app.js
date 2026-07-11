@@ -7,6 +7,16 @@
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const initials = (name) => name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
 
+  // jiujitsu.net — the cited source for current, data-driven rankings
+  // (unofficial IBJJF standings via the Weisshart Elo system). We deep-link to
+  // each athlete's live ranking page rather than copy numbers that would go
+  // stale. Slug pattern: /athlete/<name lowercased, hyphenated, de-accented>.
+  const JJNET = "https://jiujitsu.net";
+  const slugify = (name) =>
+    name.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+      .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  const jjNetUrl = (p) => `${JJNET}/athlete/${slugify(p.rankingName || p.name)}`;
+
   const STAT_LABELS = {
     control: "Control", submissions: "Submissions", guard: "Guard",
     takedowns: "Takedowns", cardio: "Cardio", subRate: "Finish Rate"
@@ -192,8 +202,12 @@
       <div class="modal-body">
         <div class="accolades">${p.accolades.map((a) => `<span class="accolade">🏅 ${esc(a)}</span>`).join("")}</div>
 
+        <a class="jjnet-link" href="${jjNetUrl(p)}" target="_blank" rel="noopener noreferrer">
+          📊 Current ranking &amp; Elo for ${esc(p.name)} on jiujitsu.net ↗
+        </a>
+
         <div class="stat-block">
-          <h4>Attribute Rating</h4>
+          <h4>Attribute Rating <span class="rating-src">— editorial scouting estimate; see jiujitsu.net for official Elo rankings</span></h4>
           <div class="bars">${statKeys.map((k) => barRow(k, p.stats[k])).join("")}</div>
         </div>
 
