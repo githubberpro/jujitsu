@@ -18,7 +18,7 @@
     { key: "South America", icon: "🌎", blurb: "Brazil — the historic heartland of the sport." },
     { key: "North America", icon: "🌎", blurb: "The USA — the modern no-gi powerhouse." },
     { key: "Europe", icon: "🌍", blurb: "A fast-rising scene led by the UK and Scandinavia." },
-    { key: "Asia", icon: "🌏", blurb: "Japan's pioneers and the UAE-fueled Middle East boom." }
+    { key: "Asia", icon: "🌏", blurb: "Japan's pioneers, the UAE-fueled Middle East boom, and a fast-rising Southeast Asian scene." }
   ];
   const REGION_BY_COUNTRY = {
     "Brazil": "South America",
@@ -26,7 +26,9 @@
     "Wales / UK": "Europe",
     "Norway": "Europe",
     "Japan": "Asia",
-    "UAE": "Asia"
+    "UAE": "Asia",
+    "Philippines": "Asia",
+    "Singapore": "Asia"
   };
   const regionOf = (p) => REGION_BY_COUNTRY[p.country] || "Other";
 
@@ -58,6 +60,7 @@
             <h3>${esc(p.name)}</h3>
             ${p.nickname ? `<div class="nick">"${esc(p.nickname)}"</div>` : ""}
             <div class="meta">${p.flag} ${esc(p.country)} · ${esc(p.team)}</div>
+            ${p.subregion ? `<div class="subregion">📍 ${esc(p.subregion)}</div>` : ""}
           </div>
         </div>
         <div class="tags">
@@ -81,7 +84,7 @@
         (activeFilter === "Gi" && (p.division === "Gi" || p.division === "Both")) ||
         (activeFilter === "No-Gi" && (p.division === "No-Gi" || p.division === "Both")) ||
         (activeFilter === "GOAT" && p.tier === "GOAT") ||
-        (activeFilter === "Women" && ["Beatriz Mesquita", "Ffion Davies", "Gabi Garcia"].includes(p.name));
+        (activeFilter === "Women" && ["Beatriz Mesquita", "Ffion Davies", "Gabi Garcia", "Meggie Ochoa", "Constance Lien"].includes(p.name));
       const matchRegion = activeRegion === "All" || regionOf(p) === activeRegion;
       const t = searchTerm.toLowerCase();
       const matchSearch =
@@ -180,6 +183,7 @@
             ${p.nickname ? `<div class="nick">"${esc(p.nickname)}"</div>` : ""}
             <div class="meta">${p.flag} ${esc(p.country)} · ${esc(p.team)} · ${esc(p.belt)} Belt${p.born ? " · b. " + p.born : ""}</div>
             <div class="meta">${esc(p.division)} · ${esc(p.weight)} · <span style="color:var(--accent-2)">${esc(p.style)}</span></div>
+            ${p.subregion ? `<div class="subregion">📍 ${esc(p.subregion)}</div>` : ""}
           </div>
         </div>
       </div>
