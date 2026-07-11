@@ -1,0 +1,11 @@
+{
+  "name": "jujitsu-atlas",
+  "version": "1.0.0",
+  "description": "A web app profiling the world's top jiu-jitsu players, a knowledge base of the sport, and the businesses making money in grappling.",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "npx --yes serve -l 3000 ."
+  },
+  "keywords": ["jiu-jitsu", "bjj", "grappling", "adcc", "ibjjf"],
+  "license": "MIT"
+}

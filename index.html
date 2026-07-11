@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jiu-Jitsu Atlas — Top Players, Knowledge & Business</title>
+  <meta name="description" content="Scouting profiles of the world's top jiu-jitsu competitors with strengths & weaknesses, a knowledge base of the sport, and the businesses making money in grappling." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥋</text></svg>" />
+</head>
+<body>
+  <header class="site">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo">🥋</div>
+        <div class="name">Jiu-Jitsu Atlas<small>Players · Knowledge · Business</small></div>
+      </div>
+      <nav class="tabs">
+        <button data-view="players" class="active">🏆 Top Players</button>
+        <button data-view="knowledge">📚 Knowledge Base</button>
+        <button data-view="business">💰 Business</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Players ===== -->
+    <section id="view-players" class="view active">
+      <div class="hero">
+        <h1>The World's Top Jiu-Jitsu Competitors</h1>
+        <p>Scouting-style profiles of the elite grapplers shaping the sport — attribute ratings, signature techniques, and an honest breakdown of each athlete's strengths and weaknesses. Click any card for the full report.</p>
+        <div class="kpis">
+          <div class="kpi"><b id="kpi-players">0</b><span>Athletes profiled</span></div>
+          <div class="kpi"><b id="kpi-titles">0</b><span>Combined world titles</span></div>
+          <div class="kpi"><b id="kpi-adcc">0</b><span>ADCC golds</span></div>
+          <div class="kpi"><b id="kpi-goats">0</b><span>GOAT-tier</span></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label class="search">
+          <span aria-hidden="true">🔎</span>
+          <input id="player-search" type="text" placeholder="Search by name, team, country, style…" autocomplete="off" />
+        </label>
+        <div class="filters">
+          <button class="chip active" data-filter="All">All</button>
+          <button class="chip" data-filter="Gi">Gi</button>
+          <button class="chip" data-filter="No-Gi">No-Gi</button>
+          <button class="chip" data-filter="Women">Women</button>
+          <button class="chip" data-filter="GOAT">GOAT-tier</button>
+        </div>
+      </div>
+
+      <div id="player-grid" class="grid"></div>
+    </section>
+
+    <!-- ===== Knowledge ===== -->
+    <section id="view-knowledge" class="view">
+      <h2 class="section-head">Knowledge Base</h2>
+      <p class="section-sub">Everything you need to understand the sport — its history, the belt system, gi vs. no-gi, the positional hierarchy, core submissions, scoring rules, and the championships that define legacies.</p>
+      <div id="kb-nav" class="kb-nav"></div>
+      <div id="kb-content"></div>
+    </section>
+
+    <!-- ===== Business ===== -->
+    <section id="view-business" class="view">
+      <h2 class="section-head">The Business of Jiu-Jitsu</h2>
+      <div id="biz-content"></div>
+    </section>
+  </main>
+
+  <!-- ===== Player modal ===== -->
+  <div id="modal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal" id="modal-content"></div>
+  </div>
+
+  <footer class="site">
+    <div>Jiu-Jitsu Atlas · A knowledge & scouting reference for Brazilian Jiu-Jitsu · © <span id="year"></span></div>
+    <div class="disclaimer">Athlete records, ratings, and business figures are directional estimates compiled from public competition history and industry reporting through ~2024–2025. Attribute ratings are an editorial scouting assessment, not official statistics. Verify specifics against primary sources before relying on them.</div>
+  </footer>
+
+  <script src="data/players.js"></script>
+  <script src="data/knowledge.js"></script>
+  <script src="data/business.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
