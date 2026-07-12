@@ -377,6 +377,61 @@
     wrap.innerHTML = html;
   }
 
+  /* ---------- Rankings (live from jiujitsu.net) ---------- */
+  function renderRankings() {
+    const wrap = $("#rankings-content");
+    const R = RANKINGS;
+    const athletes = R.athletes || [];
+
+    // Map ranking-name slug -> our profile id, so ranked athletes we also
+    // cover become clickable links into the Atlas.
+    const rosterBySlug = {};
+    window.PLAYERS.forEach((p) => { rosterBySlug[slugify(p.rankingName || p.name)] = p.id; });
+
+    const synced = R.updated ? `Last synced ${new Date(R.updated).toISOString().slice(0, 10)}` : "Awaiting first sync";
+    const header = `
+      <div class="rank-src-note">
+        Pulled live from <a href="${JJNET}" target="_blank" rel="noopener noreferrer">jiujitsu.net</a> via Tavily —
+        ${R.scope ? esc(R.scope) : "current standings"} (unofficial IBJJF · Weisshart Elo rating).
+        <b>${synced}${athletes.length ? ` · ${athletes.length} athletes` : ""}.</b>
+        Athletes also profiled in this Atlas are highlighted — tap to open their card.
+      </div>`;
+
+    if (!athletes.length) {
+      wrap.innerHTML = header + `<div class="empty">No rankings synced yet. Once the TAVILY_API_KEY secret is set and the "Update rankings" workflow runs, the current jiujitsu.net standings appear here.</div>`;
+      return;
+    }
+
+    const rows = athletes.map((a) => {
+      const pid = rosterBySlug[slugify(a.name)];
+      const mine = !!pid;
+      return `
+        <div class="lb-row${mine ? " lb-mine" : ""}"${mine ? ` data-id="${pid}" role="button" tabindex="0"` : ""}>
+          <span class="lb-rank">#${a.rank}</span>
+          <span class="lb-name">${esc(a.name)}${mine ? ` <span class="lb-tag">in Atlas ↗</span>` : ""}</span>
+          <span class="lb-rating">${a.rating != null ? a.rating : "—"}</span>
+          <a class="lb-ext" href="${JJNET}/athlete/${slugify(a.name)}" target="_blank" rel="noopener noreferrer" title="View on jiujitsu.net" aria-label="View ${esc(a.name)} on jiujitsu.net">↗</a>
+        </div>`;
+    }).join("");
+
+    wrap.innerHTML = header + `
+      <div class="leaderboard">
+        <div class="lb-row lb-head">
+          <span class="lb-rank">Rank</span>
+          <span class="lb-name">Athlete</span>
+          <span class="lb-rating">Elo</span>
+          <span class="lb-ext"></span>
+        </div>
+        ${rows}
+      </div>`;
+
+    $$(".lb-row.lb-mine", wrap).forEach((row) => {
+      const open = (e) => { if (e.target.closest(".lb-ext")) return; openModal(row.dataset.id); };
+      row.addEventListener("click", open);
+      row.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(row.dataset.id); } });
+    });
+  }
+
   /* ---------- KPIs ---------- */
   function renderHeroKpis() {
     const goats = window.PLAYERS.filter((p) => p.tier === "GOAT").length;
@@ -399,6 +454,7 @@
     renderHeroKpis();
     renderKnowledge();
     renderBusiness();
+    renderRankings();
     $("#year").textContent = new Date().getFullYear();
 
     const ru = $("#rank-updated");

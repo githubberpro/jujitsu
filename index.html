@@ -17,6 +17,7 @@
       </div>
       <nav class="tabs">
         <button data-view="players" class="active">🏆 Top Players</button>
+        <button data-view="rankings">📊 Rankings</button>
         <button data-view="knowledge">📚 Knowledge Base</button>
         <button data-view="business">💰 Business</button>
       </nav>
@@ -42,7 +43,7 @@
         <span class="rs-icon">📊</span>
         <div class="rs-text">
           <b>Rankings reference: <a href="https://jiujitsu.net" target="_blank" rel="noopener noreferrer">jiujitsu.net</a></b>
-          <span>Current, data-driven standings use jiujitsu.net's unofficial IBJJF rankings (Weisshart Elo system), synced via Tavily. Open any athlete for a live link to their ranking. The attribute bars here are an editorial scouting estimate, not official ratings. <span id="rank-updated" class="rank-updated"></span></span>
+          <span>Current, data-driven standings use jiujitsu.net's unofficial IBJJF rankings (Weisshart Elo system), synced via Tavily. Open any athlete for a live link to their ranking. The attribute bars here are an editorial scouting estimate, not official ratings. See the full synced list in the <b>📊 Rankings</b> tab. <span id="rank-updated" class="rank-updated"></span></span>
         </div>
         <a class="rs-btn" href="https://jiujitsu.net" target="_blank" rel="noopener noreferrer">View live rankings ↗</a>
       </div>
@@ -80,6 +81,12 @@
       <p class="section-sub">Everything you need to understand the sport — its history, the belt system, gi vs. no-gi, the positional hierarchy, core submissions, scoring rules, and the championships that define legacies.</p>
       <div id="kb-nav" class="kb-nav"></div>
       <div id="kb-content"></div>
+    </section>
+
+    <!-- ===== Rankings (live from jiujitsu.net) ===== -->
+    <section id="view-rankings" class="view">
+      <h2 class="section-head">Live Rankings</h2>
+      <div id="rankings-content"></div>
     </section>
 
     <!-- ===== Business ===== -->
