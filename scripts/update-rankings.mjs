@@ -55,28 +55,49 @@ function collectText(raw) {
   return chunks.filter(Boolean).join("\n");
 }
 
-// Best-effort parse of ranked athletes from free text. This is intentionally
-// conservative; the raw dump lets us tighten it once we see jiujitsu.net's
-// actual structure on the first authenticated run.
+// Parse ranked athletes. jiujitsu.net's ratings page renders as a markdown
+// table via Tavily, e.g.:
+//   | 1 |  | [Tainan Dalpra](url) ![img] | ![img] | 2574 |  |  |  |
+// We parse that primarily, and fall back to a loose "1. Name 1850" line format.
 function parseAthletes(raw) {
   const text = collectText(raw);
   if (!text) return [];
   const out = [];
   const seen = new Set();
-  // Matches "1. Firstname Lastname 1850", "#3 Name — 1720", "12) Name | 1600", etc.
-  const re =
-    /(?:^|\n)\s*#?(\d{1,3})[.)]?\s+([A-Z][A-Za-zÀ-ÿ'’.\-]+(?:\s+[A-Z][A-Za-zÀ-ÿ'’.\-]+){0,3})\s*[-–—:|]*\s*(\d{3,4})?/g;
-  let m;
-  while ((m = re.exec(text)) !== null) {
-    const rank = parseInt(m[1], 10);
-    const name = m[2].trim();
-    const rating = m[3] ? parseInt(m[3], 10) : null;
-    const key = name.toLowerCase();
-    if (rank >= 1 && rank <= 100 && name.length > 3 && !seen.has(key)) {
+
+  // Primary: markdown table rows.
+  for (const line of text.split("\n")) {
+    const rankM = line.match(/^\|\s*(\d{1,3})\s*\|/);
+    if (!rankM) continue;
+    const nameM = line.match(/\[([^\]]+?)\]\(/); // first markdown link = athlete name
+    if (!nameM) continue;
+    const ratingM = line.match(/\|\s*(\d{4})\s*\|/); // 4-digit Elo cell
+    const rank = parseInt(rankM[1], 10);
+    const name = nameM[1].replace(/\s+/g, " ").trim();
+    const rating = ratingM ? parseInt(ratingM[1], 10) : null;
+    const key = rank + "|" + name.toLowerCase();
+    if (rank >= 1 && rank <= 500 && name.length > 2 && !seen.has(key)) {
       seen.add(key);
       out.push({ rank, name, rating });
     }
   }
+
+  // Fallback: loose line format, only if the table yielded nothing.
+  if (!out.length) {
+    const re =
+      /(?:^|\n)\s*#?(\d{1,3})[.)]?\s+([A-Z][A-Za-zÀ-ÿ'’.\-]+(?:\s+[A-Z][A-Za-zÀ-ÿ'’.\-]+){0,3})\s*[-–—:|]*\s*(\d{3,4})?/g;
+    let m;
+    while ((m = re.exec(text)) !== null) {
+      const rank = parseInt(m[1], 10);
+      const name = m[2].trim();
+      const key = name.toLowerCase();
+      if (rank >= 1 && rank <= 100 && name.length > 3 && !seen.has(key)) {
+        seen.add(key);
+        out.push({ rank, name, rating: m[3] ? parseInt(m[3], 10) : null });
+      }
+    }
+  }
+
   out.sort((a, b) => a.rank - b.rank);
   return out.slice(0, 100);
 }
@@ -85,6 +106,7 @@ async function writeData(athletes, fetchedAt, errors) {
   const data = {
     updated: fetchedAt,
     source: "jiujitsu.net (unofficial IBJJF · Weisshart Elo) via Tavily",
+    scope: "Gi · Pound-for-Pound (top of the open ranking)",
     count: athletes.length,
     note: athletes.length
       ? ""

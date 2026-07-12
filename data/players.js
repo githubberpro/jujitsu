@@ -179,6 +179,7 @@ window.PLAYERS = [
     id: "mica-galvao",
     name: "Micael Galvão",
     nickname: "Mica",
+    rankingName: "Mica Galvão",
     country: "Brazil",
     flag: "🇧🇷",
     team: "Fight Sports / Manaus",

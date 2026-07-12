@@ -406,7 +406,8 @@
       if (RANKINGS.updated) {
         const d = new Date(RANKINGS.updated);
         const n = RANKINGS.athletes.length;
-        ru.textContent = `Last synced ${d.toISOString().slice(0, 10)}${n ? ` · ${n} ranked athletes` : ""}.`;
+        const scope = RANKINGS.scope ? ` · ${RANKINGS.scope}` : "";
+        ru.textContent = `Last synced ${d.toISOString().slice(0, 10)}${n ? ` · ${n} ranked athletes` : ""}${scope}.`;
       } else {
         ru.textContent = "Rankings sync pending — links go to live jiujitsu.net pages meanwhile.";
       }
