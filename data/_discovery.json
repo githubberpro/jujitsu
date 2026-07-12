@@ -1,0 +1,129 @@
+{
+  "when": "2026-07-12T14:18:00.450Z",
+  "extract": {
+    "httpOk": true,
+    "status": 200,
+    "json": {
+      "results": [
+        {
+          "url": "https://jiujitsu.net/api/ratings",
+          "title": "JiuJitsu.net — Rankings, Videos, News and More",
+          "raw_content": "[![Image 1: Logo](https://jiujitsu.net/assets/logo-DTbr8ipX.png)](https://jiujitsu.net/)\n# JiuJitsu.net — Rankings\n\n[](https://jiujitsu.net/api/ratings)\n\n[Ratings](https://jiujitsu.net/)[Database](https://jiujitsu.net/database)[Tournaments](https://jiujitsu.net/tournaments)[Teams](https://jiujitsu.net/teams)[Research](https://jiujitsu.net/research)[News](https://jiujitsu.net/news)[Store](https://store.jiujitsu.net/)[About](https://jiujitsu.net/about)[Research](https://jiujitsu.net/research)[News](https://jiujitsu.net/news)[Store](https://store.jiujitsu.net/)[About](https://jiujitsu.net/about)\n\n...\n\n[Research](https://jiujitsu.net/research)[News](https://jiujitsu.net/news)[Store](https://store.jiujitsu.net/)[About](https://jiujitsu.net/about)\n\n![Image 2: English](blob:http://localhost/2b24a5fae6c493c232b8ef776e888c51)\n\n![Image 3: English](blob:http://localhost/2b24a5fae6c493c232b8ef776e888c51)\n\nThis site is not affiliated, endorsed by, or associated with the International Brazilian Jiu-Jitsu Federation. [More Info](https://jiujitsu.net/about#disclaimer)\n\n# Page Not Found\n\n## You have confused Yuri\n\n![Image 4: Yuri](https://jiujitsu.net/assets/yuri-89fjElje.jpg)\n\n[Go Back Home](https://jiujitsu.net/)\n\n© 2026 JiuJitsu.net",
+          "images": []
+        },
+        {
+          "url": "https://jiujitsu.net/database",
+          "title": "JiuJitsu.net — Rankings, Videos, News and More",
+          "raw_content": "[![Image 1: Logo](https://jiujitsu.net/assets/logo-DTbr8ipX.png)](https://jiujitsu.net/)\n# JiuJitsu.net — Rankings\n\n[](https://jiujitsu.net/database)\n\n[Ratings](https://jiujitsu.net/)[Database](https://jiujitsu.net/database)[Tournaments](https://jiujitsu.net/tournaments)[Teams](https://jiujitsu.net/teams)[Research](https://jiujitsu.net/research)[News](https://jiujitsu.net/news)[Store](https://store.jiujitsu.net/)[About](https://jiujitsu.net/about)[Research](https://jiujitsu.net/research)[News](https://jiujitsu.net/news)[Store](https://store.jiujitsu.net/)[About](https://jiujitsu.net/about)\n\n...\n\n[Research](https://jiujitsu.net/research)[News](https://jiujitsu.net/news)[Store](https://store.jiujitsu.net/)[About](https://jiujitsu.net/about)\n\n![Image 2: English](blob:http://localhost/2b24a5fae6c493c232b8ef776e888c51)\n\n![Image 3: English](blob:http://localhost/2b24a5fae6c493c232b8ef776e888c51)\n\nThis site is not affiliated, endorsed by, or associated with the International Brazilian Jiu-Jitsu Federation. [More Info](https://jiujitsu.net/about#disclaimer)\n\n*   [Gi](https://jiujitsu.net/database)\n*   [No Gi](https://jiujitsu.net/database)\n\nFilters\n\n##### Athlete\n\n* * *\n\nClear\n\nClear\n\nClear\n\n-\n\nClear\n\n- [x] Elite Only \n\n##### Tournament\n\n* * *\n\n##### Division\n\n* * *\n\n|  | Winner | Rating | Loser | Rating | Tournament | Division | Date / Location | Notes |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| [![Image 4: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=U4FICIdmeIE&t=21795s) | [Jamie Wayne Riedinger](https://jiujitsu.net/database#) | 1898 → 1904 | [Minuk Park](https://jiujitsu.net/database#) | 1830 → 1818 | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 4 / Male / BLACK / Open Class](https://jiujitsu.net/database#) | Jul 12 2026, 4:02pm Mat 6 | Heavy vs Light (3 classes apart, adjustment: **2030** (+132) vs 1830 |\n| [![Image 5: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=4059Oa7cL-4&t=21175s) | [Brent Michael Te Kawa](https://jiujitsu.net/database#) | 1704 → 1734 | [Kyung Woo Han](https://jiujitsu.net/database#) | 1858 → 1843 | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 6 / Male / BLACK / Heavy](https://jiujitsu.net/database#) | Jul 12 2026, 3:53pm Mat 1 |  |\n| [![Image 6: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=rfwyCgsGRs8&t=21175s) | [Jessica Ng](https://jiujitsu.net/database#) | 1740 → 1755 | [Yoko Abe](https://jiujitsu.net/database#) | 1822 → 1807 | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 4 / Female / BLACK / Open Class](https://jiujitsu.net/database#) | Jul 12 2026, 3:53pm Mat 8 | Heavy vs Heavy, no adjustment |\n| [![Image 7: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=xvZm89not6M&t=21110s) | [Lauren Estelle Sacks](https://jiujitsu.net/database#) | 1876 → 1886 | [Bibiana Culau Lopes](https://jiujitsu.net/database#) | 1833 → 1818 | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 2 / Female / BLACK / Open Class](https://jiujitsu.net/database#) | Jul 12 2026, 3:53pm Mat 3 | Light vs Feather (1 class apart, adjustment: **1930** (+54) vs 1833 |\n| [![Image 8: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=U4FICIdmeIE&t=21195s) | [Byeong-Gyu Choi](https://jiujitsu.net/database#) | 1853 → 1865 | [Ishikawa Fumitoshi](https://jiujitsu.net/database#) | 1911 → 1898 | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 4 / Male / BLACK / Open Class](https://jiujitsu.net/database#) | Jul 12 2026, 3:52pm Mat 6 | Medium Heavy vs Middle (1 class apart, adjustment: **1907** (+54) vs 1911 |\n| [![Image 9: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=DJ7dJKvgpKM&t=21045s) | [Alberto Juarez](https://jiujitsu.net/database#) | 1879 → 1892 | [Sangwoo Oh](https://jiujitsu.net/database#) | 1857 → 1829 | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 3 / Male / BLACK / Open Class](https://jiujitsu.net/database#) | Jul 12 2026, 3:52pm Mat 4 | Medium Heavy vs Heavy (1 class apart, adjustment: 1879 vs **1911** (+54) |\n|  | [Brent Michael Te Kawa](https://jiujitsu.net/database#) | 1704 → 1704***** | [Mark Shawn Smith](https://jiujitsu.net/database#) | 1704 → 1704***** | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 6 / Male / BLACK / Heavy](https://jiujitsu.net/database#) | Jul 12 2026, 3:49pm Mat 1 | Disqualified by no show |\n| [![Image 10: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=C-ZDMMAGJnY&t=20320s) | [Alexsandro dos Santos Machado](https://jiujitsu.net/database#) | 1970 → 1984 | [Gilhan Bae](https://jiujitsu.net/database#) | 1927 → 1900 | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 3 / Male / BLACK / Open Class](https://jiujitsu.net/database#) | Jul 12 2026, 3:46pm Mat 7 | Light vs Medium Heavy (2 classes apart, adjustment: 1970 vs **1991** (+64) |\n| [![Image 11: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=U4FICIdmeIE&t=20775s) | [Minuk Park](https://jiujitsu.net/database#) | 1811 → 1830 | [Ivan Yuryevich Berezovskii](https://jiujitsu.net/database#) | 1605 → 1595 | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 4 / Male / BLACK / Open Class](https://jiujitsu.net/database#) | Jul 12 2026, 3:45pm Mat 6 | Light vs Heavy (3 classes apart, adjustment: 1811 vs **1737** (+132), Disqualified by technical desc. |\n| [![Image 12: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=xvZm89not6M&t=20510s) | [Serena Gabrielli](https://jiujitsu.net/database#) | 2186 → 2190 | [Melissa Wu](https://jiujitsu.net/database#) | 1873 → 1865 | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 2 / Female / BLACK / Open Class](https://jiujitsu.net/database#) | Jul 12 2026, 3:43pm Mat 3 | Light Feather vs Light Feather, no adjustment |\n| [![Image 13: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=Ppvf5a0VRes&t=20655s) | [Alexander Redvanov](https://jiujitsu.net/database#) | 1909 → 1947 | [Gyeongsoo Kim](https://jiujitsu.net/database#) | 1874 → 1836 | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 1 / Male / BLACK / Open Class](https://jiujitsu.net/database#) | Jul 12 2026, 3:43pm Mat 5 | Feather vs Heavy (4 classes apart, adjustment: 1909 vs **2043** (+169) |\n| [![Image 14: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=rfwyCgsGRs8&t=20335s) | [Si Man Un](https://jiujitsu.net/database#) | 1866 → 1893 | [Tegan Jayne Krarup](https://jiujitsu.net/database#) | 1826 → 1813 | [Asian Jiu-Jitsu IBJJF Championsh...](https://jiujitsu.net/database#) | [Master 3 / Female / BLACK / Open Class](https://jiujitsu.net/database#) | Jul 12 2026, 3:39pm Mat 8 | Feather vs Middle (2 classes apart, adjustment: 1866 vs **1890** (+64) |\n\nJul 12 2026, 4:02pm Mat 6\n\n[![Image 15: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=U4FICIdmeIE&t=21795s)\n\n**Winner:**\n\n[Jamie Wayne Riedinger](https://jiujitsu.net/database#)\n\n1898 → 1904\n\n**Loser:**\n\n[Minuk Park](https://jiujitsu.net/database#)\n\n 1830 → 1818\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 4 / Male / BLACK / Open Class](https://jiujitsu.net/database#)\n\nHeavy vs Light (3 classes apart, adjustment: **2030** (+132) vs 1830\n\nJul 12 2026, 3:53pm Mat 1\n\n[![Image 16: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=4059Oa7cL-4&t=21175s)\n\n**Winner:**\n\n[Brent Michael Te Kawa](https://jiujitsu.net/database#)\n\n1704 → 1734\n\n**Loser:**\n\n[Kyung Woo Han](https://jiujitsu.net/database#)\n\n 1858 → 1843\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 6 / Male / BLACK / Heavy](https://jiujitsu.net/database#)\n\nJul 12 2026, 3:53pm Mat 8\n\n[![Image 17: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=rfwyCgsGRs8&t=21175s)\n\n**Winner:**\n\n[Jessica Ng](https://jiujitsu.net/database#)\n\n1740 → 1755\n\n**Loser:**\n\n[Yoko Abe](https://jiujitsu.net/database#)\n\n 1822 → 1807\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 4 / Female / BLACK / Open Class](https://jiujitsu.net/database#)\n\nHeavy vs Heavy, no adjustment\n\nJul 12 2026, 3:53pm Mat 3\n\n[![Image 18: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=xvZm89not6M&t=21110s)\n\n**Winner:**\n\n[Lauren Estelle Sacks](https://jiujitsu.net/database#)\n\n1876 → 1886\n\n**Loser:**\n\n[Bibiana Culau Lopes](https://jiujitsu.net/database#)\n\n 1833 → 1818\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 2 / Female / BLACK / Open Class](https://jiujitsu.net/database#)\n\nLight vs Feather (1 class apart, adjustment: **1930** (+54) vs 1833\n\nJul 12 2026, 3:52pm Mat 6\n\n[![Image 19: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=U4FICIdmeIE&t=21195s)\n\n**Winner:**\n\n[Byeong-Gyu Choi](https://jiujitsu.net/database#)\n\n1853 → 1865\n\n**Loser:**\n\n[Ishikawa Fumitoshi](https://jiujitsu.net/database#)\n\n 1911 → 1898\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 4 / Male / BLACK / Open Class](https://jiujitsu.net/database#)\n\nMedium Heavy vs Middle (1 class apart, adjustment: **1907** (+54) vs 1911\n\nJul 12 2026, 3:52pm Mat 4\n\n[![Image 20: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=DJ7dJKvgpKM&t=21045s)\n\n**Winner:**\n\n[Alberto Juarez](https://jiujitsu.net/database#)\n\n1879 → 1892\n\n**Loser:**\n\n[Sangwoo Oh](https://jiujitsu.net/database#)\n\n 1857 → 1829\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 3 / Male / BLACK / Open Class](https://jiujitsu.net/database#)\n\nMedium Heavy vs Heavy (1 class apart, adjustment: 1879 vs **1911** (+54)\n\nJul 12 2026, 3:49pm Mat 1\n\n**Winner:**\n\n[Brent Michael Te Kawa](https://jiujitsu.net/database#)\n\n1704 → 1704*****\n\n**Loser:**\n\n[Mark Shawn Smith](https://jiujitsu.net/database#)\n\n 1704 → 1704*****\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 6 / Male / BLACK / Heavy](https://jiujitsu.net/database#)\n\nDisqualified by no show\n\nJul 12 2026, 3:46pm Mat 7\n\n[![Image 21: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=C-ZDMMAGJnY&t=20320s)\n\n**Winner:**\n\n[Alexsandro dos Santos Machado](https://jiujitsu.net/database#)\n\n1970 → 1984\n\n**Loser:**\n\n[Gilhan Bae](https://jiujitsu.net/database#)\n\n 1927 → 1900\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 3 / Male / BLACK / Open Class](https://jiujitsu.net/database#)\n\nLight vs Medium Heavy (2 classes apart, adjustment: 1970 vs **1991** (+64)\n\nJul 12 2026, 3:45pm Mat 6\n\n[![Image 22: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=U4FICIdmeIE&t=20775s)\n\n**Winner:**\n\n[Minuk Park](https://jiujitsu.net/database#)\n\n1811 → 1830\n\n**Loser:**\n\n[Ivan Yuryevich Berezovskii](https://jiujitsu.net/database#)\n\n 1605 → 1595\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 4 / Male / BLACK / Open Class](https://jiujitsu.net/database#)\n\nLight vs Heavy (3 classes apart, adjustment: 1811 vs **1737** (+132)\n\nDisqualified by technical desc.\n\nJul 12 2026, 3:43pm Mat 3\n\n[![Image 23: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=xvZm89not6M&t=20510s)\n\n**Winner:**\n\n[Serena Gabrielli](https://jiujitsu.net/database#)\n\n2186 → 2190\n\n**Loser:**\n\n[Melissa Wu](https://jiujitsu.net/database#)\n\n 1873 → 1865\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 2 / Female / BLACK / Open Class](https://jiujitsu.net/database#)\n\nLight Feather vs Light Feather, no adjustment\n\nJul 12 2026, 3:43pm Mat 5\n\n[![Image 24: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=Ppvf5a0VRes&t=20655s)\n\n**Winner:**\n\n[Alexander Redvanov](https://jiujitsu.net/database#)\n\n1909 → 1947\n\n**Loser:**\n\n[Gyeongsoo Kim](https://jiujitsu.net/database#)\n\n 1874 → 1836\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 1 / Male / BLACK / Open Class](https://jiujitsu.net/database#)\n\nFeather vs Heavy (4 classes apart, adjustment: 1909 vs **2043** (+169)\n\nJul 12 2026, 3:39pm Mat 8\n\n[![Image 25: Match Video](blob:http://localhost/5cac6623ff68b93d0a34067f1868447c)](https://www.youtube.com/watch?v=rfwyCgsGRs8&t=20335s)\n\n**Winner:**\n\n[Si Man Un](https://jiujitsu.net/database#)\n\n1866 → 1893\n\n**Loser:**\n\n[Tegan Jayne Krarup](https://jiujitsu.net/database#)\n\n 1826 → 1813\n\n[Asian Jiu-Jitsu IBJJF Championship 2026](https://jiujitsu.net/database#)\n\n[Master 3 / Female / BLACK / Open Class](https://jiujitsu.net/database#)\n\nFeather vs Middle (2 classes apart, adjustment: 1866 vs **1890** (+64)\n\n[First](https://jiujitsu.net/database#)[Previous](https://jiujitsu.net/database#)[Next](https://jiujitsu.net/database#)\n\n© 2026 JiuJitsu.net",
+          "images": []
+        }
+      ],
+      "failed_results": [
+        {
+          "url": "https://api.jiujitsu.net/ratings",
+          "error": "Failed to fetch url"
+        },
+        {
+          "url": "https://jiujitsu.net/api/athletes",
+          "error": "Failed to fetch url"
+        },
+        {
+          "url": "https://jiujitsu.net/api/rankings",
+          "error": "Failed to fetch url"
+        },
+        {
+          "url": "https://jiujitsu.net/api/ratings?page=1&limit=100",
+          "error": "Failed to fetch url"
+        },
+        {
+          "url": "https://jiujitsu.net/ratings.json",
+          "error": "Failed to fetch url"
+        }
+      ],
+      "response_time": 7.85,
+      "request_id": "06f45a4d-2c5e-4427-8da7-0fe4c17dda62"
+    },
+    "textLen": 16052
+  },
+  "map": {
+    "httpOk": true,
+    "status": 200,
+    "json": {
+      "base_url": "https://jiujitsu.net",
+      "results": [
+        "https://jiujitsu.net/",
+        "https://jiujitsu.net/database",
+        "https://jiujitsu.net/tournaments",
+        "https://jiujitsu.net/news",
+        "https://jiujitsu.net/about",
+        "https://jiujitsu.net/research",
+        "https://jiujitsu.net/teams",
+        "https://jiujitsu.net/news/556/which-gi-colors-are-most-popular",
+        "https://jiujitsu.net/news/731/the-mystery-of-the-tape-what-is-mau-olhado",
+        "https://jiujitsu.net/news/521/papasidero-dominates-in-miami-and-atlanta",
+        "https://jiujitsu.net/news/967/yes-aoj-really-is-that-dominant",
+        "https://jiujitsu.net/teams/yearly/2026",
+        "https://jiujitsu.net/news/766/new-order-of-fights-chrome-extension",
+        "https://jiujitsu.net/news/839/ten-things-you-didnt-know-about-ibjjf-bracketing",
+        "https://jiujitsu.net/news/647/exciting-new-features",
+        "https://jiujitsu.net/news/669/was-this-the-best-pans-ever",
+        "https://jiujitsu.net/news/619/strong-lineups-in-curitiba-and-orange-county",
+        "https://jiujitsu.net/news/780/brasileiros-and-solving-the-closeout-problem",
+        "https://store.jiujitsu.net/",
+        "https://store.jiujitsu.net/account",
+        "https://store.jiujitsu.net/products/ibjjf-rankings-hoodie",
+        "https://store.jiujitsu.net/policies/privacy-policy",
+        "https://store.jiujitsu.net/products/scientific-jiu-jitsu-a-unified-theory-of-grappling-pre-order",
+        "https://store.jiujitsu.net/account/addresses",
+        "https://store.jiujitsu.net/policies/terms-of-service",
+        "https://store.jiujitsu.net/products/ibjjf-rankings-large-logo-tee-white",
+        "https://store.jiujitsu.net/products/ibjjf-rankings-large-logo-tee-black",
+        "https://store.jiujitsu.net/policies/contact-information",
+        "https://store.jiujitsu.net/policies/refund-policy",
+        "https://store.jiujitsu.net/pages/contact",
+        "https://store.jiujitsu.net/customer_authentication/redirect?locale=en&region_country=US",
+        "https://store.jiujitsu.net/customer_authentication/redirect?locale=en%C2%AEion_country%3DUS",
+        "https://store.jiujitsu.net/customer_authentication/login?return_to=%2F&locale=en",
+        "https://bjjcompsystem.com/",
+        "https://ibjjf.com/",
+        "https://www.shopify.com/",
+        "https://shop.app/",
+        "https://monorail-edge.shopifysvc.com/",
+        "https://www.instagram.com/jiujitsunet",
+        "https://ko-fi.com/jiujitsunet",
+        "https://www.instagram.com/weisserwill",
+        "https://www.facebook.com/Trumpetdanbjj",
+        "https://github.com/weisserw/ibjjf-elo",
+        "https://www.youtube.com/watch?v=xvZm89not6M&t=20510s",
+        "https://www.youtube.com/watch?v=4059Oa7cL-4&amp%3Bt=21175s",
+        "https://www.youtube.com/watch?v=U4FICIdmeIE&amp%3Bt=21195s",
+        "https://www.youtube.com/watch?v=U4FICIdmeIE&t=21795s",
+        "https://www.youtube.com/watch?v=U4FICIdmeIE&t=20775s",
+        "https://www.youtube.com/watch?v=Ppvf5a0VRes&amp%3Bt=20655s",
+        "https://www.youtube.com/watch?v=U4FICIdmeIE&amp%3Bt=21795s",
+        "https://www.youtube.com/watch?v=rfwyCgsGRs8&amp%3Bt=20335s",
+        "https://www.youtube.com/watch?v=xvZm89not6M&amp%3Bt=21110s",
+        "https://www.youtube.com/watch?v=Ppvf5a0VRes&t=20655s",
+        "https://www.youtube.com/watch?v=DJ7dJKvgpKM&t=21045s",
+        "https://www.youtube.com/watch?v=C-ZDMMAGJnY&amp%3Bt=20320s"
+      ],
+      "response_time": 16.92,
+      "request_id": "d66f30be-2e0a-4762-b472-364b3e1b5cdf"
+    },
+    "textLen": 3048
+  },
+  "search": {
+    "httpOk": true,
+    "status": 200,
+    "json": {
+      "query": "jiujitsu.net ratings api endpoint athletes json database",
+      "follow_up_questions": null,
+      "answer": null,
+      "images": [],
+      "results": [],
+      "response_time": 0.8,
+      "request_id": "6a60232e-5951-4f6c-972b-552a31d6743f"
+    },
+    "textLen": 206
+  }
+}
