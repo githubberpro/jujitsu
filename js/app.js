@@ -432,6 +432,178 @@
     });
   }
 
+  /* ---------- Game Plan Lab (Noah Lim matchups) ---------- */
+  const NOAH_ID = "noah-lim";
+  const GP_ATTRS = [
+    ["cardio", "Cardio"], ["submissions", "Submissions"], ["guard", "Guard"],
+    ["control", "Control"], ["takedowns", "Takedowns"], ["subRate", "Finish Rate"]
+  ];
+
+  // Derive fighting tendencies from the existing data (single source of truth).
+  function fighterTags(p) {
+    const s = p.stats;
+    const blob = ((p.style || "") + " " + (p.signature || []).join(" ") + " " + (p.strengths || "")).toLowerCase();
+    return {
+      legLocker: /leg[- ]?lock|heel|ankle|kneebar|entangle|z-guard|k-guard/.test(blob),
+      topPressure: s.control >= 90 || /pressure|passing|top control|body[- ]?lock/.test(blob),
+      guardHeavy: s.guard >= 90 || /guard/.test(blob),
+      submissionThreat: s.submissions >= 90 || /submission|choke|finish/.test(blob),
+      wrestler: s.takedowns >= 82 || /takedown|wrestl/.test(blob),
+      backAttack: /back/.test(blob),
+      veteranMeta: p.born && p.born < 1992
+    };
+  }
+
+  const avg6 = (s) => Math.round((s.cardio + s.submissions + s.guard + s.control + s.takedowns + s.subRate) / 6 * 10) / 10;
+
+  function edgeTip(k, opp) {
+    switch (k) {
+      case "cardio": return `Drag ${opp} into deep water. Noah's gas tank is his equalizer — set a punishing pace, extend the match, and hunt the finish when their output drops late.`;
+      case "submissions": return `Turn every scramble into a submission entry. Noah's finishing threat is higher here — keep transitions chaotic where his sub-hunting shines rather than settling into static positions.`;
+      case "guard": return `Weaponize the bottom. An active, attacking guard is a real edge — threaten sweeps and submissions off your back instead of just surviving.`;
+      case "control": return `Once you pass, clamp down. Noah can out-grind ${opp} from top — pass, pin, and layer attacks to break them.`;
+      case "takedowns": return `Dictate where it happens. Win the hand-fight and choose standing vs. mat — don't let ${opp} set the location.`;
+      case "subRate": return `Play for the tap, not the scorecard. Noah closes at a higher rate — force the finish and don't leave it to the judges.`;
+    }
+  }
+  function threatTip(k, opp) {
+    switch (k) {
+      case "control": return `Respect ${opp}'s top pressure. Prioritize guard retention and early re-guards; never let them settle into a dominant pin or mount.`;
+      case "submissions": return `${opp} is a lethal finisher. Be disciplined in scrambles — don't over-commit to attacks that expose the neck or an isolated arm.`;
+      case "guard": return `Don't dive into ${opp}'s guard. Pass conservatively (knee-cut, heavy pressure, feet back) or keep it standing to deny their sweeps and submissions.`;
+      case "takedowns": return `${opp} owns the wrestling. Be first to grips, ready to sprawl, and willing to pull guard on your own terms rather than lose a scramble.`;
+      case "cardio": return `Don't turn it into a track meet — ${opp}'s conditioning matches yours. Pick your bursts instead of emptying the tank early.`;
+      case "subRate": return `${opp} finishes fights. Treat every position as dangerous, stay technically tight, and never concede a lazy grip.`;
+    }
+  }
+
+  function buildMatchup(oppId) {
+    const noah = window.PLAYERS.find((p) => p.id === NOAH_ID);
+    const opp = window.PLAYERS.find((p) => p.id === oppId);
+    if (!noah || !opp) return null;
+
+    const edges = [], threats = [], even = [];
+    GP_ATTRS.forEach(([k, label]) => {
+      const d = noah.stats[k] - opp.stats[k];
+      const row = { k, label, d, n: noah.stats[k], o: opp.stats[k] };
+      if (d >= 3) edges.push(row); else if (d <= -3) threats.push(row); else even.push(row);
+    });
+    edges.sort((a, b) => b.d - a.d);
+    threats.sort((a, b) => a.d - b.d);
+
+    const nIdx = avg6(noah.stats), oIdx = avg6(opp.stats);
+    const gap = Math.round((nIdx - oIdx) * 10) / 10;
+    let verdict, vclass;
+    if (gap >= 4) { verdict = "Favoured on paper — Noah's profile stacks up well here."; vclass = "gp-fav"; }
+    else if (gap > -4) { verdict = "A genuinely close, winnable matchup."; vclass = "gp-even"; }
+    else if (gap > -12) { verdict = "Noah's the underdog — but there's a live upset path with the right game plan."; vclass = "gp-dog"; }
+    else { verdict = "A major step up in class. It's a long shot, but the narrow path below is how it happens."; vclass = "gp-longshot"; }
+
+    const tags = fighterTags(opp);
+    const plan = [];
+    if (edges[0]) plan.push(edgeTip(edges[0].k, opp.name));
+    if (edges[1]) plan.push(edgeTip(edges[1].k, opp.name));
+    if (threats[0]) plan.push(threatTip(threats[0].k, opp.name));
+    // style-based exploit
+    if (tags.veteranMeta) plan.push(`${opp.name} built their peak in an earlier meta — pressure them with modern leg-lock and scramble threats and test their pace over a long, high-output match.`);
+    else if (tags.topPressure) plan.push(`Keep it dynamic. Deny the grips and slow, heavy pace ${opp.name} wants — constant movement and scrambles pull them out of their comfort zone.`);
+    else if (tags.legLocker) plan.push(`Manage the legs all match. Expect entanglement entries from ${opp.name}: hide your feet, clear the knee-line early, and stay calm — never panic-yank out of a heel-hook position.`);
+    else if (tags.guardHeavy) plan.push(`Stay out of ${opp.name}'s guard. Attack from standing or pass with heavy low pressure; don't get drawn into their sweep-and-submit traps.`);
+    // youth x-factor
+    plan.push(`Lean on the X-factor: Noah is far younger and fresher. Bank on the later rounds, force a scramble-heavy fight, and make ${opp.name} work for every position.`);
+
+    return { noah, opp, edges, threats, even, nIdx, oIdx, gap, verdict, vclass, plan };
+  }
+
+  function attrBar(row) {
+    const nBetter = row.d > 0, oBetter = row.d < 0;
+    const tag = row.d === 0 ? "even" : (row.d > 0 ? `Noah +${row.d}` : `${row.d}`);
+    return `
+      <div class="mc-attr">
+        <div class="mc-attr-label">${row.label}<span class="mc-delta ${nBetter ? "up" : oBetter ? "down" : ""}">${tag}</span></div>
+        <div class="mc-bars">
+          <div class="mc-side">
+            <span class="mc-val">${row.n}</span>
+            <div class="mc-track"><div class="mc-fill noah" style="width:${row.n}%"></div></div>
+          </div>
+          <div class="mc-side opp">
+            <div class="mc-track"><div class="mc-fill opp" style="width:${row.o}%"></div></div>
+            <span class="mc-val">${row.o}</span>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function renderMatchup(oppId) {
+    const wrap = $("#matchup-result");
+    const m = buildMatchup(oppId);
+    if (!m) { wrap.innerHTML = ""; return; }
+    const { noah, opp } = m;
+
+    wrap.innerHTML = `
+      <div class="mc-versus">
+        <div class="mc-fighter">
+          <div class="avatar">${initials(noah.name)}</div>
+          <div><b>${esc(noah.name)}</b><span>${noah.flag} ${esc(noah.weight)} · <span class="tier-${noah.tier}" style="padding:1px 6px;border-radius:10px">${noah.tier}</span></span></div>
+        </div>
+        <div class="mc-vs">VS</div>
+        <div class="mc-fighter opp">
+          <div><b>${esc(opp.name)}</b><span>${opp.flag} ${esc(opp.weight)} · <span class="tier-${opp.tier}" style="padding:1px 6px;border-radius:10px">${opp.tier}</span></span></div>
+          <div class="avatar opp-av">${initials(opp.name)}</div>
+        </div>
+      </div>
+
+      <div class="mc-verdict ${m.vclass}">
+        <div class="mc-verdict-txt"><b>${esc(m.verdict)}</b></div>
+        <div class="mc-index" title="Composite of the six editorial attributes">
+          <span>${m.nIdx}</span><small>Noah</small>
+          <em>composite index</em>
+          <span>${m.oIdx}</span><small>${esc(opp.name.split(" ")[0])}</small>
+        </div>
+      </div>
+
+      <div class="mc-resume">
+        <div><b>${noah.stats.worldTitles}</b><span>Noah — Gi world titles</span></div>
+        <div><b>${noah.stats.adccGold}</b><span>Noah — ADCC golds</span></div>
+        <div class="vsep"></div>
+        <div><b>${opp.stats.worldTitles}</b><span>${esc(opp.name.split(" ")[0])} — world titles</span></div>
+        <div><b>${opp.stats.adccGold}</b><span>${esc(opp.name.split(" ")[0])} — ADCC golds</span></div>
+      </div>
+      <p class="mc-basis">Historical basis: ${esc(opp.name)} — ${opp.accolades.map(esc).join(" · ")}.</p>
+
+      <h4 class="mc-h">Attribute matchup</h4>
+      <div class="mc-attrs">${GP_ATTRS.map(([k]) => attrBar([...m.edges, ...m.threats, ...m.even].find((r) => r.k === k))).join("")}</div>
+
+      <div class="mc-cols">
+        <div class="mc-col edges">
+          <h4>▲ Noah's edges to press</h4>
+          ${m.edges.length ? m.edges.map((e) => `<div class="mc-item"><b>${e.label} <span>(+${e.d})</span></b><p>${esc(edgeTip(e.k, opp.name))}</p></div>`).join("") : `<p class="mc-none">No clear attribute edge — Noah must win on pace, youth, and scrambles.</p>`}
+        </div>
+        <div class="mc-col threats">
+          <h4>▼ Threats to respect</h4>
+          ${m.threats.length ? m.threats.map((t) => `<div class="mc-item"><b>${t.label} <span>(${t.d})</span></b><p>${esc(threatTip(t.k, opp.name))}</p></div>`).join("") : `<p class="mc-none">No glaring disadvantage — a rare even-or-better matchup for Noah.</p>`}
+        </div>
+      </div>
+
+      <h4 class="mc-h">🎯 Game plan for Noah</h4>
+      <ol class="mc-plan">${m.plan.map((s) => `<li>${esc(s)}</li>`).join("")}</ol>
+
+      <p class="mc-disclaimer">This is an analytical model built from each athlete's editorial attributes, style, and record — not a prediction or a log of real head-to-head bouts. Treat it as a coaching-style scouting aid.</p>`;
+  }
+
+  function renderGamePlan() {
+    const sel = $("#opp-select");
+    if (!sel) return;
+    const tierRank = { GOAT: 0, Legend: 1, Elite: 2, Rising: 3 };
+    const opps = window.PLAYERS.filter((p) => p.id !== NOAH_ID)
+      .sort((a, b) => (tierRank[a.tier] - tierRank[b.tier]) || a.name.localeCompare(b.name));
+    sel.innerHTML = opps.map((p) => `<option value="${p.id}">${p.flag} ${esc(p.name)} — ${p.tier}</option>`).join("");
+    const def = opps.find((p) => p.id === "kade-ruotolo") ? "kade-ruotolo" : opps[0].id;
+    sel.value = def;
+    sel.addEventListener("change", () => renderMatchup(sel.value));
+    renderMatchup(def);
+  }
+
   /* ---------- KPIs ---------- */
   function renderHeroKpis() {
     const goats = window.PLAYERS.filter((p) => p.tier === "GOAT").length;
@@ -455,6 +627,7 @@
     renderKnowledge();
     renderBusiness();
     renderRankings();
+    renderGamePlan();
     $("#year").textContent = new Date().getFullYear();
 
     const ru = $("#rank-updated");

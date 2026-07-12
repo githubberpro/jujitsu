@@ -14,6 +14,11 @@ A self-contained web app that profiles the world's top jiu-jitsu (BJJ / grapplin
 - Signature techniques, accolades, team, weight class, belt, and style.
 - **Search** (name, team, country, style) plus **region filters** and **style filters** (Gi / No-Gi / Women / GOAT-tier) that combine.
 
+### 🎯 Game Plan Lab
+- Pair **Noah Lim** against any competitor in the roster and get a **data-driven strategy** for how he could win.
+- Computes an attribute matchup (dual bars), a composite-index verdict (favoured / even / underdog / long-shot), a résumé comparison (titles & ADCC golds), and the opponent's record as the historical basis.
+- Generates a tailored **game plan** — edges to press, threats to respect, and style-specific tactics (e.g. manage the legs vs. a leg-locker, keep it dynamic vs. a pressure passer) — from each athlete's attributes, style, and record. Framed as a coaching-style scouting aid, not a prediction.
+
 ### 📚 Knowledge Base
 - **History & origins** — from Japanese jujutsu and Kano's judo through Maeda, the Gracie family, UFC 1, and the modern era.
 - **Belt system** — white through red, with what each rank means.

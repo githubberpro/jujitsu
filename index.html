@@ -18,6 +18,7 @@
       <nav class="tabs">
         <button data-view="players" class="active">🏆 Top Players</button>
         <button data-view="rankings">📊 Rankings</button>
+        <button data-view="gameplan">🎯 Game Plan</button>
         <button data-view="knowledge">📚 Knowledge Base</button>
         <button data-view="business">💰 Business</button>
       </nav>
@@ -87,6 +88,17 @@
     <section id="view-rankings" class="view">
       <h2 class="section-head">Live Rankings</h2>
       <div id="rankings-content"></div>
+    </section>
+
+    <!-- ===== Game Plan Lab ===== -->
+    <section id="view-gameplan" class="view">
+      <h2 class="section-head">Game Plan Lab</h2>
+      <p class="section-sub">Pair <b>Noah Lim</b> against any competitor and get a data-driven strategy for how he could beat them — built from each athlete's attributes, fighting style, and competitive record.</p>
+      <div class="gp-controls">
+        <label for="opp-select">Noah Lim 🇸🇬 &nbsp;vs.</label>
+        <select id="opp-select" aria-label="Choose opponent"></select>
+      </div>
+      <div id="matchup-result"></div>
     </section>
 
     <!-- ===== Business ===== -->
