@@ -569,7 +569,7 @@
         <div><b>${opp.stats.worldTitles}</b><span>${esc(opp.name.split(" ")[0])} — world titles</span></div>
         <div><b>${opp.stats.adccGold}</b><span>${esc(opp.name.split(" ")[0])} — ADCC golds</span></div>
       </div>
-      <p class="mc-basis">Historical basis: ${esc(opp.name)} — ${opp.accolades.map(esc).join(" · ")}.</p>
+      <p class="mc-basis">Historical basis: ${esc(opp.name)} — ${opp.accolades.map(esc).join(" · ")}.${(() => { const r = rankOf(opp); return r ? ` <b>jiujitsu.net: #${r.rank} · Elo ${r.rating}.</b>` : ""; })()}</p>
 
       <h4 class="mc-h">Attribute matchup</h4>
       <div class="mc-attrs">${GP_ATTRS.map(([k]) => attrBar([...m.edges, ...m.threats, ...m.even].find((r) => r.k === k))).join("")}</div>
@@ -591,17 +591,91 @@
       <p class="mc-disclaimer">This is an analytical model built from each athlete's editorial attributes, style, and record — not a prediction or a log of real head-to-head bouts. Treat it as a coaching-style scouting aid.</p>`;
   }
 
+  // Analysis for a jiujitsu.net-ranked opponent we don't have a full profile
+  // for — powered by their rank + Elo, framed as a cross-discipline matchup
+  // (the ranking is Gi P4P; Noah is a no-gi prospect).
+  function rankedClass(a) {
+    if (a.rating >= 2470 || a.rank <= 5)
+      return { v: "gp-longshot", verdict: `In the gi, ${a.name} is a world-class pound-for-pound force — a major step up. Noah's realistic path is a no-gi ruleset that strips away their gi-based control.` };
+    if (a.rating >= 2400 || a.rank <= 15)
+      return { v: "gp-dog", verdict: `${a.name} is a top-tier gi competitor. Noah is the underdog in the kimono, but a no-gi, high-pace fight is a live upset path.` };
+    return { v: "gp-dog", verdict: `${a.name} is a world-ranked gi player — a serious test. Noah's no-gi pace-and-scramble game still gives him a genuine path.` };
+  }
+
+  function renderRankedMatchup(a) {
+    const wrap = $("#matchup-result");
+    const noah = window.PLAYERS.find((p) => p.id === NOAH_ID);
+    const cls = rankedClass(a);
+    const plan = [
+      `Steer it toward no-gi or submission-only. ${a.name} is ranked in the IBJJF gi pound-for-pound list — a game built on collar/sleeve grips and gi chokes that lose much of their bite without the kimono.`,
+      `Attack the legs. Heel hooks and leg entanglements sit largely outside the IBJJF gi meta ${a.name} competes in — Noah's no-gi leg game is his highest-percentage weapon here.`,
+      `Make it a pace war. Noah's cardio and youth are the equalizer against a points-and-control gi style — push relentless output and hunt the finish late.`,
+      `Deny the grips and stay off their guard. Win the hand-fight, keep it moving, and refuse the slow, grip-heavy exchanges where ${a.name} racks up control.`,
+      `Turn every exchange into a scramble. Noah's speed and submission-hunting shine in chaos, not in the static positional game a decorated gi player will win.`
+    ];
+    wrap.innerHTML = `
+      <div class="mc-versus">
+        <div class="mc-fighter">
+          <div class="avatar">${initials(noah.name)}</div>
+          <div><b>${esc(noah.name)}</b><span>${noah.flag} ${esc(noah.weight)} · No-Gi · <span class="tier-${noah.tier}" style="padding:1px 6px;border-radius:10px">${noah.tier}</span></span></div>
+        </div>
+        <div class="mc-vs">VS</div>
+        <div class="mc-fighter opp">
+          <div><b>${esc(a.name)}</b><span>jiujitsu.net #${a.rank} · Elo ${a.rating} · Gi P4P</span></div>
+          <div class="avatar opp-av">${initials(a.name)}</div>
+        </div>
+      </div>
+
+      <div class="mc-verdict ${cls.v}">
+        <div class="mc-verdict-txt"><b>${esc(cls.verdict)}</b></div>
+        <div class="mc-index"><span>#${a.rank}</span><small>rank</small><em>·</em><span>${a.rating}</span><small>Elo</small></div>
+      </div>
+
+      <p class="mc-basis">Historical basis: jiujitsu.net Gi Pound-for-Pound ranking — <b>#${a.rank}, Elo ${a.rating}</b> (unofficial IBJJF · Weisshart Elo, synced via Tavily). No individual attribute profile is available for ranking-only athletes, so this plan is built from their ranking class and the style gap.</p>
+
+      <div class="mc-crossnote">⚔️ Cross-discipline matchup — ${esc(a.name)} is ranked in the <b>gi</b>; Noah is a <b>no-gi</b> prospect. The plan below leans on Noah dragging the fight onto his terms.</div>
+
+      <h4 class="mc-h">🎯 Game plan for Noah</h4>
+      <ol class="mc-plan">${plan.map((s) => `<li>${esc(s)}</li>`).join("")}</ol>
+
+      <p class="mc-disclaimer">An analytical scouting aid, not a prediction or a record of real bouts. Ranking-only opponents are assessed from their jiujitsu.net rank and Elo plus the gi-vs-no-gi style gap — not a detailed attribute breakdown.</p>`;
+  }
+
+  function renderOpponent(value) {
+    if (value.startsWith("rank:")) {
+      const slug = value.slice(5);
+      const a = (RANKINGS.athletes || []).find((x) => slugify(x.name) === slug);
+      if (a) renderRankedMatchup(a);
+    } else {
+      renderMatchup(value.replace(/^roster:/, ""));
+    }
+  }
+
   function renderGamePlan() {
     const sel = $("#opp-select");
     if (!sel) return;
     const tierRank = { GOAT: 0, Legend: 1, Elite: 2, Rising: 3 };
-    const opps = window.PLAYERS.filter((p) => p.id !== NOAH_ID)
+    const roster = window.PLAYERS.filter((p) => p.id !== NOAH_ID)
       .sort((a, b) => (tierRank[a.tier] - tierRank[b.tier]) || a.name.localeCompare(b.name));
-    sel.innerHTML = opps.map((p) => `<option value="${p.id}">${p.flag} ${esc(p.name)} — ${p.tier}</option>`).join("");
-    const def = opps.find((p) => p.id === "kade-ruotolo") ? "kade-ruotolo" : opps[0].id;
+
+    // Ranked athletes we DON'T already have a full profile for.
+    const rosterSlugs = new Set(window.PLAYERS.map((p) => slugify(p.rankingName || p.name)));
+    const rankedOnly = (RANKINGS.athletes || []).filter((a) => !rosterSlugs.has(slugify(a.name)));
+
+    let html = `<optgroup label="Atlas roster">` +
+      roster.map((p) => `<option value="roster:${p.id}">${p.flag} ${esc(p.name)} — ${p.tier}</option>`).join("") +
+      `</optgroup>`;
+    if (rankedOnly.length) {
+      html += `<optgroup label="jiujitsu.net rankings · Gi P4P (via Tavily)">` +
+        rankedOnly.map((a) => `<option value="rank:${slugify(a.name)}">#${a.rank} ${esc(a.name)} — Elo ${a.rating}</option>`).join("") +
+        `</optgroup>`;
+    }
+    sel.innerHTML = html;
+
+    const def = roster.find((p) => p.id === "kade-ruotolo") ? "roster:kade-ruotolo" : `roster:${roster[0].id}`;
     sel.value = def;
-    sel.addEventListener("change", () => renderMatchup(sel.value));
-    renderMatchup(def);
+    sel.addEventListener("change", () => renderOpponent(sel.value));
+    renderOpponent(def);
   }
 
   /* ---------- KPIs ---------- */
