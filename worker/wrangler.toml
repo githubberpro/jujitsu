@@ -1,0 +1,10 @@
+name = "jjnet-proxy"
+main = "jjnet-proxy.js"
+compatibility_date = "2024-11-01"
+
+# Lock CORS to your site once deployed (optional but recommended):
+# [vars]
+# ALLOW_ORIGIN = "https://githubberpro.github.io"
+
+# The Tavily key is a SECRET, not a var — set it with:
+#   npx wrangler secret put TAVILY_API_KEY

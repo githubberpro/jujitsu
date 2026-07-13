@@ -641,28 +641,98 @@
       <p class="mc-disclaimer">An analytical scouting aid, not a prediction or a record of real bouts. Ranking-only opponents are assessed from their jiujitsu.net rank and Elo plus the gi-vs-no-gi style gap — not a detailed attribute breakdown.</p>`;
   }
 
+  // ----- Free-form lookup: persistence + live retrieval via the Worker -----
+  const LS_PROXY = "jja_proxy_url";
+  const LS_LOOKUPS = "jja_lookups_v1";
+  const getProxyUrl = () => { try { return localStorage.getItem(LS_PROXY) || ""; } catch { return ""; } };
+  const setProxyUrl = (u) => { try { localStorage.setItem(LS_PROXY, u); } catch {} };
+  function getSavedLookups() {
+    try { const a = JSON.parse(localStorage.getItem(LS_LOOKUPS) || "[]"); return Array.isArray(a) ? a : []; }
+    catch { return []; }
+  }
+  function saveLookup(a) {
+    const list = getSavedLookups().filter((x) => slugify(x.name) !== slugify(a.name));
+    list.unshift(a);
+    try { localStorage.setItem(LS_LOOKUPS, JSON.stringify(list.slice(0, 50))); } catch {}
+  }
+  function clearLookups() { try { localStorage.removeItem(LS_LOOKUPS); } catch {} }
+
+  const beltName = (b) => b ? (b.trim().charAt(0).toUpperCase() + b.trim().slice(1).toLowerCase() + " belt") : "unranked";
+  function liteClass(a) {
+    const belt = (a.belt || "").toUpperCase(), r = a.rating || 0;
+    if (belt && !belt.includes("BLACK"))
+      return { v: "gp-even", verdict: `${a.name} is listed at ${beltName(a.belt)} on jiujitsu.net — below black belt. A live target: Noah's black-belt submission game and pace should give him the edge if he stays composed.` };
+    if (r >= 2400) return { v: "gp-longshot", verdict: `${a.name} is elite-level on jiujitsu.net (Elo ${r}). A major step up — Noah's realistic path is a fast, scramble-heavy no-gi fight.` };
+    if (r >= 2100) return { v: "gp-dog", verdict: `${a.name} is a strong, seasoned competitor (Elo ${r}). Noah is the underdog, but pace and scrambles keep an upset live.` };
+    if (r > 0) return { v: "gp-even", verdict: `${a.name} (Elo ${r}) is within range. Noah's youth, cardio, and submission-hunting are real edges here.` };
+    return { v: "gp-dog", verdict: `Limited data on ${a.name}. Default to Noah's strengths — relentless pace, scrambles, and submission hunting.` };
+  }
+  const noGiPlan = (name) => [
+    `Steer it toward no-gi or submission-only. ${name} is tracked in IBJJF gi competition — a game built on collar/sleeve grips and gi chokes that lose much of their bite without the kimono.`,
+    `Attack the legs. Heel hooks and leg entanglements sit largely outside the IBJJF gi meta ${name} competes in — Noah's no-gi leg game is his highest-percentage weapon.`,
+    `Make it a pace war. Noah's cardio and youth are the equalizer against a control-and-points gi style — push relentless output and hunt the finish late.`,
+    `Deny the grips and stay off their guard. Win the hand-fight, keep moving, and refuse the slow, grip-heavy exchanges where ${name} scores.`,
+    `Turn every exchange into a scramble — Noah's speed and submission-hunting shine in chaos, not a static positional game a decorated gi player will win.`
+  ];
+
+  function renderCustomMatchup(a) {
+    const wrap = $("#matchup-result");
+    const noah = window.PLAYERS.find((p) => p.id === NOAH_ID);
+    const cls = liteClass(a);
+    const meta = [a.rating != null ? `Elo ${a.rating}` : null, a.belt ? `${a.belt.toUpperCase()} belt` : null,
+      a.team || null, a.country || null].filter(Boolean).join(" · ");
+    wrap.innerHTML = `
+      <div class="mc-versus">
+        <div class="mc-fighter">
+          <div class="avatar">${initials(noah.name)}</div>
+          <div><b>${esc(noah.name)}</b><span>${noah.flag} ${esc(noah.weight)} · No-Gi · <span class="tier-${noah.tier}" style="padding:1px 6px;border-radius:10px">${noah.tier}</span></span></div>
+        </div>
+        <div class="mc-vs">VS</div>
+        <div class="mc-fighter opp">
+          <div><b>${esc(a.name)}</b><span>${esc(meta || "jiujitsu.net lookup")}</span></div>
+          <div class="avatar opp-av">${initials(a.name)}</div>
+        </div>
+      </div>
+      <div class="mc-verdict ${cls.v}">
+        <div class="mc-verdict-txt"><b>${esc(cls.verdict)}</b></div>
+        ${a.rating != null ? `<div class="mc-index"><span>${a.rating}</span><small>Elo</small></div>` : ""}
+      </div>
+      <p class="mc-basis">Retrieved live from <b>jiujitsu.net</b>${a.url ? ` (<a href="${a.url}" target="_blank" rel="noopener noreferrer">profile ↗</a>)` : ""}: ${esc(meta || "no rating/belt found")}. Saved in your app for later. Source: ${esc(a.source || "jiujitsu.net via Tavily")}.</p>
+      <div class="mc-crossnote">⚔️ jiujitsu.net tracks <b>gi</b> (IBJJF) competition; Noah is a <b>no-gi</b> prospect. The plan leans on Noah dragging the fight onto his terms.</div>
+      <h4 class="mc-h">🎯 Game plan for Noah</h4>
+      <ol class="mc-plan">${noGiPlan(a.name).map((s) => `<li>${esc(s)}</li>`).join("")}</ol>
+      <p class="mc-disclaimer">Built from ${esc(a.name)}'s jiujitsu.net rating/belt plus the gi-vs-no-gi style gap — an analytical scouting aid, not a prediction or a record of real bouts.</p>`;
+  }
+
   function renderOpponent(value) {
     if (value.startsWith("rank:")) {
       const slug = value.slice(5);
       const a = (RANKINGS.athletes || []).find((x) => slugify(x.name) === slug);
       if (a) renderRankedMatchup(a);
+    } else if (value.startsWith("saved:")) {
+      const slug = value.slice(6);
+      const a = getSavedLookups().find((x) => slugify(x.name) === slug);
+      if (a) renderCustomMatchup(a);
     } else {
       renderMatchup(value.replace(/^roster:/, ""));
     }
   }
 
-  function renderGamePlan() {
-    const sel = $("#opp-select");
-    if (!sel) return;
+  function buildOppOptions() {
     const tierRank = { GOAT: 0, Legend: 1, Elite: 2, Rising: 3 };
     const roster = window.PLAYERS.filter((p) => p.id !== NOAH_ID)
       .sort((a, b) => (tierRank[a.tier] - tierRank[b.tier]) || a.name.localeCompare(b.name));
-
-    // Ranked athletes we DON'T already have a full profile for.
     const rosterSlugs = new Set(window.PLAYERS.map((p) => slugify(p.rankingName || p.name)));
     const rankedOnly = (RANKINGS.athletes || []).filter((a) => !rosterSlugs.has(slugify(a.name)));
+    const saved = getSavedLookups();
 
-    let html = `<optgroup label="Atlas roster">` +
+    let html = "";
+    if (saved.length) {
+      html += `<optgroup label="⭐ Looked up (saved)">` +
+        saved.map((a) => `<option value="saved:${slugify(a.name)}">${esc(a.name)}${a.rating != null ? ` — Elo ${a.rating}` : ""}</option>`).join("") +
+        `</optgroup>`;
+    }
+    html += `<optgroup label="Atlas roster">` +
       roster.map((p) => `<option value="roster:${p.id}">${p.flag} ${esc(p.name)} — ${p.tier}</option>`).join("") +
       `</optgroup>`;
     if (rankedOnly.length) {
@@ -670,12 +740,89 @@
         rankedOnly.map((a) => `<option value="rank:${slugify(a.name)}">#${a.rank} ${esc(a.name)} — Elo ${a.rating}</option>`).join("") +
         `</optgroup>`;
     }
-    sel.innerHTML = html;
+    return html;
+  }
 
-    const def = roster.find((p) => p.id === "kade-ruotolo") ? "roster:kade-ruotolo" : `roster:${roster[0].id}`;
+  function refreshSavedClear() {
+    const el = $("#saved-clear");
+    if (!el) return;
+    const n = getSavedLookups().length;
+    el.innerHTML = n ? `<button type="button" class="gp-linkbtn" id="saved-clear-btn">Clear ${n} saved opponent${n > 1 ? "s" : ""}</button>` : "";
+    const btn = $("#saved-clear-btn");
+    if (btn) btn.addEventListener("click", () => { clearLookups(); rebuildOptions(); refreshSavedClear(); $("#lookup-status").textContent = "Cleared saved opponents."; });
+  }
+
+  function rebuildOptions(selectValue) {
+    const sel = $("#opp-select");
+    const keep = selectValue || sel.value;
+    sel.innerHTML = buildOppOptions();
+    if ([...sel.options].some((o) => o.value === keep)) sel.value = keep;
+    renderOpponent(sel.value);
+  }
+
+  async function doLookup(rawName) {
+    const name = (rawName || "").trim();
+    const status = $("#lookup-status");
+    if (!name) return;
+    const slug = slugify(name);
+
+    const inRoster = window.PLAYERS.find((p) => p.id !== NOAH_ID && (slugify(p.rankingName || p.name) === slug || slugify(p.name) === slug));
+    if (inRoster) { rebuildOptions("roster:" + inRoster.id); status.textContent = `“${inRoster.name}” is in the Atlas roster — showing full analysis.`; return; }
+    const inRank = (RANKINGS.athletes || []).find((a) => slugify(a.name) === slug);
+    if (inRank) { rebuildOptions("rank:" + slug); status.textContent = `“${inRank.name}” is already in the jiujitsu.net rankings.`; return; }
+    const already = getSavedLookups().find((a) => slugify(a.name) === slug);
+    if (already) { rebuildOptions("saved:" + slug); status.textContent = `Loaded “${already.name}” from your saved lookups.`; return; }
+
+    const proxy = getProxyUrl();
+    if (!proxy) { showProxyConfig(true); status.innerHTML = `Set your lookup endpoint once to enable live search. <a href="https://github.com/githubberpro/jujitsu/blob/main/worker/README.md" target="_blank" rel="noopener noreferrer">Setup guide ↗</a>`; return; }
+
+    status.textContent = `Searching jiujitsu.net for “${name}”…`;
+    try {
+      const base = proxy.trim().replace(/\/+$/, "");
+      const u = base + (base.includes("?") ? "&" : "?") + "name=" + encodeURIComponent(name);
+      const res = await fetch(u, { headers: { Accept: "application/json" } });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      if (!data.found) { status.textContent = `No jiujitsu.net profile found for “${name}”. Try their full name.`; return; }
+      const athlete = { name: data.name || name, rating: data.rating ?? null, belt: data.belt || null, team: data.team || null, country: data.country || null, url: data.url || null, source: data.source || "jiujitsu.net via Tavily", ts: Date.now() };
+      saveLookup(athlete);
+      refreshSavedClear();
+      rebuildOptions("saved:" + slugify(athlete.name));
+      status.textContent = `Saved ${athlete.name}${athlete.rating != null ? ` (Elo ${athlete.rating})` : ""} — it now persists in the app.`;
+    } catch (e) {
+      status.textContent = `Lookup failed: ${e.message}. Check your endpoint URL and that the Worker has the Tavily key.`;
+    }
+  }
+
+  function showProxyConfig(show) {
+    const box = $("#proxy-config");
+    if (box) box.hidden = show === undefined ? !box.hidden : !show;
+  }
+
+  function renderGamePlan() {
+    const sel = $("#opp-select");
+    if (!sel) return;
+    sel.innerHTML = buildOppOptions();
+    const def = window.PLAYERS.find((p) => p.id === "kade-ruotolo") ? "roster:kade-ruotolo" : "roster:" + window.PLAYERS.find((p) => p.id !== NOAH_ID).id;
     sel.value = def;
     sel.addEventListener("change", () => renderOpponent(sel.value));
     renderOpponent(def);
+
+    // Free-form lookup wiring.
+    const input = $("#opp-lookup"), btn = $("#opp-lookup-btn");
+    if (btn) btn.addEventListener("click", () => doLookup(input.value));
+    if (input) input.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); doLookup(input.value); } });
+    const tgl = $("#gp-settings-toggle");
+    if (tgl) tgl.addEventListener("click", () => showProxyConfig());
+    const purl = $("#proxy-url"), psave = $("#proxy-save");
+    if (purl) purl.value = getProxyUrl();
+    if (psave) psave.addEventListener("click", () => {
+      setProxyUrl(purl.value.trim());
+      $("#lookup-status").textContent = purl.value.trim() ? "Saved your lookup endpoint." : "Cleared the endpoint.";
+      showProxyConfig(false);
+    });
+    refreshSavedClear();
   }
 
   /* ---------- KPIs ---------- */

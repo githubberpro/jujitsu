@@ -98,6 +98,25 @@
         <label for="opp-select">Noah Lim 🇸🇬 &nbsp;vs.</label>
         <select id="opp-select" aria-label="Choose opponent"></select>
       </div>
+
+      <div class="gp-lookup">
+        <input id="opp-lookup" type="text" placeholder="Or look up ANY opponent by name — live from jiujitsu.net…" autocomplete="off" />
+        <button id="opp-lookup-btn" type="button">🔎 Look up</button>
+        <button id="gp-settings-toggle" class="gp-linkbtn" type="button">⚙︎ Endpoint</button>
+      </div>
+      <div id="lookup-status" class="lookup-status"></div>
+      <div id="proxy-config" class="proxy-config" hidden>
+        <label for="proxy-url">Your lookup Worker URL (one-time)</label>
+        <div class="proxy-row">
+          <input id="proxy-url" type="url" placeholder="https://jjnet-proxy.your-name.workers.dev" />
+          <button id="proxy-save" type="button">Save</button>
+        </div>
+        <div class="proxy-foot">
+          <a href="https://github.com/githubberpro/jujitsu/blob/main/worker/README.md" target="_blank" rel="noopener noreferrer">Deploy the free lookup Worker ↗</a>
+          <span id="saved-clear"></span>
+        </div>
+      </div>
+
       <div id="matchup-result"></div>
     </section>
 

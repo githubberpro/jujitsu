@@ -15,7 +15,8 @@ A self-contained web app that profiles the world's top jiu-jitsu (BJJ / grapplin
 - **Search** (name, team, country, style) plus **region filters** and **style filters** (Gi / No-Gi / Women / GOAT-tier) that combine.
 
 ### 🎯 Game Plan Lab
-- Pair **Noah Lim** against any competitor and get a **data-driven strategy** for how he could win — choose from the **Atlas roster** *or* the live **jiujitsu.net ranked field** (synced via Tavily).
+- Pair **Noah Lim** against any competitor and get a **data-driven strategy** for how he could win — choose from the **Atlas roster**, the live **jiujitsu.net ranked field** (synced via Tavily), or **free-form type any name**.
+- **Free-form live lookup** — type any opponent and pull their jiujitsu.net data (Elo, belt, team, country) via a free **Cloudflare Worker** proxy (`worker/`, holds the Tavily key server-side). Looked-up opponents are **saved in your browser** and persist across reloads under a "⭐ Looked up (saved)" group. Setup: [`worker/README.md`](worker/README.md).
 - Computes an attribute matchup (dual bars), a composite-index verdict (favoured / even / underdog / long-shot), a résumé comparison (titles & ADCC golds), and the opponent's record as the historical basis.
 - Generates a tailored **game plan** — edges to press, threats to respect, and style-specific tactics (e.g. manage the legs vs. a leg-locker, keep it dynamic vs. a pressure passer) — from each athlete's attributes, style, and record. Framed as a coaching-style scouting aid, not a prediction.
 
