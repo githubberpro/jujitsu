@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-13T09:30:31.233Z",
+  "fetchedAt": "2026-07-14T08:08:23.255Z",
   "extract": {
     "results": [
       {
@@ -11,16 +11,16 @@
     ],
     "failed_results": [
       {
-        "url": "https://jiujitsu.net/rankings/pound-for-pound",
+        "url": "https://jiujitsu.net/rankings",
         "error": "Failed to fetch url"
       },
       {
-        "url": "https://jiujitsu.net/rankings",
+        "url": "https://jiujitsu.net/rankings/pound-for-pound",
         "error": "Failed to fetch url"
       }
     ],
-    "response_time": 5.74,
-    "request_id": "9468ddbc-ee3c-47e0-8a7b-e5a1b60d8a7a"
+    "response_time": 5.26,
+    "request_id": "5a77e683-d579-4c99-9736-9556f95c4aea"
   },
   "search": {
     "query": "jiujitsu.net current pound for pound BJJ rankings top ranked athletes by division",
@@ -29,10 +29,10 @@
     "images": [],
     "results": [
       {
-        "url": "https://jiujitsu.net",
+        "url": "https://jiujitsu.net/athlete/ryan-christopher-wunderlich",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "| # | ↑↓ | Name |  | Rating |  | +/- |  |\n ---  ---  ---  --- |\n| 1 |  | Tainan Dalpra |  | 2574 |  |  |  |\n| 2 |  | Erich Munis |  | 2534 |  |  |  |\n| 3 |  | Adam Wardziński |  | 2507 |  |  |  |\n| 4 |  | Diego Oliveira \"Pato\" |  | 2506 |  |  |  |\n| 5 |  | Cole Abate |  | 2493 |  |  |  |\n| 6 |  | Tarcísio Santos |  | 2465 |  |  |  |\n| 6 |  | Andy Murasaki |  | 2465 |  |  |  |\n| 8 | ↑1 | Jackson Nagai |  | 2463 |  | +8 |  |\n| 9 |  | Jansen Gomes \"Nenego\" |  | 2462 |  |  |  |\n| 10 |  | Matheus Gabriel |  | 2446 |  |  |  |\n| 11 |  | Meyram Maquine |  | 2438 |  |  |  |\n| 12 |  | Fellipe Andrew |  | 2437 |  |  |  |\n| 13 |  | Enderson Dias \"Varão\" |  | 2431 |  |  |  |\n| 14 |  | Vinicius Liberati |  | 2429 |  |  |  |\n| 15 |  | Mica Galvão |  | 2401 |  |  |  | [...] | 15 |  | Mica Galvão |  | 2401 |  |  |  |\n| 16 |  | Gabriel Galvao \"Caboja\" |  | 2400 |  |  |  |\n| 17 |  | Leo Ferreira |  | 2397 |  |  |  |\n| 18 |  | Rider Zuchi |  | 2389 |  |  |  |\n| 19 |  | Samuel Nagai \"Samurai\" |  | 2376 |  | -10 |  |\n| 19 |  | Gabriel Ribeiro \"Veloso\" |  | 2376 |  |  |  |\n| 21 |  | Pablo Lavaselli |  | 2373 |  |  |  |\n| 22 |  | Edu Alves |  | 2370 |  |  |  |\n| 23 |  | Nolan Stuart |  | 2351 |  |  |  |\n| 23 |  | Kennedy Maciel \"Cobrinha Jr\" |  | 2351 |  |  |  |\n| 25 |  | Gustavo Batista \"Braguinha\" |  | 2344 |  |  |  |\n| 26 |  | Pedro Machado |  | 2342 |  |  |  |\n| 27 |  | Gutemberg Pereira |  | 2339 |  |  |  |\n| 28 |  | Rerisson Gabriel |  | 2335 |  |  |  |\n| 29 |  | Pedro Maia |  | 2327 |  |  |  |\n| 30 | ↑8 | Uanderson Ferreira |  | 2326 |  | +21 |  | [...] Gi\n No Gi\n\nAdult\n\nP4P\n\nMore Filters",
-        "score": 0.80014634,
+        "content": "# Ryan Christopher Wunderlich\n\nRating: 1,545 | Belt: BLUE | Team: Rodrigo Vaghi BJJ | Country: us\n\n## Ranks\n\n Male / Adult / BLUE / : Rank 146, Rating 1545\n Male / Adult / BLUE / Heavy: Rank 11, Rating 1545\n Male / Adult / BLUE / Medium Heavy: Rank 22, Rating 1545\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] ## Registrations\n\n No upcoming registrations\n\n## Medals\n\n 2024-09-28: St. Louis International Open IBJJF Jiu-Jitsu Championship 2024 (Results) - WHITE / Adult / Male / Heavy (Place 1)\n 2026-03-07: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Heavy (Place 1)\n 2026-04-18: Chicago Spring International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Heavy (Place 1)\n 2026-03-07: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Open Class (Place 3)\n 2026-06-20: St. Louis International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Open Class (Place 3)",
+        "score": 0.7769112,
         "raw_content": null
       },
       {
@@ -43,13 +43,6 @@
         "raw_content": null
       },
       {
-        "url": "https://jiujitsu.net/athlete/ryan-christopher-wunderlich",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Ryan Christopher Wunderlich\n\nRating: 1,545 | Belt: BLUE | Team: Rodrigo Vaghi BJJ | Country: us\n\n## Ranks\n\n## Registrations\n\n## Medals",
-        "score": 0.72629017,
-        "raw_content": null
-      },
-      {
         "url": "https://jiujitsu.net/athlete/trenton-hall-nutter",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
         "content": "# Trenton Hall Nutter\n\nRating: 1,472 | Belt: BLUE | Team: Carlson Gracie Team | Country:\n\n## Ranks\n\n Male / Master 1 / BLUE / : Rank 28, Rating 1472\n Male / Master 1 / BLUE / Middle: Rank 3, Rating 1472\n Male / Master 2 / BLUE / : Rank 12, Rating 1472\n Male / Master 2 / BLUE / Middle: Rank 3, Rating 1472\n\n## Registrations\n\n 2026-09-03: World Master IBJJF Jiu-Jitsu Championship 2026 - BLUE / Master 2 / Male / Middle\n\n## Medals [...] 2023-08-12: Chicago Summer International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Master 2 / Male / Middle (Place 1)\n 2026-03-07: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Master 1 / Male / Middle (Place 1)\n 2026-03-27: Pan IBJJF Jiu-Jitsu Championship 2026 - BLUE / Master 2 / Male / Middle (Place 1)\n 2026-04-18: Chicago Spring International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Master 2 / Male / Middle (Place 1)\n 2023-08-12: Chicago Summer International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Master 2 / Male / Open Class (Place 2)\n 2024-03-10: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLUE / Master 2 / Male / Middle (Place 2) [...] 2024-03-20: Pan IBJJF Jiu-Jitsu Championship 2024 (Flo) - BLUE / Master 2 / Male / Middle (Place 2)\n 2024-04-27: Chicago Spring International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLUE / Master 2 / Male / Middle (Place 2)",
@@ -57,24 +50,31 @@
         "raw_content": null
       },
       {
-        "url": "https://jiujitsu.net/athlete/bernardo-correa-da-cruz",
+        "url": "https://jiujitsu.net/athlete/jared-alec-wade",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Bernardo Correa da Cruz\n\nRating: 2,131 | Belt: BLACK | Team: Renzo Gracie Academy | Country:\n\n## Ranks\n\n## Registrations\n\n## Medals",
-        "score": 0.5993685,
+        "content": "# Jared Alec Wade\n\nRating: 1,843 | Belt: PURPLE | Team: AOJ | Country: us\n\n## Ranks\n\n Male / Adult / PURPLE / : Rank 54, Rating 1843\n Male / Adult / PURPLE / Light: Rank 17, Rating 1843\n Male / Adult / PURPLE / Middle: Rank 19, Rating 1843\n\n## Registrations\n\n 2026-07-11: Los Angeles Summer International Open IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Adult / Male / Middle\n\n## Medals [...] 2023-07-29: Phoenix International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 2)\n 2023-11-18: Atlanta Fall International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 2)\n 2024-03-20: Pan IBJJF Jiu-Jitsu Championship 2024 (Flo) - BLUE / Adult / Male / Light (Place 2)\n 2024-05-30: World IBJJF Jiu-Jitsu Championship 2024 (Flo) - BLUE / Adult / Male / Light (Place 2)\n 2024-07-12: Phoenix International Open IBJJF Jiu-Jitsu Championship 2024 (Archive) - PURPLE / Adult / Male / Middle (Place 2)\n 2024-07-13: Orange County Summer International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Adult / Male / Middle (Place 2) [...] 2023-08-05: San Diego Summer International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 1)\n 2023-08-31: Jiu-Jitsu CON International 2023 (Flo) - BLUE / Adult / Male / Light (Place 1)\n 2023-10-21: Orange County International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 1)\n 2023-12-02: Waco International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 1)\n 2023-12-02: Waco International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Open Class (Place 1)\n 2024-05-18: San Diego Spring International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLUE / Adult / Male / Middle (Place 1)",
+        "score": 0.64880073,
         "raw_content": null
       },
       {
-        "url": "https://jiujitsu.net/athlete/kim-donghyuk",
-        "title": "Donghyuk Kim - JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "Blue Belt Tier 3 Elite (Top 10%) Gi No Gi Division AverageAvg ・ 91% Tier 3 Elite (Top 10%) Juvenile ・ 93% Tier 3 Elite (Top 10%) Winner Rating Loser Rating",
-        "score": 0.55420566,
+        "url": "https://jiujitsu.net/athlete/lucas-lopez-vida",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "# Lucas Lopez Vida\n\nRating: 1,491 | Belt: BLUE | Team: Jiu-Jitsu AZcademy | Country:\n\n## Ranks\n\n Male / Adult / BLUE / : Rank 321, Rating 1491\n Male / Adult / BLUE / Feather: Rank 78, Rating 1491\n Male / Adult / BLUE / Light Feather: Rank 55, Rating 1491\n\n## Registrations\n\n 2026-10-28: European IBJJF Jiu-Jitsu No-Gi Championship 2026 - BLUE / Adult / Male / Light Feather\n\n## Medals [...] 2026-02-22: London International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Light Feather (Place 1)\n 2026-03-08: Madrid International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Light Feather (Place 1)\n 2026-04-12: Milan International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Light Feather (Place 1)\n 2026-04-18: Dublin International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Feather (Place 1)\n 2024-10-25: Lisbon International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - WHITE / Adult / Male / Light Feather (Place 2)\n 2024-10-13: London Fall International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - WHITE / Adult / Male / Light Feather (Place 3) [...] 2026-05-17: Paris Spring International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Light Feather (Place 3)",
+        "score": 0.6439794,
         "raw_content": null
       },
       {
-        "url": "https://jiujitsu.net/athlete/matthew-steven-gillette",
-        "title": "Matthew Steven Gillette - Rankings - JiuJitsu.net",
-        "content": "JiuJitsu.net unofficially rates International Brazilian Jiu-Jitsu Federation (IBJJF) competitors using the Weisshart Elo rating system, providing accurate,",
-        "score": 0.5524679,
+        "url": "https://jiujitsu.net/athlete/rasean-donte-edwards",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "# RaSean Donte Edwards\n\nRating: 1,567 | Belt: PURPLE | Team: RMNU Team | Country:\n\n## Ranks\n\n Male / Master 2 / PURPLE / : Rank 88, Rating 1567\n Male / Master 2 / PURPLE / Feather: Rank 7, Rating 1567\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] 2024-06-22: Charlotte Summer International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Master 1 / Male / Feather (Place 2)\n 2022-10-01: Charlotte International Open IBJJF Jiu-Jitsu Championship 2022 (BJJHeroes) - BLUE / Master 1 / Male / Feather (Place 3)\n 2023-03-22: Pan IBJJF Jiu-Jitsu Championship 2023 (Flo) - BLUE / Master 1 / Male / Feather (Place 3)\n 2025-03-19: Pan IBJJF Jiu-Jitsu Championship 2025 - PURPLE / Master 2 / Male / Feather (Place 3) [...] 2022-04-06: Pan IBJJF Jiu-Jitsu Championship 2022 (Flo) - WHITE / Master 1 / Male / Feather (Place 1)\n 2024-02-10: Atlanta Winter International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLUE / Master 1 / Male / Feather (Place 1)\n 2024-03-20: Pan IBJJF Jiu-Jitsu Championship 2024 (Flo) - BLUE / Master 1 / Male / Feather (Place 1)\n 2025-03-01: Virginia International Open IBJJF Jiu-Jitsu Championship 2025 - PURPLE / Master 2 / Male / Feather (Place 1)\n 2026-03-26: Pan IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Master 2 / Male / Feather (Place 1)\n 2023-10-07: Charlotte International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Master 1 / Male / Feather (Place 2)",
+        "score": 0.6296157,
+        "raw_content": null
+      },
+      {
+        "url": "https://jiujitsu.net/athlete/erin-victoria-bradley",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "# Erin Victoria Bradley\n\nRating: 1,379 | Belt: BLUE | Team: Pedigo Submission Fighting | Country:\n\n## Ranks\n\n Female / Master 1 / BLUE / : Rank 81, Rating 1379\n Female / Master 1 / BLUE / Light: Rank 15, Rating 1379\n\n## Registrations\n\n 2026-08-08: Chicago Summer International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Female / Feather\n\n## Medals [...] ## Medals\n\n 2023-07-02: St. Louis International Open IBJJF Jiu-Jitsu Championship 2023 (Results) - WHITE / Master 1 / Female / Feather (Place 1)\n 2023-07-19: Orlando Summer International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - WHITE / Master 1 / Female / Feather (Place 1)\n 2026-03-25: Pan IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Female / Feather (Place 1)\n 2023-03-22: Pan IBJJF Jiu-Jitsu Championship 2023 (Flo) - WHITE / Master 1 / Female / Feather (Place 2)\n 2023-08-31: Jiu-Jitsu CON Novice International 2023 (Flo) - WHITE / Master 1 / Female / Feather (Place 2)",
+        "score": 0.58237284,
         "raw_content": null
       },
       {
@@ -92,15 +92,15 @@
         "raw_content": null
       },
       {
-        "url": "https://jiujitsu.net/research",
+        "url": "https://jiujitsu.net/teams",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "This site is not affiliated, endorsed by, or associated with the International Brazilian Jiu-Jitsu Federation. More Info\n\n Gi\n No Gi\n\nSelect two athletes (or manually enter ratings) to see the predicted outcome of a match, potential Elo gain / loss, team overlaps, and match history.",
-        "score": 0.380138,
+        "content": "This site is not affiliated, endorsed by, or associated with the International Brazilian Jiu-Jitsu Federation. More Info\n\n## Yearly Team Awards - 2026 Gi\n\nClick to see our top-ranked teams for the 2026 gi season\n\n## Elite Athlete Lists\n\nSearch for a team to view elite athletes who have represented that team.\n\n## Team Event Awards\n\nSearch for a past event in our database to view our team rankings based on match outcomes and opponent rating. To encourage competitive participation without pressure, white belts and teens are not included in team rankings.",
+        "score": 0.43323857,
         "raw_content": null
       }
     ],
-    "response_time": 4.22,
-    "request_id": "2924081c-5fc8-4e05-9532-a8717d121f25"
+    "response_time": 0.94,
+    "request_id": "f56ca142-94b2-47f4-88ba-d76efe5da4d4"
   },
   "errors": []
 }
