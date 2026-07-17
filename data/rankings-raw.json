@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-16T08:16:44.377Z",
+  "fetchedAt": "2026-07-17T08:11:54.979Z",
   "extract": {
     "results": [
       {
@@ -11,16 +11,16 @@
     ],
     "failed_results": [
       {
-        "url": "https://jiujitsu.net/rankings/pound-for-pound",
+        "url": "https://jiujitsu.net/rankings",
         "error": "Failed to fetch url"
       },
       {
-        "url": "https://jiujitsu.net/rankings",
+        "url": "https://jiujitsu.net/rankings/pound-for-pound",
         "error": "Failed to fetch url"
       }
     ],
-    "response_time": 6.18,
-    "request_id": "efea6561-8e4d-484a-bfb5-b28c612135a6"
+    "response_time": 7.25,
+    "request_id": "bcfea2e0-6436-4371-91e4-254709dd71f8"
   },
   "search": {
     "query": "jiujitsu.net current pound for pound BJJ rankings top ranked athletes by division",
@@ -43,10 +43,10 @@
         "raw_content": null
       },
       {
-        "url": "https://jiujitsu.net/athlete/wing-chau-cheung",
+        "url": "https://jiujitsu.net/athlete/thomas-michael-nordholt",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Wing Chau Cheung\n\nRating: 1,943 | Belt: BLACK | Team: Stealth BJJ Bolton | Country:\n\n## Ranks\n\n Male / Master 3 / BLACK / : Rank 343, Rating 1943\n Male / Master 3 / BLACK / Light: Rank 60, Rating 1943\n Male / Master 4 / BLACK / : Rank 157, Rating 1943\n Male / Master 4 / BLACK / Light: Rank 35, Rating 1943\n\n## Registrations\n\n 2026-09-03: World Master IBJJF Jiu-Jitsu Championship 2026 - BLACK / Master 4 / Male / Light\n 2026-10-28: European IBJJF Jiu-Jitsu No-Gi Championship 2026 - BLACK / Master 4 / Male / Light\n\n## Medals [...] 2018-01-01: Master International Jiu-Jitsu IBJJF Championship – Europe 2018 - BROWN / Master 2 / Male / Light (Place 1)\n 2022-10-15: London Fall International Open IBJJF Jiu-Jitsu Championship 2022 (BJJHeroes) - BLACK / Master 3 / Male / Light (Place 1)\n 2025-04-12: Dublin International Open IBJJF Jiu-Jitsu Championship 2025 - BLACK / Master 3 / Male / Light (Place 1)\n 2025-06-14: London Spring International Open IBJJF Jiu-Jitsu Championship 2025 - BLACK / Master 3 / Male / Light (Place 1)\n 2025-11-08: Dublin Fall International Open IBJJF Jiu-Jitsu Championship 2025 - BLACK / Master 4 / Male / Light (Place 1)\n 2026-06-20: Munich International Open IBJJF Jiu-Jitsu Championship 2026 - BLACK / Master 3 / Male / Light (Place 1) [...] 2026-07-04: Venice Jesolo International Open IBJJF Jiu-Jitsu Championship 2026 - BLACK / Master 4 / Male / Light (Place 1)\n 2025-05-03: Master International Jiu-Jitsu Championship - Europe 2025 - BLACK / Master 4 / Male / Light (Place 2)\n 2015-03-08: Madrid International Open IBJJF Jiu-Jitsu Championship 2015 - PURPLE / Master 2 / Male / Open Class (Place 3)\n 2017-01-01: World Master Jiu-Jitsu IBJJF Championship 2017 - BROWN / Master 2 / Male / Light (Place 3)\n 2018-01-01: Copenhagen International Open IBJJF Jiu-Jitsu Championship 2018 - BROWN / Adult / Male / Light (Place 3)\n 2019-01-01: World Master Jiu-Jitsu IBJJF Championship 2019 - BROWN / Master 2 / Male / Light (Place 3)\n 2020-01-01: European Jiu-Jitsu IBJJF Championship 2020 - BROWN / Master 3 / Male / Light (Place 3)",
-        "score": 0.71377134,
+        "content": "# Thomas Michael Nordholt\n\nRating: 1,787 | Belt: BROWN | Team: Super System BJJ | Country:\n\n## Ranks\n\n Male / Master 2 / BROWN / : Rank 65, Rating 1787\n Male / Master 2 / BROWN / Ultra Heavy: Rank 7, Rating 1787\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] ## Registrations\n\n No upcoming registrations\n\n## Medals\n\n 2024-03-10: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Master 2 / Male / Open Class (Place 1)\n 2024-03-10: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Master 2 / Male / Super Heavy (Place 1)\n 2026-03-26: Pan IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Master 2 / Male / Ultra Heavy (Place 1)\n 2026-03-26: Pan IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Master 2 / Male / Open Class (Place 1)\n 2026-05-02: Columbus International Open IBJJF Jiu-Jitsu Championship 2026 - BROWN / Master 2 / Male / Ultra Heavy (Place 1)\n 2024-03-20: Pan IBJJF Jiu-Jitsu Championship 2024 (Flo) - PURPLE / Master 2 / Male / Super Heavy (Place 2)",
+        "score": 0.7023877,
         "raw_content": null
       },
       {
@@ -57,24 +57,10 @@
         "raw_content": null
       },
       {
-        "url": "https://jiujitsu.net/athlete/carlie-ann-frech",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Carlie Ann Frech\n\nRating: 1,383 | Belt: BLUE | Team: BJJ Coach - Corral's Martial Arts | Country:\n\n## Ranks\n\n Female / Master 1 / BLUE / : Rank 73, Rating 1383\n Female / Master 1 / BLUE / Light Feather: Rank 6, Rating 1383\n Female / Master 2 / BLUE / : Rank 33, Rating 1383\n Female / Master 2 / BLUE / Feather: Rank 9, Rating 1383\n Female / Master 2 / BLUE / Light Feather: Rank 2, Rating 1383\n\n## Registrations\n\n 2026-08-08: Chicago Summer International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Master 2 / Female / Light Feather\n 2026-08-08: Chicago Summer International Open IBJJF Jiu-Jitsu No-Gi Championship 2026 - BLUE / Master 2 / Female / Light Feather\n\n## Medals [...] 2024-07-14: Austin Summer International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - WHITE / Master 1 / Female / Light Feather (Place 1)\n 2025-02-22: Austin Winter International Open IBJJF Jiu-Jitsu Championship 2025 - BLUE / Master 2 / Female / Light Feather (Place 1)\n 2025-04-05: Chicago Spring International Open IBJJF Jiu-Jitsu Championship 2025 - BLUE / Master 1 / Female / Light Feather (Place 1)\n 2026-04-18: Chicago Spring International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Master 2 / Female / Feather (Place 1)\n 2026-05-02: Columbus International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Master 2 / Female / Light Feather (Place 1)\n 2023-08-31: Jiu-Jitsu CON Novice International 2023 (Flo) - WHITE / Master 1 / Female / Light Feather (Place 2) [...] 2023-03-08: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - WHITE / Adult / Female / Light Feather (Place 1)\n 2023-04-29: Chicago Spring International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - WHITE / Master 1 / Female / Light Feather (Place 1)\n 2023-08-12: Chicago Summer International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - WHITE / Master 1 / Female / Light Feather (Place 1)\n 2024-03-20: Pan IBJJF Jiu-Jitsu Championship 2024 (Flo) - WHITE / Master 2 / Female / Light Feather (Place 1)\n 2024-06-27: American National IBJJF Jiu-Jitsu Championship 2024 (Flo) - WHITE / Master 2 / Female / Light Feather (Place 1)",
-        "score": 0.6557114,
-        "raw_content": null
-      },
-      {
         "url": "https://jiujitsu.net/athlete/jared-alec-wade",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
         "content": "# Jared Alec Wade\n\nRating: 1,843 | Belt: PURPLE | Team: AOJ | Country: us\n\n## Ranks\n\n Male / Adult / PURPLE / : Rank 54, Rating 1843\n Male / Adult / PURPLE / Light: Rank 17, Rating 1843\n Male / Adult / PURPLE / Middle: Rank 19, Rating 1843\n\n## Registrations\n\n 2026-07-11: Los Angeles Summer International Open IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Adult / Male / Middle\n\n## Medals [...] 2023-07-29: Phoenix International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 2)\n 2023-11-18: Atlanta Fall International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 2)\n 2024-03-20: Pan IBJJF Jiu-Jitsu Championship 2024 (Flo) - BLUE / Adult / Male / Light (Place 2)\n 2024-05-30: World IBJJF Jiu-Jitsu Championship 2024 (Flo) - BLUE / Adult / Male / Light (Place 2)\n 2024-07-12: Phoenix International Open IBJJF Jiu-Jitsu Championship 2024 (Archive) - PURPLE / Adult / Male / Middle (Place 2)\n 2024-07-13: Orange County Summer International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Adult / Male / Middle (Place 2) [...] 2023-08-05: San Diego Summer International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 1)\n 2023-08-31: Jiu-Jitsu CON International 2023 (Flo) - BLUE / Adult / Male / Light (Place 1)\n 2023-10-21: Orange County International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 1)\n 2023-12-02: Waco International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 1)\n 2023-12-02: Waco International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Open Class (Place 1)\n 2024-05-18: San Diego Spring International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLUE / Adult / Male / Middle (Place 1)",
         "score": 0.64880073,
-        "raw_content": null
-      },
-      {
-        "url": "https://jiujitsu.net/athlete/lucas-lopez-vida",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Lucas Lopez Vida\n\nRating: 1,491 | Belt: BLUE | Team: Jiu-Jitsu AZcademy | Country:\n\n## Ranks\n\n Male / Adult / BLUE / : Rank 321, Rating 1491\n Male / Adult / BLUE / Feather: Rank 78, Rating 1491\n Male / Adult / BLUE / Light Feather: Rank 55, Rating 1491\n\n## Registrations\n\n 2026-10-28: European IBJJF Jiu-Jitsu No-Gi Championship 2026 - BLUE / Adult / Male / Light Feather\n\n## Medals [...] 2026-02-22: London International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Light Feather (Place 1)\n 2026-03-08: Madrid International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Light Feather (Place 1)\n 2026-04-12: Milan International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Light Feather (Place 1)\n 2026-04-18: Dublin International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Feather (Place 1)\n 2024-10-25: Lisbon International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - WHITE / Adult / Male / Light Feather (Place 2)\n 2024-10-13: London Fall International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - WHITE / Adult / Male / Light Feather (Place 3) [...] 2026-05-17: Paris Spring International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Light Feather (Place 3)",
-        "score": 0.6439794,
         "raw_content": null
       },
       {
@@ -97,10 +83,24 @@
         "content": "# About This App\n\nJiuJitsu.net ranks competitors and provides a comprehensive database of matches in events run by the International Brazilian Jiu-Jitsu Federation. We are an independant site and are not affiliated with the IBJJF.\n\nCompetitors are rated using the Elo rating system, which is a method for calculating the relative skill levels of players in competitive games. We allow users to search for competitors, view their ratings, and see their match history.\n\nThis app is a work in progress and is being developed by Dan Lukehart and Will Weisser. The source code is available on GitHub. Ratings may be subject to change as the app is developed and improved. [...] We host and maintain this app as a free service to the jiu-jitsu community. If you would like to support us, please consider donating.\n\nIf you would like a copy of our source data for research purposes, contact us and we'll be happy to help. You have permission to use data or screenshots from this site in articles, blog posts, and other media, but we ask that you credit JiuJitsu.net. All other uses of our data, including commercial use, is prohibited without an explicit license.\n\n# Full Disclaimer\n\nWhile we only rank athletes who compete in the International Brazilian Jiu-Jitsu Federation, this site is not affiliated, endorsed by, or associated with the IBJJF. [...] Q: Are you going to track kids divisions?\n\nA: We have decided to store a searchable list of teen matches as some of these athletes are beginning their serious competitive journey in the sport. However, we do not compute ratings for teens and we do not track younger divisions in order to promote a healthy competitive environment for children.\n\nQ: What are the \"Elite\" badges on some athlete profiles?\n\nA: We assign an \"Elite\" badge to athletes whose ratings are among the top competitors in the same belt, weight and age divisions (or across all weights in the same age, a.k.a. Pound-for-Pound / P4P). These badges are a mark of achievement and allow fans to easily recognize when an elite athlete is competing and follow their progress.\n\nThere are three levels of Elite badges:",
         "score": 0.5382315,
         "raw_content": null
+      },
+      {
+        "url": "https://jiujitsu.net/news/839/ten-things-you-didnt-know-about-ibjjf-bracketing",
+        "title": "Ten Things You Didn't Know About IBJJF Bracketing",
+        "content": "if you're among the top ranked competitors in each division, the IBJJF will give you a special award each year. you need at least 80 ranking",
+        "score": 0.25766745,
+        "raw_content": null
+      },
+      {
+        "url": "https://jiujitsu.net/news/443/who-to-watch-at-the-los-angeles-winter-open",
+        "title": "Who to Watch at the Los Angeles Winter Open",
+        "content": "The #1 seed is Pablo Lavaselli, and the Argentinian warrants closer attention. By our estimation, Lavaselli is not getting enough credit in the broader BJJ",
+        "score": 0.20798618,
+        "raw_content": null
       }
     ],
-    "response_time": 2.41,
-    "request_id": "1763bbb3-872e-44c1-8bfb-7fe31b0453ed"
+    "response_time": 3.42,
+    "request_id": "9fdf73b5-388d-4bd5-b2d2-b4db05041e9c"
   },
   "errors": []
 }
