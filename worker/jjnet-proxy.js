@@ -40,19 +40,22 @@ export default {
       const hit = results.find((r) => /\/athlete\//.test(r.url || "")) || results[0];
       if (!hit) return json({ found: false, name }, 200, cors);
 
-      // 2) Use the content already returned, or extract the page for more.
-      let content = hit.content || "";
-      if (!/Rating:/i.test(content)) {
-        try {
-          const ex = await tavily(env, "extract", { urls: [hit.url], extract_depth: "basic" });
-          content = (ex.results && ex.results[0] && ex.results[0].raw_content) || content;
-        } catch { /* keep search content */ }
-      }
+      // 2) The clean athlete card ("Rating: X | Belt: Y | Team: Z | Country: c")
+      // lives in a BASIC extract. Search `content` is often a messy stats blob,
+      // and ADVANCED extract returns the whole SPA shell — so prefer basic,
+      // then fall back to search content only if needed.
+      let content = "";
+      try {
+        const ex = await tavily(env, "extract", { urls: [hit.url], extract_depth: "basic" });
+        content = (ex.results && ex.results[0] && ex.results[0].raw_content) || "";
+      } catch { /* fall through */ }
+      if (!/Rating:/i.test(content) && hit.content) content = hit.content;
 
       const info = parse(content, name);
       info.url = hit.url;
       info.source = "jiujitsu.net (via Tavily)";
-      info.found = info.rating != null || info.belt != null;
+      // Treat locating the athlete page as a hit even if parsing is thin.
+      info.found = /\/athlete\//.test(hit.url) || info.rating != null || info.belt != null;
       return json(info, 200, cors);
     } catch (e) {
       return json({ error: String(e && e.message || e) }, 502, cors);

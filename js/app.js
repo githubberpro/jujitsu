@@ -791,7 +791,10 @@
       rebuildOptions("saved:" + slugify(athlete.name));
       status.textContent = `Saved ${athlete.name}${athlete.rating != null ? ` (Elo ${athlete.rating})` : ""} — it now persists in the app.`;
     } catch (e) {
-      status.textContent = `Lookup failed: ${e.message}. Check your endpoint URL and that the Worker has the Tavily key.`;
+      const hint = /Failed to fetch|NetworkError|Load failed/i.test(e.message)
+        ? " — a 'Failed to fetch' usually means the endpoint URL is wrong, the Worker isn't deployed, or CORS is blocking it."
+        : "";
+      status.textContent = `Lookup failed: ${e.message}${hint} Tip: open <your-worker-url>?name=${encodeURIComponent(name)} directly to test it.`;
     }
   }
 
