@@ -397,10 +397,10 @@
         Athletes also profiled in this Atlas are highlighted — tap to open their card.
       </div>`;
 
-    // Saved free-form lookups persist here too (sorted by Elo, like the ranking).
-    const saved = getSavedLookups();
+    // Players you added from jiujitsu.net (Target Players lookups) persist here too.
+    const saved = getTargets().filter((t) => t.kind === "lookup");
     const savedHtml = saved.length ? `
-      <h4 class="mc-h" style="margin-top:0">⭐ Your saved lookups <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-mute)">— free-form searches pulled live from jiujitsu.net, saved on this device</span></h4>
+      <h4 class="mc-h" style="margin-top:0">⭐ Your added players <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-mute)">— pulled live from jiujitsu.net into your Target Players</span></h4>
       <div class="leaderboard" style="margin-bottom:26px">
         <div class="lb-row lb-head">
           <span class="lb-rank">Elo</span><span class="lb-name">Athlete</span><span class="lb-rating">Belt</span><span class="lb-ext"></span>
@@ -722,52 +722,61 @@
       <p class="mc-disclaimer">Built from ${esc(a.name)}'s jiujitsu.net rating/belt plus the gi-vs-no-gi style gap — an analytical scouting aid, not a prediction or a record of real bouts.</p>`;
   }
 
+  // Generated plans persist per opponent on this device (jja_gp_analyzed),
+  // and the last-viewed opponent is restored on return (jja_gp_last).
+  const LS_GP_LAST = "jja_gp_last";
+  const LS_GP_ANALYZED = "jja_gp_analyzed";
+  function getAnalyzed() { try { return JSON.parse(localStorage.getItem(LS_GP_ANALYZED) || "{}") || {}; } catch { return {}; } }
+  function markAnalyzed(key, name) {
+    const a = getAnalyzed(); a[key] = { name, ts: Date.now() };
+    try { localStorage.setItem(LS_GP_ANALYZED, JSON.stringify(a)); } catch {}
+  }
+
   function renderOpponent(value) {
-    if (value.startsWith("rank:")) {
-      const slug = value.slice(5);
-      const a = (RANKINGS.athletes || []).find((x) => slugify(x.name) === slug);
-      if (a) renderRankedMatchup(a);
-    } else if (value.startsWith("saved:")) {
-      const slug = value.slice(6);
-      const a = getSavedLookups().find((x) => slugify(x.name) === slug);
-      if (a) renderCustomMatchup(a);
-    } else {
-      renderMatchup(value.replace(/^roster:/, ""));
-    }
+    if (!value || value.indexOf("target:") !== 0) { $("#matchup-result").innerHTML = ""; return; }
+    const key = value.slice("target:".length);
+    const t = getTargets().find((x) => targetKey(x) === key);
+    if (!t) { $("#matchup-result").innerHTML = ""; return; }
+    if (t.kind === "roster") renderMatchup(t.rosterId);
+    else renderCustomMatchup(t);
+    markAnalyzed(key, t.name);
+    try { localStorage.setItem(LS_GP_LAST, value); } catch {}
+    const note = $("#gp-analyzed-note");
+    if (note) note.textContent = `Generated plans are saved on this device — ${Object.keys(getAnalyzed()).length} analysed (✓ in the list). Your last opponent is restored when you return.`;
+    const sel = $("#opp-select");
+    if (sel) { sel.innerHTML = buildOppOptions(); if ([...sel.options].some((o) => o.value === value)) sel.value = value; }
   }
 
+  // The opponent dropdown mirrors your Target Players watchlist (minus Noah),
+  // grouped by region (Asia first, then alphabetical). "✓" = a saved plan.
   function buildOppOptions() {
-    const tierRank = { GOAT: 0, Legend: 1, Elite: 2, Rising: 3 };
-    const roster = window.PLAYERS.filter((p) => p.id !== NOAH_ID)
-      .sort((a, b) => (tierRank[a.tier] - tierRank[b.tier]) || a.name.localeCompare(b.name));
-    const rosterSlugs = new Set(window.PLAYERS.map((p) => slugify(p.rankingName || p.name)));
-    const rankedOnly = (RANKINGS.athletes || []).filter((a) => !rosterSlugs.has(slugify(a.name)));
-    const saved = getSavedLookups();
-
+    const opp = getTargets().filter((t) => t.rosterId !== NOAH_ID);
+    const analyzed = getAnalyzed();
+    const extras = [...new Set(opp.map((t) => t.region))].filter((r) => !TP_BASE.includes(r)).sort();
+    const regions = [...TP_BASE, ...extras];
     let html = "";
-    if (saved.length) {
-      html += `<optgroup label="⭐ Looked up (saved)">` +
-        saved.map((a) => `<option value="saved:${slugify(a.name)}">${esc(a.name)}${a.rating != null ? ` — Elo ${a.rating}` : ""}</option>`).join("") +
-        `</optgroup>`;
+    for (const region of regions) {
+      const members = opp.filter((t) => t.region === region);
+      if (!members.length) continue;
+      html += `<optgroup label="${esc(region)}">` + members.map((t) => {
+        const key = targetKey(t);
+        const rp = t.kind === "roster" ? window.PLAYERS.find((p) => p.id === t.rosterId) : null;
+        const extra = rp ? ` — ${rp.tier}` : (t.rating != null ? ` — Elo ${t.rating}` : "");
+        return `<option value="target:${esc(key)}">${analyzed[key] ? "✓ " : ""}${esc(t.name)}${extra}</option>`;
+      }).join("") + `</optgroup>`;
     }
-    html += `<optgroup label="Atlas roster">` +
-      roster.map((p) => `<option value="roster:${p.id}">${p.flag} ${esc(p.name)} — ${p.tier}</option>`).join("") +
-      `</optgroup>`;
-    if (rankedOnly.length) {
-      html += `<optgroup label="jiujitsu.net rankings · Gi P4P (via Tavily)">` +
-        rankedOnly.map((a) => `<option value="rank:${slugify(a.name)}">#${a.rank} ${esc(a.name)} — Elo ${a.rating}</option>`).join("") +
-        `</optgroup>`;
-    }
-    return html;
+    return html || `<option value="">No target players yet — add some in Target Players</option>`;
   }
 
-  function refreshSavedClear() {
-    const el = $("#saved-clear");
-    if (!el) return;
-    const n = getSavedLookups().length;
-    el.innerHTML = n ? `<button type="button" class="gp-linkbtn" id="saved-clear-btn">Clear ${n} saved opponent${n > 1 ? "s" : ""}</button>` : "";
-    const btn = $("#saved-clear-btn");
-    if (btn) btn.addEventListener("click", () => { clearLookups(); rebuildOptions(); refreshSavedClear(); renderRankings(); $("#lookup-status").textContent = "Cleared saved opponents."; });
+  // Jump from a Target Players card straight into that opponent's game plan.
+  function gotoGamePlan(key) {
+    const tab = $('nav.tabs button[data-view="gameplan"]');
+    if (tab) tab.click();
+    const val = "target:" + key;
+    const sel = $("#opp-select");
+    if (sel) { sel.innerHTML = buildOppOptions(); if ([...sel.options].some((o) => o.value === val)) sel.value = val; }
+    renderOpponent(val);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function rebuildOptions(selectValue) {
@@ -784,12 +793,16 @@
     if (!name) return;
     const slug = slugify(name);
 
-    const inRoster = window.PLAYERS.find((p) => p.id !== NOAH_ID && (slugify(p.rankingName || p.name) === slug || slugify(p.name) === slug));
-    if (inRoster) { rebuildOptions("roster:" + inRoster.id); status.textContent = `“${inRoster.name}” is in the Atlas roster — showing full analysis.`; return; }
-    const inRank = (RANKINGS.athletes || []).find((a) => slugify(a.name) === slug);
-    if (inRank) { rebuildOptions("rank:" + slug); status.textContent = `“${inRank.name}” is already in the jiujitsu.net rankings.`; return; }
-    const already = getSavedLookups().find((a) => slugify(a.name) === slug);
-    if (already) { rebuildOptions("saved:" + slug); status.textContent = `Loaded “${already.name}” from your saved lookups.`; return; }
+    const existing = getTargets().find((t) => slugify(t.name) === slug);
+    if (existing) { rebuildOptions("target:" + targetKey(existing)); status.textContent = `“${existing.name}” is already on your target list — selected.`; return; }
+
+    const rp = window.PLAYERS.find((p) => p.id !== NOAH_ID && (slugify(p.rankingName || p.name) === slug || slugify(p.name) === slug));
+    if (rp) {
+      addTarget({ rosterId: rp.id, name: rp.name, region: regionOf(rp), kind: "roster" });
+      renderTargets(); renderHeroKpis(); rebuildOptions("target:r:" + rp.id);
+      status.textContent = `Added ${rp.name} to your targets (${regionOf(rp)}) and selected them.`;
+      return;
+    }
 
     const proxy = getProxyUrl();
     if (!proxy) { showProxyConfig(true); status.innerHTML = `Set your lookup endpoint once to enable live search. <a href="https://github.com/githubberpro/jujitsu/blob/main/worker/README.md" target="_blank" rel="noopener noreferrer">Setup guide ↗</a>`; return; }
@@ -803,12 +816,12 @@
       const data = await res.json();
       if (data.error) throw new Error(data.error);
       if (!data.found) { status.textContent = `No jiujitsu.net profile found for “${name}”. Try their full name.`; return; }
-      const athlete = { name: data.name || name, rating: data.rating ?? null, belt: data.belt || null, team: data.team || null, country: data.country || null, url: data.url || null, source: data.source || "jiujitsu.net via Tavily", ts: Date.now() };
-      saveLookup(athlete);
-      refreshSavedClear();
-      rebuildOptions("saved:" + slugify(athlete.name));
-      renderRankings();
-      status.textContent = `Saved ${athlete.name}${athlete.rating != null ? ` (Elo ${athlete.rating})` : ""} — now saved here and in the 📊 Rankings tab.`;
+      const region = regionFromCC(data.country);
+      const t = { name: data.name || name, rating: data.rating ?? null, belt: data.belt || null, team: data.team || null, country: data.country || null, url: data.url || null, region, kind: "lookup" };
+      addTarget(t);
+      renderTargets(); renderHeroKpis(); renderRankings();
+      rebuildOptions("target:l:" + slugify(t.name));
+      status.textContent = `Added ${t.name} to ${region}${t.rating != null ? ` (Elo ${t.rating})` : ""} — now on your Target Players list.`;
     } catch (e) {
       const hint = /Failed to fetch|NetworkError|Load failed/i.test(e.message)
         ? " — a 'Failed to fetch' usually means the endpoint URL is wrong, the Worker isn't deployed, or CORS is blocking it."
@@ -825,13 +838,15 @@
   function renderGamePlan() {
     const sel = $("#opp-select");
     if (!sel) return;
+    seedTargets(false);
     sel.innerHTML = buildOppOptions();
-    const def = window.PLAYERS.find((p) => p.id === "kade-ruotolo") ? "roster:kade-ruotolo" : "roster:" + window.PLAYERS.find((p) => p.id !== NOAH_ID).id;
-    sel.value = def;
+    let last = null; try { last = localStorage.getItem(LS_GP_LAST); } catch {}
+    const values = [...sel.options].map((o) => o.value).filter(Boolean);
+    const def = (last && values.includes(last)) ? last : (values[0] || "");
+    if (def) { sel.value = def; renderOpponent(def); }
     sel.addEventListener("change", () => renderOpponent(sel.value));
-    renderOpponent(def);
 
-    // Free-form lookup wiring.
+    // Free-form lookup wiring (adds to Target Players).
     const input = $("#opp-lookup"), btn = $("#opp-lookup-btn");
     if (btn) btn.addEventListener("click", () => doLookup(input.value));
     if (input) input.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); doLookup(input.value); } });
@@ -844,7 +859,6 @@
       $("#lookup-status").textContent = purl.value.trim() ? "Saved your lookup endpoint." : "Cleared the endpoint.";
       showProxyConfig(false);
     });
-    refreshSavedClear();
   }
 
   /* ---------- Target Players (region-grouped watchlist) ---------- */
@@ -916,6 +930,11 @@
             <div class="m"><b>${p.stats.adccGold}</b><span>ADCC Gold</span></div>
             <div class="m"><b>${p.stats.subRate}%</b><span>Finish Rate</span></div>
           </div>
+          <div class="tp-actions">
+            ${p.id !== NOAH_ID
+              ? `<button class="tp-gameplan" data-key="${esc(key)}">🧠 Game plan vs ${esc(p.name.split(" ")[0])}</button>`
+              : `<span class="tp-self">🎯 The protagonist</span>`}
+          </div>
         </div>`;
     }
     const flag = flagFromCC(t.country);
@@ -936,6 +955,9 @@
         <div class="tags">
           <a class="tag" href="${t.url || JJNET}" target="_blank" rel="noopener noreferrer">jiujitsu.net ↗</a>
           <span class="tag">added via lookup</span>
+        </div>
+        <div class="tp-actions">
+          <button class="tp-gameplan" data-key="${esc(key)}">🧠 Game plan vs ${esc(t.name.split(" ")[0])}</button>
         </div>
       </div>`;
   }
@@ -967,8 +989,12 @@
       removeTarget(b.dataset.key);
       renderTargets(); renderHeroKpis();
     }));
+    $$(".tp-gameplan", wrap).forEach((b) => b.addEventListener("click", (e) => {
+      e.stopPropagation();
+      gotoGamePlan(b.dataset.key);
+    }));
     $$(".card.tp-roster", wrap).forEach((card) => {
-      const open = (e) => { if (e.target.closest(".tp-remove")) return; openModal(card.dataset.id); };
+      const open = (e) => { if (e.target.closest(".tp-remove") || e.target.closest(".tp-gameplan")) return; openModal(card.dataset.id); };
       card.addEventListener("click", open);
       card.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(card.dataset.id); } });
     });

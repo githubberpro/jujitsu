@@ -162,6 +162,14 @@ main { max-width: 1200px; margin: 0 auto; padding: 30px 22px 80px; }
 }
 .tp-remove:hover { background: var(--red); border-color: var(--red); color: #fff; }
 .tier-badge.tier-inline { position: static; top: auto; right: auto; }
+.tp-actions { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); }
+.tp-gameplan {
+  width: 100%; background: rgba(168,121,255,.12); color: var(--purple); border: 1px solid rgba(168,121,255,.4);
+  border-radius: 9px; padding: 9px 12px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit;
+  transition: all .15s;
+}
+.tp-gameplan:hover { background: var(--purple); color: #fff; border-color: var(--purple); }
+.tp-self { display: inline-block; font-size: 12px; color: var(--text-mute); font-weight: 600; }
 .card.tp-lookup .avatar.opp-av { background: linear-gradient(135deg, var(--blue), #6db3ff); }
 .card.tp-lookup .tags a.tag:hover { border-color: var(--blue); color: var(--blue); }
 

@@ -66,14 +66,15 @@
     <!-- ===== Game Plan Lab ===== -->
     <section id="view-gameplan" class="view">
       <h2 class="section-head">Game Plan Lab</h2>
-      <p class="section-sub">Pair <b>Noah Lim</b> against any competitor and get a data-driven strategy for how he could beat them — built from each athlete's attributes, fighting style, and competitive record.</p>
+      <p class="section-sub">Pair <b>Noah Lim</b> against any player on your <b>🎯 Target Players</b> list and get a data-driven strategy for how he could beat them. Generated plans are saved on this device.</p>
       <div class="gp-controls">
         <label for="opp-select">Noah Lim 🇸🇬 &nbsp;vs.</label>
         <select id="opp-select" aria-label="Choose opponent"></select>
       </div>
+      <div id="gp-analyzed-note" class="lookup-status"></div>
 
       <div class="gp-lookup">
-        <input id="opp-lookup" type="text" placeholder="Or look up ANY opponent by name — live from jiujitsu.net…" autocomplete="off" />
+        <input id="opp-lookup" type="text" placeholder="Add a new opponent by name — live from jiujitsu.net…" autocomplete="off" />
         <button id="opp-lookup-btn" type="button">🔎 Look up</button>
         <button id="gp-settings-toggle" class="gp-linkbtn" type="button">⚙︎ Endpoint</button>
       </div>
