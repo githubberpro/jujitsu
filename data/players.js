@@ -458,9 +458,9 @@ window.PLAYERS = [
     tier: "Rising",
     stats: { adccGold: 0, worldTitles: 0, subRate: 68, control: 78, submissions: 86, guard: 88, takedowns: 78, cardio: 93 },
     signature: ["Guard attacks", "Submission chains", "Aggressive scrambles"],
-    strengths: "One of Southeast Asia's brightest prospects — a Singaporean teenage phenom out of Evolve who has stepped in against far more experienced grapplers on the ONE Championship submission-grappling stage. Composed and submission-hungry well beyond his years, he is a poster child for the next generation of Asian talent and the region's fast-professionalizing scene.",
-    weaknesses: "Still early in his development with limited elite-level mileage; the jump against seasoned world-class veterans over full-length matches is his proving ground. Physical maturation, positional patience, and consistency against the established global top tier are all still ahead of him.",
-    accolades: ["Singaporean prodigy", "ONE Championship submission grappling competitor", "Evolve standout", "Rising SEA talent"]
+    strengths: "One of Southeast Asia's brightest prospects — a Singaporean teenage phenom out of Evolve, composed and submission-hungry well beyond his years. He has become a poster child for the next generation of Asian no-gi talent and the region's fast-professionalizing grappling scene.",
+    weaknesses: "Still early in his development with limited elite-level mileage; the jump against seasoned world-class veterans over full-length matches is his proving ground. Physical maturation, positional patience, and consistency against the established top tier are all still ahead of him.",
+    accolades: ["Singaporean prodigy", "Evolve standout", "Rising SEA no-gi talent"]
   },
   {
     id: "craig-jones",
