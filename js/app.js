@@ -397,8 +397,25 @@
         Athletes also profiled in this Atlas are highlighted — tap to open their card.
       </div>`;
 
+    // Saved free-form lookups persist here too (sorted by Elo, like the ranking).
+    const saved = getSavedLookups();
+    const savedHtml = saved.length ? `
+      <h4 class="mc-h" style="margin-top:0">⭐ Your saved lookups <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-mute)">— free-form searches pulled live from jiujitsu.net, saved on this device</span></h4>
+      <div class="leaderboard" style="margin-bottom:26px">
+        <div class="lb-row lb-head">
+          <span class="lb-rank">Elo</span><span class="lb-name">Athlete</span><span class="lb-rating">Belt</span><span class="lb-ext"></span>
+        </div>
+        ${saved.slice().sort((a, b) => (b.rating || 0) - (a.rating || 0)).map((a) => `
+          <div class="lb-row">
+            <span class="lb-rank">${a.rating != null ? a.rating : "—"}</span>
+            <span class="lb-name">${esc(a.name)}${a.team ? ` <span style="color:var(--text-mute);font-weight:400">· ${esc(a.team)}${a.country ? ", " + esc(a.country) : ""}</span>` : ""}</span>
+            <span class="lb-rating" style="color:var(--text-dim)">${a.belt ? esc(a.belt) : "—"}</span>
+            <a class="lb-ext" href="${a.url || JJNET}" target="_blank" rel="noopener noreferrer" title="View on jiujitsu.net">↗</a>
+          </div>`).join("")}
+      </div>` : "";
+
     if (!athletes.length) {
-      wrap.innerHTML = header + `<div class="empty">No rankings synced yet. Once the TAVILY_API_KEY secret is set and the "Update rankings" workflow runs, the current jiujitsu.net standings appear here.</div>`;
+      wrap.innerHTML = header + savedHtml + `<div class="empty">No rankings synced yet. Once the TAVILY_API_KEY secret is set and the "Update rankings" workflow runs, the current jiujitsu.net standings appear here.</div>`;
       return;
     }
 
@@ -414,7 +431,8 @@
         </div>`;
     }).join("");
 
-    wrap.innerHTML = header + `
+    wrap.innerHTML = header + savedHtml + `
+      <h4 class="mc-h" style="margin-top:0">jiujitsu.net · Gi Pound-for-Pound</h4>
       <div class="leaderboard">
         <div class="lb-row lb-head">
           <span class="lb-rank">Rank</span>
@@ -749,7 +767,7 @@
     const n = getSavedLookups().length;
     el.innerHTML = n ? `<button type="button" class="gp-linkbtn" id="saved-clear-btn">Clear ${n} saved opponent${n > 1 ? "s" : ""}</button>` : "";
     const btn = $("#saved-clear-btn");
-    if (btn) btn.addEventListener("click", () => { clearLookups(); rebuildOptions(); refreshSavedClear(); $("#lookup-status").textContent = "Cleared saved opponents."; });
+    if (btn) btn.addEventListener("click", () => { clearLookups(); rebuildOptions(); refreshSavedClear(); renderRankings(); $("#lookup-status").textContent = "Cleared saved opponents."; });
   }
 
   function rebuildOptions(selectValue) {
@@ -789,7 +807,8 @@
       saveLookup(athlete);
       refreshSavedClear();
       rebuildOptions("saved:" + slugify(athlete.name));
-      status.textContent = `Saved ${athlete.name}${athlete.rating != null ? ` (Elo ${athlete.rating})` : ""} — it now persists in the app.`;
+      renderRankings();
+      status.textContent = `Saved ${athlete.name}${athlete.rating != null ? ` (Elo ${athlete.rating})` : ""} — now saved here and in the 📊 Rankings tab.`;
     } catch (e) {
       const hint = /Failed to fetch|NetworkError|Load failed/i.test(e.message)
         ? " — a 'Failed to fetch' usually means the endpoint URL is wrong, the Worker isn't deployed, or CORS is blocking it."
