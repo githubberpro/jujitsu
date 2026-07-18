@@ -447,7 +447,8 @@ window.PLAYERS = [
   },
   {
     id: "noah-lim",
-    name: "Noah Lim",
+    name: "Noah Lim Tian Run",
+    rankingName: "Noah Lim Tian Run",
     nickname: "",
     country: "Singapore",
     flag: "🇸🇬",

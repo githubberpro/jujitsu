@@ -5,7 +5,7 @@ A self-contained web app that profiles the world's top jiu-jitsu (BJJ / grapplin
 ## Features
 
 ### 🎯 Target Players (watchlist)
-- A **region-grouped scouting watchlist** you build yourself. **Asia is pre-loaded** with its top players (Yuki Nakai, Masakazu Imanari, Shinya Aoki, Faisal Al Ketbi, Meggie Ochoa, Constance Lien, Noah Lim); the other regions start empty.
+- A **region-grouped scouting watchlist** you build yourself. **Asia is pre-loaded** with its top players (Yuki Nakai, Masakazu Imanari, Shinya Aoki, Faisal Al Ketbi, Meggie Ochoa, Constance Lien, Noah Lim Tian Run); the other regions start empty.
 - **Add any player by name** — retrieved live from jiujitsu.net via the Worker (Elo, belt, team, country) and auto-filed into the right region by nationality. **Remove** any player with the × button. Everything persists in your browser; **Reset** restores the default Asia list.
 - Regions are ordered **Asia first, then alphabetically** (Europe, North America, Oceania, South America). Roster players keep their full attribute profile (click to open); looked-up players show their jiujitsu.net data.
 - The full **27 curated profiles** (Gordon Ryan, Roger Gracie, Buchecha, the Ruotolos, Craig Jones, etc., tiered GOAT / Legend / Elite / Rising) still power the profile modals and the Game Plan Lab.
@@ -15,7 +15,7 @@ A self-contained web app that profiles the world's top jiu-jitsu (BJJ / grapplin
 - **Search** (name, team, country, style) plus **region filters** and **style filters** (Gi / No-Gi / Women / GOAT-tier) that combine.
 
 ### 🧠 Game Plan Lab
-- Pair **Noah Lim** against any player on your **Target Players** list (the dropdown mirrors that watchlist, grouped by region, minus Noah) and get a **data-driven strategy** for how he could win.
+- Pair **Noah Lim Tian Run** against any player on your **Target Players** list (the dropdown mirrors that watchlist, grouped by region, minus Noah) and get a **data-driven strategy** for how he could win.
 - **Generated plans persist** on your device — the last opponent is restored when you return, and analysed opponents are marked with a ✓ in the dropdown. Each **Target Players card has a "🧠 Game plan vs …" button** that jumps straight to that matchup.
 - **Free-form live lookup** — type any opponent and pull their jiujitsu.net data (Elo, belt, team, country) via a free **Cloudflare Worker** proxy (`worker/`, holds the Tavily key server-side). Looked-up opponents are **saved in your browser** and persist across reloads under a "⭐ Looked up (saved)" group. Setup: [`worker/README.md`](worker/README.md).
 - Computes an attribute matchup (dual bars), a composite-index verdict (favoured / even / underdog / long-shot), a résumé comparison (titles & ADCC golds), and the opponent's record as the historical basis.
