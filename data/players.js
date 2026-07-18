@@ -1,7 +1,9 @@
 // Top jiu-jitsu competitors — profiles, stats, and technical analysis.
-// Data reflects widely reported records and competitive reputations through ~2024–2025.
-// Records are approximate and drawn from public competition history; treat as a scouting
-// reference rather than an official ledger.
+// Records fact-checked against public sources (Wikipedia, BJJ Heroes, ADCC, IBJJF,
+// FloGrappling, JJIF, SEA Games) through ~2025. ADCC counts follow the "total gold
+// medals" convention (division + superfight titles). Attribute ratings (control,
+// submissions, guard, etc.) remain an editorial scouting estimate, not official stats.
+// Where a claim could not be verified it has been generalised or removed rather than asserted.
 
 window.PLAYERS = [
   {
@@ -17,11 +19,11 @@ window.PLAYERS = [
     born: 1995,
     style: "No-Gi Pressure & Systematized Control",
     tier: "GOAT",
-    stats: { adccGold: 4, worldTitles: 8, subRate: 78, control: 99, submissions: 97, guard: 92, takedowns: 80, cardio: 95 },
+    stats: { adccGold: 7, worldTitles: 3, subRate: 78, control: 99, submissions: 97, guard: 92, takedowns: 80, cardio: 95 },
     signature: ["Body triangle back system", "Leg lock entanglements", "Chest-to-chest pressure passing"],
     strengths: "Widely regarded as the greatest no-gi grappler of all time. Ryan's game is a fully systematized flowchart: he chains passing to control to the back with almost no wasted motion, and his back-attack and leg-lock systems give him submission threats from nearly every position. Elite fight IQ, positional dominance, and psychological pressure over long matches.",
     weaknesses: "Recurrent stomach/health issues have interrupted his competition schedule and caused withdrawals. Has competed far less in the gi, where his dominance is less established. His style relies on imposing pace and pressure, so a fast-paced younger generation testing his cardio over multiple hard matches in one day is the main theoretical threat.",
-    accolades: ["4x ADCC Champion", "ADCC Superfight Champion", "Multiple-time No-Gi World Champion", "WNO Champion"]
+    accolades: ["7x ADCC gold medalist (all-time record)", "3x ADCC Superfight Champion", "3x IBJJF No-Gi World Champion", "WNO Champion"]
   },
   {
     id: "roger-gracie",
@@ -36,11 +38,11 @@ window.PLAYERS = [
     born: 1981,
     style: "Fundamental Gi Mastery",
     tier: "GOAT",
-    stats: { adccGold: 1, worldTitles: 10, subRate: 90, control: 97, submissions: 98, guard: 90, takedowns: 82, cardio: 90 },
+    stats: { adccGold: 3, worldTitles: 10, subRate: 90, control: 97, submissions: 98, guard: 90, takedowns: 82, cardio: 90 },
     signature: ["Cross-collar choke from mount", "Closed guard control", "Textbook mount escape denial"],
     strengths: "Frequently cited as the greatest gi competitor ever. Famous for winning world titles finishing nearly every opponent with basic, high-percentage techniques — the mount-to-cross-collar-choke sequence in particular. Perfect fundamentals, timing, and pressure make his game a blueprint for the entire sport.",
     weaknesses: "Competed in an earlier era with a different meta; the modern leg-lock and guard-retention game evolved after his gi peak. Split focus toward an MMA career mid-prime. Relative to today's specialists his takedown entries were conventional rather than innovative.",
-    accolades: ["10x IBJJF World Champion", "ADCC Champion", "3x Absolute World Champion", "Considered the gi GOAT"]
+    accolades: ["10x IBJJF World Champion", "ADCC Champion (2005 double gold) & Superfight (2007)", "3x Absolute World Champion", "Considered the gi GOAT"]
   },
   {
     id: "marcus-buchecha",
@@ -55,11 +57,11 @@ window.PLAYERS = [
     born: 1990,
     style: "Athletic Pressure & Passing",
     tier: "Legend",
-    stats: { adccGold: 1, worldTitles: 13, subRate: 65, control: 94, submissions: 88, guard: 88, takedowns: 78, cardio: 92 },
+    stats: { adccGold: 2, worldTitles: 13, subRate: 65, control: 94, submissions: 88, guard: 88, takedowns: 78, cardio: 92 },
     signature: ["Over-under pressure pass", "Explosive guard passing", "Knee-cut entries"],
     strengths: "Record 13-time IBJJF World Champion — the most decorated gi competitor in history by title count. A rare blend of size, explosiveness, and technical passing. Dominated the heavy and absolute divisions for a decade before transitioning to MMA with ONE Championship.",
     weaknesses: "As a big athlete, his game depended partly on top pressure and athleticism that is harder to maintain with age. Transitioned to MMA relatively late. Faced a strong rivalry with Rodolfo Vieira that exposed high-level competitive battles rather than easy dominance.",
-    accolades: ["13x IBJJF World Champion", "ADCC Champion", "6x Absolute World Champion", "Most gi world titles all-time"]
+    accolades: ["13x IBJJF World Champion", "2x ADCC Champion", "6x Absolute World Champion", "Most gi world titles all-time"]
   },
   {
     id: "marcelo-garcia",
@@ -93,11 +95,11 @@ window.PLAYERS = [
     born: 1982,
     style: "Complete All-Rounder",
     tier: "Legend",
-    stats: { adccGold: 3, worldTitles: 6, subRate: 70, control: 93, submissions: 86, guard: 89, takedowns: 84, cardio: 94 },
+    stats: { adccGold: 6, worldTitles: 6, subRate: 70, control: 93, submissions: 86, guard: 89, takedowns: 84, cardio: 94 },
     signature: ["Guard passing pressure", "Takedown chains", "Head coach systems"],
     strengths: "One of the most complete competitors ever and the architect of Atos, a powerhouse competition team. Multiple-time world and ADCC champion who later became the sport's most successful modern head coach, developing champions like the Ruotolos and Kaynan Duarte.",
     weaknesses: "His famous 2022 ADCC superfight loss to Gordon Ryan marked a symbolic passing of the torch. Now primarily a coach; competitive appearances are rare, so his current form is untested against the newest generation.",
-    accolades: ["3x ADCC Champion", "6x World Champion", "Founder & head coach of Atos"]
+    accolades: ["6x ADCC gold medalist (record 4 Superfight titles)", "6x IBJJF World Champion", "Founder & head coach of Atos"]
   },
   {
     id: "nicholas-meregali",
@@ -152,9 +154,9 @@ window.PLAYERS = [
     tier: "Elite",
     stats: { adccGold: 1, worldTitles: 2, subRate: 75, control: 84, submissions: 92, guard: 90, takedowns: 82, cardio: 97 },
     signature: ["Darce choke", "Marcelotine (arm-in guillotine)", "Relentless pace"],
-    strengths: "ADCC Champion at just 20, and a ONE Championship submission grappling world champion. Blistering pace, world-class scrambles, and a submission-first mentality make him electric to watch. Threatens finishes from everywhere and rarely stalls.",
+    strengths: "ADCC Champion at just 19 — the youngest ever — and the inaugural ONE Lightweight Submission Grappling World Champion. Blistering pace, world-class scrambles, and a submission-first mentality make him electric to watch. Threatens finishes from everywhere and rarely stalls.",
     weaknesses: "His high-risk, submission-hunting style occasionally concedes position against elite defensive grapplers. As a lightweight, moving up in weight or facing larger specialists tests the limits of his scramble-based game. Gi resume is lighter than no-gi.",
-    accolades: ["ADCC Champion", "ONE Championship Grappling Champion", "2x No-Gi World Champion"]
+    accolades: ["ADCC Champion (2022, youngest ever)", "ONE Lightweight Submission Grappling World Champion", "2x IBJJF World Champion (brown belt)"]
   },
   {
     id: "tye-ruotolo",
@@ -169,11 +171,11 @@ window.PLAYERS = [
     born: 2003,
     style: "Dynamic Passing & Pace",
     tier: "Elite",
-    stats: { adccGold: 1, worldTitles: 2, subRate: 72, control: 87, submissions: 89, guard: 88, takedowns: 80, cardio: 97 },
+    stats: { adccGold: 0, worldTitles: 2, subRate: 72, control: 87, submissions: 89, guard: 88, takedowns: 80, cardio: 97 },
     signature: ["Guard passing entries", "Back takes", "High-output scrambles"],
-    strengths: "ADCC Champion and ONE Championship titleholder alongside twin brother Kade. Tye's passing pressure and cardio are elite, and his aggressive, entertaining style has made him one of the faces of modern no-gi grappling. Excellent at maintaining a punishing pace over long matches.",
+    strengths: "ONE Welterweight Submission Grappling World Champion and ADCC bronze medalist, competing alongside twin brother Kade. Tye's passing pressure and cardio are elite, and his aggressive, entertaining style has made him one of the faces of modern no-gi grappling. Excellent at maintaining a punishing pace over long matches.",
     weaknesses: "Like his brother, an all-action approach can leave openings against patient counter-grapplers. Primarily a no-gi specialist. Still refining the positional patience that separates good finishers from complete dominators at the very top.",
-    accolades: ["ADCC Champion", "ONE Championship Grappling Champion", "2x No-Gi World Champion"]
+    accolades: ["ONE Welterweight Submission Grappling World Champion", "ADCC bronze medalist (2022)", "2x IBJJF World Champion (brown belt)"]
   },
   {
     id: "mica-galvao",
@@ -189,7 +191,7 @@ window.PLAYERS = [
     born: 2003,
     style: "Complete Modern Game",
     tier: "Elite",
-    stats: { adccGold: 1, worldTitles: 2, subRate: 76, control: 90, submissions: 90, guard: 91, takedowns: 83, cardio: 94 },
+    stats: { adccGold: 1, worldTitles: 1, subRate: 76, control: 90, submissions: 90, guard: 91, takedowns: 83, cardio: 94 },
     signature: ["Well-rounded attacks", "Back control", "Guard passing & retention"],
     strengths: "A generational talent who won ADCC gold at a very young age and holds gi world titles. Considered one of the most complete young grapplers on the planet — strong in the gi and no-gi, on top and bottom, with mature match management well beyond his age.",
     weaknesses: "Faced a doping-related suspension controversy that briefly disrupted his momentum. As a smaller competitor stepping into open competition, physical size gaps against heavyweights remain a natural ceiling. Still building his legacy against peak veteran opposition.",
@@ -205,14 +207,14 @@ window.PLAYERS = [
     division: "Both",
     weight: "Heavyweight / Absolute",
     belt: "Black",
-    born: 1999,
+    born: 1998,
     style: "Modern Pressure & Leg Locks",
     tier: "Elite",
-    stats: { adccGold: 2, worldTitles: 2, subRate: 71, control: 92, submissions: 88, guard: 86, takedowns: 81, cardio: 90 },
+    stats: { adccGold: 4, worldTitles: 2, subRate: 71, control: 92, submissions: 88, guard: 86, takedowns: 81, cardio: 90 },
     signature: ["Body-lock passing", "Leg entanglements", "Back control"],
     strengths: "Multiple-time ADCC Champion and one of the top heavyweights in both gi and no-gi. A modern all-rounder from Atos with heavy pressure passing married to a sharp leg-lock and back-attack game. Beats elite opposition at the highest level.",
     weaknesses: "Sits in an extremely deep heavyweight division alongside Gordon Ryan and Nicholas Meregali, which raises the bar for absolute dominance. Occasionally point-oriented in close matches rather than finishing. Consistency at superfight level is his next benchmark.",
-    accolades: ["2x ADCC Champion", "IBJJF World Champion", "Atos heavyweight anchor"]
+    accolades: ["4x ADCC Champion", "IBJJF World Champion", "Atos heavyweight anchor"]
   },
   {
     id: "felipe-pena",
@@ -224,14 +226,14 @@ window.PLAYERS = [
     division: "Both",
     weight: "Heavyweight / Absolute",
     belt: "Black",
-    born: 1990,
+    born: 1991,
     style: "Guard & Submission Hunting",
     tier: "Elite",
-    stats: { adccGold: 1, worldTitles: 4, subRate: 79, control: 87, submissions: 92, guard: 94, takedowns: 72, cardio: 89 },
+    stats: { adccGold: 3, worldTitles: 3, subRate: 79, control: 87, submissions: 92, guard: 94, takedowns: 72, cardio: 89 },
     signature: ["Triangle & armbar setups", "Guard retention", "Back attacks"],
     strengths: "Multiple-time world champion and ADCC champion known as one of the few competitors to hold notable wins over Gordon Ryan. A dangerous submission hunter with an excellent guard and finishing instinct in both gi and no-gi. Big-match performer.",
     weaknesses: "His rivalry with Gordon Ryan has been largely one-sided in Ryan's favor across their meetings. Takedown/wrestling is the softer part of his game. Competition activity has been intermittent relative to the busiest full-time athletes.",
-    accolades: ["ADCC Champion", "4x IBJJF World Champion", "Notable wins over Gordon Ryan"]
+    accolades: ["3x ADCC Champion", "Multiple-time IBJJF World & No-Gi World Champion", "Notable win over Gordon Ryan"]
   },
   {
     id: "beatriz-mesquita",
@@ -243,14 +245,14 @@ window.PLAYERS = [
     division: "Both",
     weight: "Middleweight / Absolute",
     belt: "Black",
-    born: 1993,
+    born: 1991,
     style: "Dominant All-Rounder",
     tier: "Legend",
-    stats: { adccGold: 2, worldTitles: 10, subRate: 68, control: 95, submissions: 87, guard: 92, takedowns: 80, cardio: 93 },
+    stats: { adccGold: 1, worldTitles: 10, subRate: 68, control: 95, submissions: 87, guard: 92, takedowns: 80, cardio: 93 },
     signature: ["Pressure passing", "Back control", "Relentless top game"],
-    strengths: "One of the most decorated female grapplers in history with double-digit world titles and multiple ADCC golds. Dominant in both gi and no-gi with a complete, pressure-heavy game and elite competitive consistency across more than a decade at the top.",
+    strengths: "One of the most decorated female grapplers in history with double-digit world titles and an ADCC gold. Dominant in both gi and no-gi with a complete, pressure-heavy game and elite competitive consistency across more than a decade at the top.",
     weaknesses: "Faces a rising, deeper women's field than early in her career. As with many long-reigning champions, the newest wave of specialists presents fresh stylistic challenges. Point-control style yields fewer finishes against elite peers.",
-    accolades: ["2x ADCC Champion", "10x IBJJF World Champion", "Women's gi GOAT contender"]
+    accolades: ["ADCC Champion (2017)", "10x IBJJF World Champion", "Women's gi GOAT contender"]
   },
   {
     id: "ffion-davies",
@@ -258,7 +260,7 @@ window.PLAYERS = [
     nickname: "",
     country: "Wales / UK",
     flag: "🏴",
-    team: "Essa Academy / B-Team-affiliated",
+    team: "Essential Jiu Jitsu (Atos) / ARMA BJJ",
     division: "Both",
     weight: "Lightweight",
     belt: "Black",
@@ -284,11 +286,11 @@ window.PLAYERS = [
     born: 1985,
     style: "Size, Pressure & Dominance",
     tier: "Legend",
-    stats: { adccGold: 0, worldTitles: 10, subRate: 74, control: 96, submissions: 88, guard: 84, takedowns: 80, cardio: 88 },
+    stats: { adccGold: 4, worldTitles: 6, subRate: 74, control: 96, submissions: 88, guard: 84, takedowns: 80, cardio: 88 },
     signature: ["Crushing top pressure", "Mount control", "Submission from dominant positions"],
     strengths: "One of the most dominant heavyweight women ever, with a long reign of world titles and near-total control of her division for years. Overwhelming pressure, control, and finishing ability from the top made her nearly unbeatable in the gi at her peak.",
     weaknesses: "Extreme size and physicality invited scrutiny and limited the depth of opposition in her weight class. Later split focus to an MMA career with mixed results. Style was built on physical dominance more than the technical guard artistry of some peers.",
-    accolades: ["10x IBJJF World Champion", "Multiple-time absolute medalist", "Dominant heavyweight reign"]
+    accolades: ["Multiple-time IBJJF World Champion", "4x ADCC Champion (+60kg)", "Dominant heavyweight reign"]
   },
   {
     id: "diogo-reis",
@@ -296,11 +298,11 @@ window.PLAYERS = [
     nickname: "Baby Shark",
     country: "Brazil",
     flag: "🇧🇷",
-    team: "Dream Art",
+    team: "Fight Sports / Melqui Galvão (Manaus)",
     division: "No-Gi",
     weight: "Featherweight / Rooster",
     belt: "Black",
-    born: 2004,
+    born: 2002,
     style: "Submission-Heavy Small Frame",
     tier: "Elite",
     stats: { adccGold: 2, worldTitles: 2, subRate: 80, control: 85, submissions: 93, guard: 91, takedowns: 78, cardio: 96 },
@@ -362,9 +364,9 @@ window.PLAYERS = [
     tier: "Elite",
     stats: { adccGold: 0, worldTitles: 0, subRate: 55, control: 90, submissions: 80, guard: 82, takedowns: 84, cardio: 88 },
     signature: ["Top pressure", "Passing control", "Points management"],
-    strengths: "The face of the Middle East's grappling boom and one of the most decorated Emirati competitors ever. A multiple-time Abu Dhabi World Professional Jiu-Jitsu Championship medalist and ADCC medalist, he embodies the UAE's massive state-backed investment in the sport and has beaten world-class opposition on home soil.",
+    strengths: "The face of the Middle East's grappling boom and one of the most decorated Emirati competitors ever. A multiple-time Abu Dhabi World Pro champion and two-time Asian Games gold medalist (2018, 2023), he embodies the UAE's massive state-backed investment in the sport and has beaten world-class opposition on home soil.",
     weaknesses: "A control- and points-oriented game yields fewer submissions against elite finishers. Much of his headline success has come at UAE-hosted events; consistently reaching the top of the podium at ADCC and IBJJF Worlds abroad remains the benchmark he chases.",
-    accolades: ["Abu Dhabi World Pro medalist", "ADCC medalist", "Leading Emirati grappler", "Asian Games / regional standout"]
+    accolades: ["6x Abu Dhabi World Pro champion", "2x Asian Games gold medalist (2018, 2023)", "World Games gold medalist (2022)", "Leading Emirati grappler"]
   },
   {
     id: "tommy-langaker",
@@ -381,9 +383,9 @@ window.PLAYERS = [
     tier: "Elite",
     stats: { adccGold: 0, worldTitles: 1, subRate: 64, control: 86, submissions: 85, guard: 90, takedowns: 79, cardio: 89 },
     signature: ["Modern guard", "Back takes", "Smooth passing"],
-    strengths: "One of Europe's premier grapplers and a leading figure in the strong Scandinavian scene out of Frontline Academy. A polished all-rounder in gi and no-gi with an entertaining, well-rounded game who has beaten elite competition at WNO, ADCC, and IBJJF events, helping put European jiu-jitsu on the world map.",
-    weaknesses: "Sits just outside the very top tier that consistently medals at ADCC and Worlds, where the deepest divisions still favor the Brazilian and American core. Needs signature wins over the absolute elite to elevate from 'top contender' to champion status.",
-    accolades: ["IBJJF European Champion", "ADCC veteran", "WNO competitor", "Leading Scandinavian grappler"]
+    strengths: "One of Europe's premier grapplers and a leading figure in the strong Scandinavian scene. A polished all-rounder in gi and no-gi with an entertaining, well-rounded game who has beaten elite competition at WNO, ADCC, and IBJJF events — capturing the 2023 IBJJF No-Gi World title — and helped put European jiu-jitsu on the world map.",
+    weaknesses: "An IBJJF No-Gi world title aside, ADCC gold — where the deepest divisions still favor the Brazilian and American core — remains the benchmark he chases. Needs more signature wins over the absolute elite at ADCC to reach that level.",
+    accolades: ["IBJJF No-Gi World Champion (2023)", "IBJJF European Champion", "ADCC veteran", "Leading Scandinavian grappler"]
   },
   {
     id: "meggie-ochoa",
@@ -400,9 +402,9 @@ window.PLAYERS = [
     tier: "Elite",
     stats: { adccGold: 0, worldTitles: 1, subRate: 66, control: 84, submissions: 89, guard: 90, takedowns: 74, cardio: 92 },
     signature: ["Back takes", "Rear naked choke", "Tenacious guard"],
-    strengths: "A trailblazer for Southeast Asian jiu-jitsu and one of the region's first world champions, having captured an IBJJF No-Gi World title in the roosterweight division. A dangerous back-attacker who overcomes size with technique and pace, she also won gold at the SEA Games and is a prominent advocate using the sport for social good.",
+    strengths: "A trailblazer for Southeast Asian jiu-jitsu and one of the region's first world champions, winning JJIF World titles (2018, 2022) and gold at the 2023 Asian Games. A dangerous back-attacker who overcomes size with technique and pace, she also won gold at the SEA Games and is a prominent advocate using the sport for social good.",
     weaknesses: "Competing in the lightest division limits high-profile superfight opportunities and mainstream exposure. The Southeast Asian competitive scene, while growing fast, still has less week-to-week depth than the Brazilian and American cores, so elite match reps abroad are harder to accumulate.",
-    accolades: ["IBJJF No-Gi World Champion", "SEA Games gold medalist", "Asian Championship medalist", "Filipina BJJ pioneer"]
+    accolades: ["JJIF World Champion (2018, 2022)", "Asian Games gold medalist (2023)", "SEA Games gold medalist", "Filipina BJJ pioneer"]
   },
   {
     id: "constance-lien",
@@ -419,9 +421,9 @@ window.PLAYERS = [
     tier: "Elite",
     stats: { adccGold: 0, worldTitles: 0, subRate: 58, control: 85, submissions: 82, guard: 86, takedowns: 82, cardio: 90 },
     signature: ["Passing pressure", "Scrambles", "Top control"],
-    strengths: "The face of Singaporean jiu-jitsu and a SEA Games gold medalist who put the city-state's grappling on the map. An athletic, well-rounded competitor who has stepped onto the global stage in ONE Championship's submission grappling, helping grow the sport across Southeast Asia.",
+    strengths: "The face of Singaporean jiu-jitsu, a SEA Games gold medalist and the first Singaporean to win an IBJJF World title (blue belt, 2019). An athletic, well-rounded competitor who put the city-state's grappling on the map and has helped grow the sport across Southeast Asia.",
     weaknesses: "Still building a resume against the very top international field, where the deepest divisions remain dominated by Brazilian and American athletes. As with much of the SEA scene, access to elite training partners and high-level competition at home is a developing challenge.",
-    accolades: ["SEA Games gold medalist", "ONE Championship competitor", "Leading Singaporean grappler"]
+    accolades: ["SEA Games gold medalist (2019)", "IBJJF World Champion (blue belt, 2019)", "First Singaporean BJJ World Champion", "Leading Singaporean grappler"]
   },
   {
     id: "shinya-aoki",
@@ -446,21 +448,21 @@ window.PLAYERS = [
   {
     id: "noah-lim",
     name: "Noah Lim",
-    nickname: "The Prodigy",
+    nickname: "",
     country: "Singapore",
     flag: "🇸🇬",
     team: "Evolve (Singapore)",
     subregion: "Southeast Asia",
     division: "No-Gi",
     weight: "Featherweight / Lightweight",
-    belt: "Black",
+    belt: "Purple",
     style: "Fearless Submission Hunting",
     tier: "Rising",
     stats: { adccGold: 0, worldTitles: 0, subRate: 68, control: 78, submissions: 86, guard: 88, takedowns: 78, cardio: 93 },
     signature: ["Guard attacks", "Submission chains", "Aggressive scrambles"],
-    strengths: "One of Southeast Asia's brightest prospects — a Singaporean teenage phenom out of Evolve, composed and submission-hungry well beyond his years. He has become a poster child for the next generation of Asian no-gi talent and the region's fast-professionalizing grappling scene.",
-    weaknesses: "Still early in his development with limited elite-level mileage; the jump against seasoned world-class veterans over full-length matches is his proving ground. Physical maturation, positional patience, and consistency against the established top tier are all still ahead of him.",
-    accolades: ["Singaporean prodigy", "Evolve standout", "Rising SEA no-gi talent"]
+    strengths: "One of Southeast Asia's most accomplished grapplers — a Singaporean standout out of Evolve and a multiple-time SEA Games gold medalist, composed and submission-hungry. He has become a poster child for Asian no-gi talent and the region's fast-professionalizing grappling scene.",
+    weaknesses: "Limited mileage against the very top of the global no-gi field; the jump against seasoned world-class veterans over full-length matches is his proving ground. Positional patience and consistency against the established elite are the next steps in his development.",
+    accolades: ["Multiple-time SEA Games gold medalist", "Singapore national team (Evolve)", "Leading SEA no-gi talent"]
   },
   {
     id: "craig-jones",
@@ -468,7 +470,7 @@ window.PLAYERS = [
     nickname: "",
     country: "Australia",
     flag: "🇦🇺",
-    team: "B-Team Jiu-Jitsu",
+    team: "B-Team (co-founder; departed 2025)",
     division: "No-Gi",
     weight: "Middleweight / Absolute",
     belt: "Black",
@@ -478,7 +480,7 @@ window.PLAYERS = [
     stats: { adccGold: 0, worldTitles: 0, subRate: 71, control: 86, submissions: 93, guard: 92, takedowns: 76, cardio: 90 },
     signature: ["Z-guard", "Heel hooks", "K-guard entries", "Leg entanglements"],
     strengths: "One of the most influential no-gi grapplers and personalities of his generation. A two-time ADCC silver medalist and elite leg-locker who co-founded B-Team and created the Craig Jones Invitational, whose record prize purse reshaped athlete pay across the sport. Famous for a dangerous guard, a deep leg-lock system, and an outsized impact on grappling's culture and business.",
-    weaknesses: "Has fallen just short of ADCC gold, losing finals in the Gordon Ryan era. Increasingly focused on promotion, coaching, and media, which has thinned his full-time competitive schedule. A leg-lock-centric game meets its stiffest test against the elite defensive grapplers he helped teach the world to become.",
+    weaknesses: "Has fallen just short of ADCC gold, losing finals in the Gordon Ryan era. Increasingly focused on promotion and media — he announced his retirement from competition after CJI 2 in 2025 — which thinned his full-time competitive schedule. A leg-lock-centric game meets its stiffest test against the elite defensive grapplers he helped teach the world to become.",
     accolades: ["2x ADCC silver medalist", "B-Team co-founder", "Founder of the Craig Jones Invitational (CJI)", "Elite leg-locker"]
   },
   {
@@ -491,7 +493,7 @@ window.PLAYERS = [
     division: "Both",
     weight: "Lightweight",
     belt: "Black",
-    born: 1988,
+    born: 1986,
     style: "Guard & Leg Locks",
     tier: "Elite",
     stats: { adccGold: 0, worldTitles: 0, subRate: 66, control: 84, submissions: 90, guard: 94, takedowns: 74, cardio: 90 },
@@ -506,7 +508,7 @@ window.PLAYERS = [
     nickname: "",
     country: "Australia",
     flag: "🇦🇺",
-    team: "New Wave lineage (Australia)",
+    team: "Absolute MMA (Melbourne) / Murilo Santana",
     division: "No-Gi",
     weight: "Lightweight / Welterweight",
     belt: "Black",
@@ -516,6 +518,6 @@ window.PLAYERS = [
     signature: ["Berimbolo & back takes", "Guard passing", "Scrambles"],
     strengths: "A dynamic Australian no-gi talent who has competed on the sport's biggest submission-grappling cards and at ADCC trials against world-class opposition. Fast, creative, and comfortable in scrambles, he is a leading figure in the strong wave of Oceania grapplers pushing onto the global stage.",
     weaknesses: "Still chasing signature wins over the very top of the division to cement elite status. A high-movement, offense-first style can leave openings against the most patient positional grapplers, and consistency at the championship level is his next step.",
-    accolades: ["WNO & ADCC-trials competitor", "Leading Australian no-gi talent", "International circuit regular"]
+    accolades: ["ADCC 2024 competitor (won ADCC Asia/Oceania trials)", "Polaris champion", "Leading Australian no-gi talent"]
   }
 ];

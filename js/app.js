@@ -679,7 +679,7 @@
   function liteClass(a) {
     const belt = (a.belt || "").toUpperCase(), r = a.rating || 0;
     if (belt && !belt.includes("BLACK"))
-      return { v: "gp-even", verdict: `${a.name} is listed at ${beltName(a.belt)} on jiujitsu.net — below black belt. A live target: Noah's black-belt submission game and pace should give him the edge if he stays composed.` };
+      return { v: "gp-even", verdict: `${a.name} is listed at ${beltName(a.belt)} on jiujitsu.net. A live target: Noah's submission game and relentless pace should give him the edge if he stays composed.` };
     if (r >= 2400) return { v: "gp-longshot", verdict: `${a.name} is elite-level on jiujitsu.net (Elo ${r}). A major step up — Noah's realistic path is a fast, scramble-heavy no-gi fight.` };
     if (r >= 2100) return { v: "gp-dog", verdict: `${a.name} is a strong, seasoned competitor (Elo ${r}). Noah is the underdog, but pace and scrambles keep an upset live.` };
     if (r > 0) return { v: "gp-even", verdict: `${a.name} (Elo ${r}) is within range. Noah's youth, cardio, and submission-hunting are real edges here.` };
