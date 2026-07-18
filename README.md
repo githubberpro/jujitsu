@@ -4,11 +4,11 @@ A self-contained web app that profiles the world's top jiu-jitsu (BJJ / grapplin
 
 ## Features
 
-### 🏆 Top Players
-- **27 competitor profiles** — Gordon Ryan, Roger Gracie, Marcus "Buchecha" Almeida, Marcelo Garcia, the Ruotolo brothers, Craig Jones, Beatriz Mesquita, and more, tiered GOAT / Legend / Elite / Rising.
-- **Organized by 5 regions** — South America, North America, Europe, Asia, and Oceania, each with its own section header and athlete count:
-  - **Asia** (7) with a 📍 sub-region tag: Japan's pioneers Yuki Nakai, Masakazu Imanari & Shinya Aoki (East Asia), the UAE's Faisal Al Ketbi, and **Southeast Asia** — Meggie Ochoa (🇵🇭 Philippines), Constance Lien and rising prodigy Noah Lim (🇸🇬 Singapore).
-  - **Oceania** (3) — Australia's Craig Jones (B-Team / CJI founder), Lachlan Giles, and Levi Jones-Leary.
+### 🎯 Target Players (watchlist)
+- A **region-grouped scouting watchlist** you build yourself. **Asia is pre-loaded** with its top players (Yuki Nakai, Masakazu Imanari, Shinya Aoki, Faisal Al Ketbi, Meggie Ochoa, Constance Lien, Noah Lim); the other regions start empty.
+- **Add any player by name** — retrieved live from jiujitsu.net via the Worker (Elo, belt, team, country) and auto-filed into the right region by nationality. **Remove** any player with the × button. Everything persists in your browser; **Reset** restores the default Asia list.
+- Regions are ordered **Asia first, then alphabetically** (Europe, North America, Oceania, South America). Roster players keep their full attribute profile (click to open); looked-up players show their jiujitsu.net data.
+- The full **27 curated profiles** (Gordon Ryan, Roger Gracie, Buchecha, the Ruotolos, Craig Jones, etc., tiered GOAT / Legend / Elite / Rising) still power the profile modals and the Game Plan Lab.
 - **Attribute ratings** — control, submissions, guard, takedowns, cardio, and finish rate, shown as animated bars.
 - **Strengths & weaknesses** — an honest scouting-style breakdown of each athlete's game.
 - Signature techniques, accolades, team, weight class, belt, and style.

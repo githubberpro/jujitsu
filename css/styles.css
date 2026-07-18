@@ -138,6 +138,33 @@ main { max-width: 1200px; margin: 0 auto; padding: 30px 22px 80px; }
 .filter-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .filter-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.3px; color: var(--text-mute); font-weight: 700; min-width: 54px; }
 
+/* ===== Target Players (watchlist) ===== */
+.tp-add { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 8px; }
+.tp-add input {
+  flex: 1; min-width: 240px; background: var(--panel); color: var(--text);
+  border: 1px solid var(--border-2); border-radius: 11px; padding: 12px 15px; font-size: 15px; font-family: inherit;
+}
+.tp-add input:focus { outline: none; border-color: var(--accent); }
+#tp-add-btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; border: none;
+  border-radius: 11px; padding: 12px 20px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit;
+}
+#tp-add-btn:hover { filter: brightness(1.08); }
+.tp-empty {
+  background: var(--panel); border: 1px dashed var(--border-2); border-radius: 12px;
+  padding: 22px; color: var(--text-mute); font-size: 14px; text-align: center;
+}
+.card.tp-roster, .card.tp-lookup { position: relative; }
+.tp-remove {
+  position: absolute; top: 10px; right: 12px; z-index: 3; width: 26px; height: 26px; border-radius: 8px;
+  background: var(--panel-2); border: 1px solid var(--border-2); color: var(--text-mute);
+  font-size: 17px; line-height: 1; cursor: pointer; display: grid; place-items: center; transition: all .15s;
+}
+.tp-remove:hover { background: var(--red); border-color: var(--red); color: #fff; }
+.tier-badge.tier-inline { position: static; top: auto; right: auto; }
+.card.tp-lookup .avatar.opp-av { background: linear-gradient(135deg, var(--blue), #6db3ff); }
+.card.tp-lookup .tags a.tag:hover { border-color: var(--blue); color: var(--blue); }
+
 /* ===== Region sections ===== */
 .region-section { margin-bottom: 34px; }
 .region-head { display: flex; align-items: center; gap: 14px; margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }

@@ -847,42 +847,208 @@
     refreshSavedClear();
   }
 
+  /* ---------- Target Players (region-grouped watchlist) ---------- */
+  const LS_TARGETS = "jja_targets_v1";
+  // Always-visible regions: Asia first, then the rest alphabetical.
+  const TP_BASE = ["Asia", "Europe", "North America", "Oceania", "South America"];
+  const REGION_ICON = { "Asia": "🌏", "Europe": "🌍", "North America": "🌎", "South America": "🌎", "Oceania": "🏝️", "Africa": "🌍", "Other": "🌐" };
+  // jiujitsu.net returns 2-letter country codes; map them to a region.
+  const CC_REGION = {
+    jp:"Asia",sg:"Asia",ph:"Asia",ae:"Asia",kr:"Asia",cn:"Asia",th:"Asia",id:"Asia",my:"Asia",vn:"Asia","in":"Asia",kz:"Asia",mn:"Asia",hk:"Asia",tw:"Asia",il:"Asia",sa:"Asia",qa:"Asia",kw:"Asia",jo:"Asia",lb:"Asia",ir:"Asia",iq:"Asia",uz:"Asia",bh:"Asia",om:"Asia",
+    de:"Europe",gb:"Europe",uk:"Europe",ie:"Europe",fr:"Europe",es:"Europe",it:"Europe",pt:"Europe",pl:"Europe",no:"Europe",se:"Europe",fi:"Europe",dk:"Europe",nl:"Europe",be:"Europe",ch:"Europe",at:"Europe",cz:"Europe",sk:"Europe",hu:"Europe",ro:"Europe",bg:"Europe",gr:"Europe",ua:"Europe",ru:"Europe",rs:"Europe",hr:"Europe",si:"Europe",lt:"Europe",lv:"Europe",ee:"Europe","is":"Europe",
+    us:"North America",ca:"North America",mx:"North America",cr:"North America",pa:"North America",gt:"North America","do":"North America",pr:"North America",cu:"North America",jm:"North America",
+    br:"South America",ar:"South America",cl:"South America",co:"South America",pe:"South America",uy:"South America",ve:"South America",ec:"South America",bo:"South America",py:"South America",
+    au:"Oceania",nz:"Oceania",
+    za:"Africa",ng:"Africa",eg:"Africa",ma:"Africa",ke:"Africa",tn:"Africa",dz:"Africa",ao:"Africa"
+  };
+  const regionFromCC = (cc) => CC_REGION[(cc || "").toLowerCase()] || "Other";
+  const flagFromCC = (cc) => {
+    if (!cc || cc.length !== 2 || !/^[a-zA-Z]{2}$/.test(cc)) return "";
+    const A = 0x1F1E6, c = cc.toLowerCase();
+    return String.fromCodePoint(A + c.charCodeAt(0) - 97, A + c.charCodeAt(1) - 97);
+  };
+  const targetKey = (t) => t.rosterId ? "r:" + t.rosterId : "l:" + slugify(t.name);
+
+  const defaultAsiaTargets = () =>
+    window.PLAYERS.filter((p) => regionOf(p) === "Asia").map((p) => ({ rosterId: p.id, name: p.name, region: "Asia", kind: "roster" }));
+  function seedTargets(force) {
+    if (force || localStorage.getItem(LS_TARGETS) === null) {
+      try { localStorage.setItem(LS_TARGETS, JSON.stringify(defaultAsiaTargets())); } catch {}
+    }
+  }
+  function getTargets() {
+    try { const a = JSON.parse(localStorage.getItem(LS_TARGETS) || "[]"); return Array.isArray(a) ? a : []; }
+    catch { return []; }
+  }
+  const saveTargets = (list) => { try { localStorage.setItem(LS_TARGETS, JSON.stringify(list.slice(0, 200))); } catch {} };
+  function addTarget(t) {
+    const list = getTargets();
+    if (list.some((x) => targetKey(x) === targetKey(t))) return false;
+    list.push(t); saveTargets(list); return true;
+  }
+  function removeTarget(key) { saveTargets(getTargets().filter((t) => targetKey(t) !== key)); }
+
+  function tpCard(t) {
+    const key = targetKey(t);
+    const rm = `<button class="tp-remove" data-key="${esc(key)}" title="Remove" aria-label="Remove ${esc(t.name)}">×</button>`;
+    if (t.kind === "roster") {
+      const p = window.PLAYERS.find((x) => x.id === t.rosterId);
+      if (!p) return "";
+      const r = rankOf(p);
+      return `
+        <div class="card tp-roster" data-id="${p.id}" role="button" tabindex="0">
+          ${rm}
+          <div class="top">
+            <div class="avatar">${initials(p.name)}</div>
+            <div>
+              <h3>${esc(p.name)}</h3>
+              ${p.nickname ? `<div class="nick">"${esc(p.nickname)}"</div>` : ""}
+              <div class="meta">${p.flag} ${esc(p.country)} · ${esc(p.team)}</div>
+              <div class="badge-row">
+                <span class="tier-badge tier-${p.tier} tier-inline">${p.tier}</span>
+                ${p.subregion ? `<span class="subregion">📍 ${esc(p.subregion)}</span>` : ""}
+                ${r ? `<span class="rank-pill">📊 #${r.rank}${r.rating ? ` · ${r.rating}` : ""}</span>` : ""}
+              </div>
+            </div>
+          </div>
+          <div class="mini-stats">
+            <div class="m"><b>${p.stats.worldTitles}</b><span>World Titles</span></div>
+            <div class="m"><b>${p.stats.adccGold}</b><span>ADCC Gold</span></div>
+            <div class="m"><b>${p.stats.subRate}%</b><span>Finish Rate</span></div>
+          </div>
+        </div>`;
+    }
+    const flag = flagFromCC(t.country);
+    return `
+      <div class="card tp-lookup">
+        ${rm}
+        <div class="top">
+          <div class="avatar opp-av">${initials(t.name)}</div>
+          <div>
+            <h3>${esc(t.name)}</h3>
+            <div class="meta">${flag ? flag + " " : ""}${t.country ? esc(t.country.toUpperCase()) + " · " : ""}${esc(t.team || "jiujitsu.net")}</div>
+            <div class="badge-row">
+              ${t.belt ? `<span class="tag">${esc(t.belt)}</span>` : ""}
+              ${t.rating != null ? `<span class="rank-pill">📊 Elo ${t.rating}</span>` : ""}
+            </div>
+          </div>
+        </div>
+        <div class="tags">
+          <a class="tag" href="${t.url || JJNET}" target="_blank" rel="noopener noreferrer">jiujitsu.net ↗</a>
+          <span class="tag">added via lookup</span>
+        </div>
+      </div>`;
+  }
+
+  function renderTargets() {
+    const wrap = $("#player-grid");
+    if (!wrap) return;
+    seedTargets(false);
+    const targets = getTargets();
+    const extras = [...new Set(targets.map((t) => t.region))].filter((r) => !TP_BASE.includes(r)).sort();
+    const regions = [...TP_BASE, ...extras];
+    wrap.innerHTML = regions.map((region) => {
+      const members = targets.filter((t) => t.region === region);
+      return `
+        <section class="region-section">
+          <div class="region-head">
+            <span class="ricon">${REGION_ICON[region] || "🌐"}</span>
+            <div class="region-title"><h3>${esc(region)}</h3></div>
+            <span class="rcount">${members.length} player${members.length !== 1 ? "s" : ""}</span>
+          </div>
+          ${members.length
+            ? `<div class="grid">${members.map(tpCard).join("")}</div>`
+            : `<div class="tp-empty">No players yet — search a name above to add one from jiujitsu.net.</div>`}
+        </section>`;
+    }).join("");
+
+    $$(".tp-remove", wrap).forEach((b) => b.addEventListener("click", (e) => {
+      e.stopPropagation();
+      removeTarget(b.dataset.key);
+      renderTargets(); renderHeroKpis();
+    }));
+    $$(".card.tp-roster", wrap).forEach((card) => {
+      const open = (e) => { if (e.target.closest(".tp-remove")) return; openModal(card.dataset.id); };
+      card.addEventListener("click", open);
+      card.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(card.dataset.id); } });
+    });
+  }
+
+  async function tpAdd(rawName) {
+    const name = (rawName || "").trim();
+    const status = $("#tp-status");
+    const input = $("#tp-add-input");
+    if (!name) return;
+    const slug = slugify(name);
+
+    // Already tracked (roster or lookup)?
+    if (getTargets().some((t) => slugify(t.name) === slug)) { status.textContent = `“${name}” is already on your list.`; return; }
+    // A roster player by that name — add with full profile.
+    const rp = window.PLAYERS.find((p) => slugify(p.rankingName || p.name) === slug || slugify(p.name) === slug);
+    if (rp) {
+      addTarget({ rosterId: rp.id, name: rp.name, region: regionOf(rp), kind: "roster" });
+      renderTargets(); renderHeroKpis();
+      status.textContent = `Added ${rp.name} to ${regionOf(rp)} (from the Atlas roster).`;
+      if (input) input.value = "";
+      return;
+    }
+
+    const proxy = getProxyUrl();
+    if (!proxy) { status.innerHTML = `To add players from jiujitsu.net, set your lookup endpoint once in the <b>🧠 Game Plan</b> tab (⚙︎ Endpoint).`; return; }
+
+    status.textContent = `Searching jiujitsu.net for “${name}”…`;
+    try {
+      const base = proxy.trim().replace(/\/+$/, "");
+      const u = base + (base.includes("?") ? "&" : "?") + "name=" + encodeURIComponent(name);
+      const res = await fetch(u, { headers: { Accept: "application/json" } });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      if (!data.found) { status.textContent = `No jiujitsu.net profile found for “${name}”. Try their full name.`; return; }
+      const region = regionFromCC(data.country);
+      const t = { name: data.name || name, rating: data.rating ?? null, belt: data.belt || null, team: data.team || null, country: data.country || null, url: data.url || null, region, kind: "lookup" };
+      addTarget(t);
+      renderTargets(); renderHeroKpis();
+      status.textContent = `Added ${t.name} to ${region}${t.rating != null ? ` (Elo ${t.rating})` : ""}.`;
+      if (input) input.value = "";
+    } catch (e) {
+      const hint = /Failed to fetch|NetworkError|Load failed/i.test(e.message) ? " — check your endpoint URL / that the Worker is deployed." : "";
+      status.textContent = `Lookup failed: ${e.message}${hint}`;
+    }
+  }
+
+  function initTargets() {
+    const input = $("#tp-add-input"), btn = $("#tp-add-btn"), reset = $("#tp-reset");
+    if (btn) btn.addEventListener("click", () => tpAdd(input.value));
+    if (input) input.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); tpAdd(input.value); } });
+    if (reset) reset.addEventListener("click", () => {
+      seedTargets(true); renderTargets(); renderHeroKpis();
+      $("#tp-status").textContent = "Reset to the default Asia list.";
+    });
+  }
+
   /* ---------- KPIs ---------- */
   function renderHeroKpis() {
-    const goats = window.PLAYERS.filter((p) => p.tier === "GOAT").length;
-    const totalTitles = window.PLAYERS.reduce((s, p) => s + p.stats.worldTitles, 0);
-    const totalAdcc = window.PLAYERS.reduce((s, p) => s + p.stats.adccGold, 0);
-    const regions = new Set(window.PLAYERS.map(regionOf));
-    $("#kpi-players").textContent = window.PLAYERS.length;
-    $("#kpi-titles").textContent = totalTitles + "+";
-    $("#kpi-adcc").textContent = totalAdcc + "+";
-    $("#kpi-regions").textContent = regions.size;
-    $("#kpi-goats").textContent = goats;
+    const t = getTargets();
+    const regions = new Set(t.map((x) => x.region));
+    const set = (id, v) => { const el = $(id); if (el) el.textContent = v; };
+    set("#kpi-players", t.length);
+    set("#kpi-regions", regions.size);
+    set("#kpi-asia", t.filter((x) => x.region === "Asia").length);
+    set("#kpi-added", t.filter((x) => x.kind === "lookup").length);
   }
 
   /* ---------- Boot ---------- */
   document.addEventListener("DOMContentLoaded", () => {
     initTabs();
-    initPlayerControls();
     initModal();
-    renderPlayers();
+    initTargets();
+    renderTargets();
     renderHeroKpis();
     renderKnowledge();
     renderBusiness();
     renderRankings();
     renderGamePlan();
     $("#year").textContent = new Date().getFullYear();
-
-    const ru = $("#rank-updated");
-    if (ru) {
-      if (RANKINGS.updated) {
-        const d = new Date(RANKINGS.updated);
-        const n = RANKINGS.athletes.length;
-        const scope = RANKINGS.scope ? ` · ${RANKINGS.scope}` : "";
-        ru.textContent = `Last synced ${d.toISOString().slice(0, 10)}${n ? ` · ${n} ranked athletes` : ""}${scope}.`;
-      } else {
-        ru.textContent = "Rankings sync pending — links go to live jiujitsu.net pages meanwhile.";
-      }
-    }
   });
 })();

@@ -16,9 +16,9 @@
         <div class="name">Jiu-Jitsu Atlas<small>Players · Knowledge · Business</small></div>
       </div>
       <nav class="tabs">
-        <button data-view="players" class="active">🏆 Top Players</button>
+        <button data-view="players" class="active">🎯 Target Players</button>
         <button data-view="rankings">📊 Rankings</button>
-        <button data-view="gameplan">🎯 Game Plan</button>
+        <button data-view="gameplan">🧠 Game Plan</button>
         <button data-view="knowledge">📚 Knowledge Base</button>
         <button data-view="business">💰 Business</button>
       </nav>
@@ -26,52 +26,25 @@
   </header>
 
   <main>
-    <!-- ===== Players ===== -->
+    <!-- ===== Target Players (watchlist) ===== -->
     <section id="view-players" class="view active">
       <div class="hero">
-        <h1>The World's Top Jiu-Jitsu Competitors</h1>
-        <p>Scouting-style profiles of the elite grapplers shaping the sport — attribute ratings, signature techniques, and an honest breakdown of each athlete's strengths and weaknesses. Click any card for the full report.</p>
+        <h1>Target Players</h1>
+        <p>Your scouting watchlist, grouped by region. <b>Asia</b> is pre-loaded with its top players; add anyone else by name — retrieved live from jiujitsu.net — and remove players anytime.</p>
         <div class="kpis">
-          <div class="kpi"><b id="kpi-players">0</b><span>Athletes profiled</span></div>
-          <div class="kpi"><b id="kpi-titles">0</b><span>Combined world titles</span></div>
-          <div class="kpi"><b id="kpi-adcc">0</b><span>ADCC golds</span></div>
-          <div class="kpi"><b id="kpi-regions">0</b><span>Regions</span></div>
-          <div class="kpi"><b id="kpi-goats">0</b><span>GOAT-tier</span></div>
+          <div class="kpi"><b id="kpi-players">0</b><span>Players tracked</span></div>
+          <div class="kpi"><b id="kpi-regions">0</b><span>Regions with players</span></div>
+          <div class="kpi"><b id="kpi-asia">0</b><span>Asia players</span></div>
+          <div class="kpi"><b id="kpi-added">0</b><span>Added from jiujitsu.net</span></div>
         </div>
       </div>
 
-      <div class="ranking-source">
-        <span class="rs-icon">📊</span>
-        <div class="rs-text">
-          <b>Rankings reference: <a href="https://jiujitsu.net" target="_blank" rel="noopener noreferrer">jiujitsu.net</a></b>
-          <span>Current, data-driven standings use jiujitsu.net's unofficial IBJJF rankings (Weisshart Elo system), synced via Tavily. Open any athlete for a live link to their ranking. The attribute bars here are an editorial scouting estimate, not official ratings. See the full synced list in the <b>📊 Rankings</b> tab. <span id="rank-updated" class="rank-updated"></span></span>
-        </div>
-        <a class="rs-btn" href="https://jiujitsu.net" target="_blank" rel="noopener noreferrer">View live rankings ↗</a>
+      <div class="tp-add">
+        <input id="tp-add-input" type="text" placeholder="Add a player by name — live from jiujitsu.net…" autocomplete="off" />
+        <button id="tp-add-btn" type="button">＋ Add player</button>
+        <button id="tp-reset" class="gp-linkbtn" type="button" title="Reset to the default Asia list">↺ Reset</button>
       </div>
-
-      <div class="controls">
-        <label class="search">
-          <span aria-hidden="true">🔎</span>
-          <input id="player-search" type="text" placeholder="Search by name, team, country, style…" autocomplete="off" />
-        </label>
-      </div>
-
-      <div class="filter-groups">
-        <div class="filter-row">
-          <span class="filter-label">Region</span>
-          <div id="region-filters" class="filters"></div>
-        </div>
-        <div class="filter-row">
-          <span class="filter-label">Style</span>
-          <div id="style-filters" class="filters">
-            <button class="chip active" data-filter="All">All</button>
-            <button class="chip" data-filter="Gi">Gi</button>
-            <button class="chip" data-filter="No-Gi">No-Gi</button>
-            <button class="chip" data-filter="Women">Women</button>
-            <button class="chip" data-filter="GOAT">GOAT-tier</button>
-          </div>
-        </div>
-      </div>
+      <div id="tp-status" class="lookup-status"></div>
 
       <div id="player-grid"></div>
     </section>
