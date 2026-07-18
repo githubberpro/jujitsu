@@ -200,6 +200,15 @@
     if (!p) return;
     const statKeys = ["control", "submissions", "guard", "takedowns", "cardio", "subRate"];
     const body = $("#modal-content");
+    // Factual identity fields (belt/team/country/Elo) come live from jiujitsu.net
+    // when available; the rest of the profile is editorial.
+    const tgt = { kind: "roster", rosterId: p.id, name: p.name };
+    const jj = jjLive(tgt), hasJJ = !!(jj && jj.found), r0 = rankOf(p);
+    const mFlag = (hasJJ && jjFlag(jj.country)) || p.flag;
+    const mCountry = (hasJJ && jj.country) ? jjCountryLabel(jj.country) : p.country;
+    const mTeam = (hasJJ && jj.team) ? jj.team : p.team;
+    const mBelt = (hasJJ && jj.belt) ? jj.belt : p.belt;
+    const mElo = (hasJJ && jj.rating != null) ? jj.rating : (r0 ? r0.rating : null);
     body.innerHTML = `
       <div class="modal-hero">
         <button class="modal-close" aria-label="Close">✕</button>
@@ -208,7 +217,7 @@
           <div>
             <h2>${esc(p.name)}</h2>
             ${p.nickname ? `<div class="nick">"${esc(p.nickname)}"</div>` : ""}
-            <div class="meta">${p.flag} ${esc(p.country)} · ${esc(p.team)} · ${esc(p.belt)} Belt${p.born ? " · b. " + p.born : ""}</div>
+            <div class="meta">${mFlag} ${esc(mCountry)} · ${esc(mTeam)} · ${esc(mBelt)}${/belt$/i.test(String(mBelt).trim()) ? "" : " Belt"}${p.born ? " · b. " + p.born : ""}</div>
             <div class="meta">${esc(p.division)} · ${esc(p.weight)} · <span style="color:var(--accent-2)">${esc(p.style)}</span></div>
             ${p.subregion ? `<div class="subregion">📍 ${esc(p.subregion)}</div>` : ""}
           </div>
@@ -217,10 +226,12 @@
       <div class="modal-body">
         <div class="accolades">${p.accolades.map((a) => `<span class="accolade">🏅 ${esc(a)}</span>`).join("")}</div>
 
-        ${(() => { const r = rankOf(p); return `
-        <a class="jjnet-link" href="${jjNetUrl(p)}" target="_blank" rel="noopener noreferrer">
-          📊 ${r ? `Ranked <b>#${r.rank}</b>${r.rating ? ` · Elo ${r.rating}` : ""} on jiujitsu.net` : `Current ranking &amp; Elo for ${esc(p.name)} on jiujitsu.net`} ↗
-        </a>`; })()}
+        <a class="jjnet-link${hasJJ ? " live" : ""}" href="${(hasJJ && jj.url) || jjNetUrl(p)}" target="_blank" rel="noopener noreferrer">
+          ${hasJJ
+            ? `📡 Live from jiujitsu.net —${mBelt ? ` <b>${esc(mBelt)}</b>` : ""}${mElo != null ? ` · Elo <b>${mElo}</b>` : ""}${r0 ? ` · #${r0.rank} P4P` : ""}${mTeam ? ` · ${esc(mTeam)}` : ""} ↗`
+            : `📊 ${r0 ? `Ranked <b>#${r0.rank}</b>${r0.rating ? ` · Elo ${r0.rating}` : ""} on jiujitsu.net` : `Current ranking &amp; Elo for ${esc(p.name)} on jiujitsu.net`} ↗`}
+        </a>
+        ${(!hasJJ && getProxyUrl()) ? `<div class="jjnet-pending">⏳ Fetching live jiujitsu.net data…</div>` : ""}
 
         <div class="stat-block">
           <h4>Attribute Rating <span class="rating-src">— editorial scouting estimate; see jiujitsu.net for official Elo rankings</span></h4>
@@ -252,6 +263,23 @@
     requestAnimationFrame(() => {
       setTimeout(() => $$(".bar-fill", body).forEach((f) => { f.style.width = f.dataset.w + "%"; }), 60);
     });
+
+    // If we don't yet have fresh live data for this athlete, fetch it from
+    // jiujitsu.net and re-render the modal in place when it arrives.
+    if (getProxyUrl() && !jjnetFresh(jjSlugFor(tgt))) {
+      jjnetFetch(p.rankingName || p.name).then((d) => {
+        const cache = getJjnetCache();
+        cache[jjSlugFor(tgt)] = {
+          name: (d && d.name) || p.name, rating: (d && d.rating != null) ? d.rating : null,
+          belt: (d && d.belt) || null, team: (d && d.team) || null, country: (d && d.country) || null,
+          url: (d && d.url) || null, found: !!(d && d.found), ts: Date.now()
+        };
+        saveJjnetCache(cache);
+        const h2 = $(".modal-hero h2", body);
+        if ($("#modal").classList.contains("open") && h2 && h2.textContent === p.name) openModal(id);
+        renderTargets();
+      }).catch(() => {});
+    }
   }
 
   function closeModal() {
@@ -664,6 +692,92 @@
   const LS_LOOKUPS = "jja_lookups_v1";
   const getProxyUrl = () => { try { return localStorage.getItem(LS_PROXY) || ""; } catch { return ""; } };
   const setProxyUrl = (u) => { try { localStorage.setItem(LS_PROXY, u); } catch {} };
+
+  /* ---------- Live jiujitsu.net data layer ----------
+     jiujitsu.net publishes each athlete's Elo, belt, team and country. We pull
+     those live through the lookup Worker and cache them (24h) so the Target
+     Players cards and the profile modal show jiujitsu.net as the source of truth
+     for the factual fields. The strengths/weaknesses breakdown, attribute bars
+     and title counts stay editorial and are labelled as such. */
+  const LS_JJNET = "jja_jjnet_v1";
+  const JJNET_TTL = 24 * 3600 * 1000;
+  const rosterOf = (t) => (t && t.kind === "roster") ? window.PLAYERS.find((p) => p.id === t.rosterId) : null;
+  const jjNameFor = (t) => { const p = rosterOf(t); return p ? (p.rankingName || p.name) : (t && t.name) || ""; };
+  const jjSlugFor = (t) => slugify(jjNameFor(t));
+  function getJjnetCache() { try { return JSON.parse(localStorage.getItem(LS_JJNET) || "{}") || {}; } catch { return {}; } }
+  function saveJjnetCache(c) { try { localStorage.setItem(LS_JJNET, JSON.stringify(c)); } catch {} }
+  const jjnetEntry = (slug) => getJjnetCache()[slug] || null;
+  const jjnetFresh = (slug) => { const e = jjnetEntry(slug); return !!(e && (Date.now() - (e.ts || 0) < JJNET_TTL)); };
+  // Live jiujitsu.net fields for a target: cached fetch wins; a lookup target
+  // already carries its own jiujitsu.net data from when it was added.
+  function jjLive(t) {
+    const e = jjnetEntry(jjSlugFor(t));
+    if (e && e.found) return e;
+    if (t && t.kind === "lookup" && (t.rating != null || t.belt || t.team || t.country))
+      return { rating: t.rating, belt: t.belt, team: t.team, country: t.country, url: t.url, found: true };
+    return e; // may be a not-found marker (found:false) or null (never fetched)
+  }
+  async function jjnetFetch(name) {
+    const proxy = getProxyUrl(); if (!proxy) return null;
+    const base = proxy.trim().replace(/\/+$/, "");
+    const u = base + (base.includes("?") ? "&" : "?") + "name=" + encodeURIComponent(name);
+    const res = await fetch(u, { headers: { Accept: "application/json" } });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    if (data && data.error) throw new Error(data.error);
+    return data;
+  }
+  function liveNoteText() {
+    const c = getJjnetCache();
+    const miss = Object.values(c).filter((e) => e && e.found === false).length;
+    let s = `📡 Elo, belt, team &amp; country are pulled live from <b><a href="${JJNET}" target="_blank" rel="noopener noreferrer">jiujitsu.net</a></b> (cached 24h). Strengths &amp; weaknesses are editorial scouting.`;
+    if (miss) s += ` <span class="live-miss">${miss} not found on jiujitsu.net — editorial fields shown.</span>`;
+    return s;
+  }
+  let jjnetSyncing = false;
+  // Fetch missing/stale jiujitsu.net data for every target, gently (sequential),
+  // re-rendering as each arrives. Cached results keep repeat visits cheap.
+  async function syncTargetsFromJjnet() {
+    if (jjnetSyncing) return;
+    const note = $("#tp-live-note");
+    const proxy = getProxyUrl();
+    if (!proxy) {
+      if (note) note.innerHTML = `⚙︎ To pull live Elo/belt/team/country from <b>jiujitsu.net</b>, set your lookup endpoint once in the <b>🧠 Game Plan</b> tab (⚙︎ Endpoint). Until then, cards show editorial fields.`;
+      return;
+    }
+    const seen = new Set(), jobs = [];
+    getTargets().forEach((t) => {
+      const slug = jjSlugFor(t);
+      if (!slug || seen.has(slug)) return;
+      seen.add(slug);
+      if (!jjnetFresh(slug)) jobs.push({ slug, name: jjNameFor(t) });
+    });
+    if (!jobs.length) { if (note) note.innerHTML = liveNoteText(); return; }
+    jjnetSyncing = true;
+    if (note) note.innerHTML = `⏳ Pulling live data from <b>jiujitsu.net</b> for ${jobs.length} player${jobs.length !== 1 ? "s" : ""}…`;
+    for (const job of jobs) {
+      const cache = getJjnetCache();
+      try {
+        const d = await jjnetFetch(job.name);
+        cache[job.slug] = {
+          name: (d && d.name) || job.name,
+          rating: (d && d.rating != null) ? d.rating : null,
+          belt: (d && d.belt) || null,
+          team: (d && d.team) || null,
+          country: (d && d.country) || null,
+          url: (d && d.url) || null,
+          found: !!(d && d.found),
+          ts: Date.now()
+        };
+      } catch (e) {
+        cache[job.slug] = Object.assign({ found: false }, cache[job.slug], { error: String((e && e.message) || e), ts: Date.now() });
+      }
+      saveJjnetCache(cache);
+      renderTargets();
+    }
+    jjnetSyncing = false;
+    if (note) note.innerHTML = liveNoteText();
+  }
   function getSavedLookups() {
     try { const a = JSON.parse(localStorage.getItem(LS_LOOKUPS) || "[]"); return Array.isArray(a) ? a : []; }
     catch { return []; }
@@ -881,6 +995,9 @@
     const A = 0x1F1E6, c = cc.toLowerCase();
     return String.fromCodePoint(A + c.charCodeAt(0) - 97, A + c.charCodeAt(1) - 97);
   };
+  // jiujitsu.net "country" may arrive as a 2-letter code or a full name.
+  const jjFlag = (country) => (country && /^[a-z]{2}$/i.test(country)) ? flagFromCC(country) : "";
+  const jjCountryLabel = (country) => !country ? "" : (country.length === 2 ? country.toUpperCase() : country);
   const targetKey = (t) => t.rosterId ? "r:" + t.rosterId : "l:" + slugify(t.name);
 
   const defaultAsiaTargets = () =>
@@ -909,6 +1026,20 @@
       const p = window.PLAYERS.find((x) => x.id === t.rosterId);
       if (!p) return "";
       const r = rankOf(p);
+      const jj = jjLive(t);
+      const hasJJ = !!(jj && jj.found);
+      const flag = (hasJJ && jjFlag(jj.country)) || p.flag;
+      const country = (hasJJ && jj.country) ? jjCountryLabel(jj.country) : p.country;
+      const team = (hasJJ && jj.team) ? jj.team : p.team;
+      const belt = (hasJJ && jj.belt) ? jj.belt : p.belt;
+      const elo = (hasJJ && jj.rating != null) ? jj.rating : (r ? r.rating : null);
+      const rankNo = r ? r.rank : null;
+      const pending = !!getProxyUrl() && !jjnetFresh(jjSlugFor(t));
+      const srcChip = hasJJ
+        ? `<a class="tp-src live" href="${jj.url || jjNetUrl(p)}" target="_blank" rel="noopener noreferrer" title="Live from jiujitsu.net">📡 Live · jiujitsu.net ↗</a>`
+        : pending
+          ? `<span class="tp-src pending">⏳ jiujitsu.net…</span>`
+          : `<a class="tp-src" href="${jjNetUrl(p)}" target="_blank" rel="noopener noreferrer" title="View on jiujitsu.net">📊 jiujitsu.net ↗</a>`;
       return `
         <div class="card tp-roster" data-id="${p.id}" role="button" tabindex="0">
           ${rm}
@@ -917,15 +1048,18 @@
             <div>
               <h3>${esc(p.name)}</h3>
               ${p.nickname ? `<div class="nick">"${esc(p.nickname)}"</div>` : ""}
-              <div class="meta">${p.flag} ${esc(p.country)} · ${esc(p.team)}</div>
+              <div class="meta">${flag} ${esc(country)} · ${esc(team)}</div>
               <div class="badge-row">
+                ${belt ? `<span class="tag belt-tag">${esc(belt)}</span>` : ""}
+                ${(rankNo || elo != null) ? `<span class="rank-pill">📊 ${rankNo ? "#" + rankNo : ""}${(rankNo && elo != null) ? " · " : ""}${elo != null ? "Elo " + elo : ""}</span>` : ""}
                 <span class="tier-badge tier-${p.tier} tier-inline">${p.tier}</span>
                 ${p.subregion ? `<span class="subregion">📍 ${esc(p.subregion)}</span>` : ""}
-                ${r ? `<span class="rank-pill">📊 #${r.rank}${r.rating ? ` · ${r.rating}` : ""}</span>` : ""}
               </div>
+              <div class="src-row">${srcChip}</div>
             </div>
           </div>
           <div class="mini-stats">
+            <div class="mini-cap">Editorial scouting</div>
             <div class="m"><b>${p.stats.worldTitles}</b><span>World Titles</span></div>
             <div class="m"><b>${p.stats.adccGold}</b><span>ADCC Gold</span></div>
             <div class="m"><b>${p.stats.subRate}%</b><span>Finish Rate</span></div>
@@ -937,7 +1071,13 @@
           </div>
         </div>`;
     }
-    const flag = flagFromCC(t.country);
+    const jj = jjLive(t) || {};
+    const country = jj.country || t.country;
+    const team = jj.team || t.team;
+    const belt = jj.belt || t.belt;
+    const rating = (jj.rating != null) ? jj.rating : t.rating;
+    const url = jj.url || t.url;
+    const flag = jjFlag(country) || flagFromCC(t.country);
     return `
       <div class="card tp-lookup">
         ${rm}
@@ -945,15 +1085,15 @@
           <div class="avatar opp-av">${initials(t.name)}</div>
           <div>
             <h3>${esc(t.name)}</h3>
-            <div class="meta">${flag ? flag + " " : ""}${t.country ? esc(t.country.toUpperCase()) + " · " : ""}${esc(t.team || "jiujitsu.net")}</div>
+            <div class="meta">${flag ? flag + " " : ""}${country ? esc(jjCountryLabel(country)) + " · " : ""}${esc(team || "jiujitsu.net")}</div>
             <div class="badge-row">
-              ${t.belt ? `<span class="tag">${esc(t.belt)}</span>` : ""}
-              ${t.rating != null ? `<span class="rank-pill">📊 Elo ${t.rating}</span>` : ""}
+              ${belt ? `<span class="tag belt-tag">${esc(belt)}</span>` : ""}
+              ${rating != null ? `<span class="rank-pill">📊 Elo ${rating}</span>` : ""}
             </div>
           </div>
         </div>
         <div class="tags">
-          <a class="tag" href="${t.url || JJNET}" target="_blank" rel="noopener noreferrer">jiujitsu.net ↗</a>
+          <a class="tp-src live" href="${url || JJNET}" target="_blank" rel="noopener noreferrer">📡 Live · jiujitsu.net ↗</a>
           <span class="tag">added via lookup</span>
         </div>
         <div class="tp-actions">
@@ -998,6 +1138,10 @@
       card.addEventListener("click", open);
       card.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(card.dataset.id); } });
     });
+
+    // Pull live jiujitsu.net data for any target that is missing/stale (async;
+    // re-renders as results arrive). Guarded against re-entry during a sync.
+    syncTargetsFromJjnet();
   }
 
   async function tpAdd(rawName) {

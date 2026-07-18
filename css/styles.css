@@ -131,7 +131,35 @@ main { max-width: 1200px; margin: 0 auto; padding: 30px 22px 80px; }
   transition: background .15s, border-color .15s;
 }
 .jjnet-link:hover { background: rgba(76,157,255,.2); border-color: var(--blue); }
+.jjnet-link.live { color: #35c98a; background: rgba(53,201,138,.12); border-color: rgba(53,201,138,.4); }
+.jjnet-link.live:hover { background: rgba(53,201,138,.2); border-color: #35c98a; }
+.jjnet-pending { margin: -12px 0 20px; font-size: 12px; color: var(--text-mute); }
 .rating-src { font-size: 10.5px; font-weight: 500; letter-spacing: 0; text-transform: none; color: var(--text-mute); }
+
+/* ===== Live jiujitsu.net data UI ===== */
+.live-note {
+  font-size: 12.5px; line-height: 1.5; color: var(--text-dim);
+  background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+  padding: 9px 13px; margin: 4px 0 20px;
+}
+.live-note:empty { display: none; }
+.live-note a { color: var(--accent-2); }
+.live-note .live-miss { color: var(--text-mute); }
+.src-row { margin-top: 7px; }
+.tp-src {
+  display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700;
+  padding: 3px 9px; border-radius: 7px; color: var(--text-dim);
+  background: var(--panel-2); border: 1px solid var(--border);
+}
+.tp-src.live { color: #35c98a; background: rgba(53,201,138,.1); border-color: rgba(53,201,138,.35); }
+.tp-src.pending { color: var(--text-mute); animation: tpPulse 1.1s ease-in-out infinite; }
+@keyframes tpPulse { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
+.belt-tag { text-transform: capitalize; font-weight: 700; }
+.mini-stats { flex-wrap: wrap; }
+.mini-cap {
+  flex-basis: 100%; order: -1; font-size: 9.5px; font-weight: 700; letter-spacing: .8px;
+  text-transform: uppercase; color: var(--text-mute); margin-bottom: 2px;
+}
 
 /* ===== Filter groups ===== */
 .filter-groups { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
