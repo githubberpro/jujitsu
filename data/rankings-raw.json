@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-17T08:11:54.979Z",
+  "fetchedAt": "2026-07-18T07:53:45.521Z",
   "extract": {
     "results": [
       {
@@ -11,16 +11,16 @@
     ],
     "failed_results": [
       {
-        "url": "https://jiujitsu.net/rankings",
+        "url": "https://jiujitsu.net/rankings/pound-for-pound",
         "error": "Failed to fetch url"
       },
       {
-        "url": "https://jiujitsu.net/rankings/pound-for-pound",
+        "url": "https://jiujitsu.net/rankings",
         "error": "Failed to fetch url"
       }
     ],
-    "response_time": 7.25,
-    "request_id": "bcfea2e0-6436-4371-91e4-254709dd71f8"
+    "response_time": 4.23,
+    "request_id": "a27b7022-b507-4b67-a435-ce48c1ade78c"
   },
   "search": {
     "query": "jiujitsu.net current pound for pound BJJ rankings top ranked athletes by division",
@@ -29,13 +29,6 @@
     "images": [],
     "results": [
       {
-        "url": "https://jiujitsu.net/athlete/ryan-christopher-wunderlich",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Ryan Christopher Wunderlich\n\nRating: 1,545 | Belt: BLUE | Team: Rodrigo Vaghi BJJ | Country: us\n\n## Ranks\n\n Male / Adult / BLUE / : Rank 146, Rating 1545\n Male / Adult / BLUE / Heavy: Rank 11, Rating 1545\n Male / Adult / BLUE / Medium Heavy: Rank 22, Rating 1545\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] ## Registrations\n\n No upcoming registrations\n\n## Medals\n\n 2024-09-28: St. Louis International Open IBJJF Jiu-Jitsu Championship 2024 (Results) - WHITE / Adult / Male / Heavy (Place 1)\n 2026-03-07: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Heavy (Place 1)\n 2026-04-18: Chicago Spring International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Heavy (Place 1)\n 2026-03-07: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Open Class (Place 3)\n 2026-06-20: St. Louis International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Open Class (Place 3)",
-        "score": 0.7769112,
-        "raw_content": null
-      },
-      {
         "url": "https://jiujitsu.net/athlete/niklas-josef-heyer",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
         "content": "# Niklas Josef Heyer\n\nRating: 1,555 | Belt: PURPLE | Team: Pound for Pound Deutschland | Country:\n\n## Ranks\n\n Male / Adult / PURPLE / : Rank 928, Rating 1555\n Male / Adult / PURPLE / Medium Heavy: Rank 139, Rating 1555\n\n## Registrations\n\n No upcoming registrations\n\n## Medals\n\n No medals listed",
@@ -43,10 +36,10 @@
         "raw_content": null
       },
       {
-        "url": "https://jiujitsu.net/athlete/thomas-michael-nordholt",
+        "url": "https://jiujitsu.net/athlete/samuel-nagai-hatchwell",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Thomas Michael Nordholt\n\nRating: 1,787 | Belt: BROWN | Team: Super System BJJ | Country:\n\n## Ranks\n\n Male / Master 2 / BROWN / : Rank 65, Rating 1787\n Male / Master 2 / BROWN / Ultra Heavy: Rank 7, Rating 1787\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] ## Registrations\n\n No upcoming registrations\n\n## Medals\n\n 2024-03-10: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Master 2 / Male / Open Class (Place 1)\n 2024-03-10: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Master 2 / Male / Super Heavy (Place 1)\n 2026-03-26: Pan IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Master 2 / Male / Ultra Heavy (Place 1)\n 2026-03-26: Pan IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Master 2 / Male / Open Class (Place 1)\n 2026-05-02: Columbus International Open IBJJF Jiu-Jitsu Championship 2026 - BROWN / Master 2 / Male / Ultra Heavy (Place 1)\n 2024-03-20: Pan IBJJF Jiu-Jitsu Championship 2024 (Flo) - PURPLE / Master 2 / Male / Super Heavy (Place 2)",
-        "score": 0.7023877,
+        "content": "# Samuel A. Nagai Hatchwell\n\nRating: 2,376 | Belt: BLACK | Team: Inevat Brazilian Jiu-Jitsu | Country: br\n\n## Ranks\n\n Male / Adult / BLACK / : Rank 19, Rating 2376\n Male / Adult / BLACK / Feather: Rank 3, Rating 2376\n Male / Adult / BLACK / Light: Rank 6, Rating 2376\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] 2018-01-01: World Jiu-Jitsu IBJJF Championship 2018 - PURPLE / Adult / Male / Light (Place 1)\n 2020-01-01: Houston Winter International Open IBJJF Jiu-Jitsu Championship 2020 - BROWN / Adult / Male / Light (Place 1)\n 2023-06-01: World IBJJF Jiu-Jitsu Championship 2023 (Flo) - BLACK / Adult / Male / Feather (Place 1)\n 2024-10-13: Houston Fall International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLACK / Adult / Male / Light (Place 1)\n 2025-04-05: Chicago Spring International Open IBJJF Jiu-Jitsu Championship 2025 - BLACK / Adult / Male / Light (Place 1)\n 2025-06-19: Asian Jiu-Jitsu IBJJF Championship 2025 - BLACK / Adult / Male / Light (Place 1)\n 2026-04-11: Houston International Open IBJJF Jiu-Jitsu Championship 2026 - BLACK / Adult / Male / Light (Place 1) [...] 2026-07-11: Austin Summer International Open IBJJF Jiu-Jitsu Championship 2026 - BLACK / Adult / Male / Light (Place 2)\n 2020-01-01: Pan Jiu-Jitsu IBJJF Championship 2020 - BLACK / Adult / Male / Feather (Place 3)\n 2021-08-29: Jiu-Jitsu CON International 2021 - BLACK / Adult / Male / Feather (Place 3)\n 2022-06-02: World IBJJF Jiu-Jitsu Championship 2022 (Flo) - BLACK / Adult / Male / Feather (Place 3)",
+        "score": 0.73023266,
         "raw_content": null
       },
       {
@@ -85,10 +78,17 @@
         "raw_content": null
       },
       {
-        "url": "https://jiujitsu.net/news/839/ten-things-you-didnt-know-about-ibjjf-bracketing",
-        "title": "Ten Things You Didn't Know About IBJJF Bracketing",
-        "content": "if you're among the top ranked competitors in each division, the IBJJF will give you a special award each year. you need at least 80 ranking",
-        "score": 0.25766745,
+        "url": "https://jiujitsu.net/tournaments",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "This site is not affiliated, endorsed by, or associated with the International Brazilian Jiu-Jitsu Federation. More Info\n\n Live Brackets\n Registrations\n Archive\n\nThis tool imports brackets from bjjcompsystem.com and displays the current ratings of the competitors. Brackets are typically posted 1-2 days before an event starts.\n\nNew: Try this Chrome extension which adds our ratings and profile links to the IBJJF's \"Order of Fights\" page (see disclaimer).\n\n We cache responses from the IBJJF servers. If you don't see the latest data, try again in a few minutes.\n Ratings shown are estimates and may differ from an athlete's final rating at the end of an event.",
+        "score": 0.48718598,
+        "raw_content": null
+      },
+      {
+        "url": "https://jiujitsu.net/teams",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "This site is not affiliated, endorsed by, or associated with the International Brazilian Jiu-Jitsu Federation. More Info\n\n## Yearly Team Awards - 2026 Gi\n\nClick to see our top-ranked teams for the 2026 gi season\n\n## Elite Athlete Lists\n\nSearch for a team to view elite athletes who have represented that team.\n\n## Team Event Awards\n\nSearch for a past event in our database to view our team rankings based on match outcomes and opponent rating. To encourage competitive participation without pressure, white belts and teens are not included in team rankings.",
+        "score": 0.43323857,
         "raw_content": null
       },
       {
@@ -99,8 +99,8 @@
         "raw_content": null
       }
     ],
-    "response_time": 3.42,
-    "request_id": "9fdf73b5-388d-4bd5-b2d2-b4db05041e9c"
+    "response_time": 2.49,
+    "request_id": "b603dc42-5234-4cfb-9d01-146c21477ad3"
   },
   "errors": []
 }
