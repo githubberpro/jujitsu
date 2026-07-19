@@ -1,5 +1,5 @@
 window.RANKINGS = {
-  "updated": "2026-07-18T07:53:45.521Z",
+  "updated": "2026-07-19T08:21:42.867Z",
   "source": "jiujitsu.net (unofficial IBJJF · Weisshart Elo) via Tavily",
   "scope": "Gi · Pound-for-Pound (top of the open ranking)",
   "count": 30,
@@ -53,28 +53,28 @@ window.RANKINGS = {
     },
     {
       "rank": 10,
+      "name": "Vinicius Liberati",
+      "rating": 2450
+    },
+    {
+      "rank": 11,
       "name": "Matheus Gabriel",
       "rating": 2446
     },
     {
-      "rank": 11,
+      "rank": 12,
       "name": "Meyram Maquine",
       "rating": 2438
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Fellipe Andrew",
       "rating": 2437
     },
     {
-      "rank": 13,
+      "rank": 14,
       "name": "Enderson Dias \"Varão\"",
       "rating": 2431
-    },
-    {
-      "rank": 14,
-      "name": "Vinicius Liberati",
-      "rating": 2429
     },
     {
       "rank": 15,
@@ -148,13 +148,13 @@ window.RANKINGS = {
     },
     {
       "rank": 29,
-      "name": "Pedro Maia",
+      "name": "Horlando Monteiro",
       "rating": 2327
     },
     {
-      "rank": 30,
-      "name": "Uanderson Ferreira",
-      "rating": 2326
+      "rank": 29,
+      "name": "Pedro Maia",
+      "rating": 2327
     }
   ]
 };
