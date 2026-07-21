@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-20T09:17:01.056Z",
+  "fetchedAt": "2026-07-21T08:31:45.486Z",
   "extract": {
     "results": [
       {
@@ -19,8 +19,8 @@
         "error": "Failed to fetch url"
       }
     ],
-    "response_time": 5.96,
-    "request_id": "8156ff14-f7ea-4025-a22d-96cba5723c17"
+    "response_time": 4.34,
+    "request_id": "897d0ddb-4228-4c34-bed5-c35049063d9a"
   },
   "search": {
     "query": "jiujitsu.net current pound for pound BJJ rankings top ranked athletes by division",
@@ -57,6 +57,13 @@
         "raw_content": null
       },
       {
+        "url": "https://jiujitsu.net/athlete/thomas-michael-nordholt",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "# Thomas Michael Nordholt\n\nRating: 1,787 | Belt: BROWN | Team: Super System BJJ | Country:\n\n## Ranks\n\n Male / Master 2 / BROWN / : Rank 65, Rating 1787\n Male / Master 2 / BROWN / Ultra Heavy: Rank 7, Rating 1787\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] ## Registrations\n\n No upcoming registrations\n\n## Medals\n\n 2024-03-10: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Master 2 / Male / Open Class (Place 1)\n 2024-03-10: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Master 2 / Male / Super Heavy (Place 1)\n 2026-03-26: Pan IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Master 2 / Male / Ultra Heavy (Place 1)\n 2026-03-26: Pan IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Master 2 / Male / Open Class (Place 1)\n 2026-05-02: Columbus International Open IBJJF Jiu-Jitsu Championship 2026 - BROWN / Master 2 / Male / Ultra Heavy (Place 1)\n 2024-03-20: Pan IBJJF Jiu-Jitsu Championship 2024 (Flo) - PURPLE / Master 2 / Male / Super Heavy (Place 2)",
+        "score": 0.7023877,
+        "raw_content": null
+      },
+      {
         "url": "https://jiujitsu.net/athlete/leandro-teixeira-ribeiro",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
         "content": "# Leandro Teixeira Ribeiro\n\nRating: 1,246 | Belt: BLUE | Team: PSLPB Cicero Costha | Country:\n\n## Ranks\n\n Male / Master 3 / BLUE / : Rank 227, Rating 1246\n Male / Master 3 / BLUE / Medium Heavy: Rank 43, Rating 1246\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] 2024-07-20: São Paulo International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLUE / Master 3 / Male / Middle (Place 1)\n 2024-11-16: Campeonato Sul-Americano de Jiu-Jitsu 2024 (Archive) - BLUE / Master 3 / Male / Middle (Place 1)\n 2023-09-16: Campeonato Sul-Americano de Jiu-Jitsu 2023 (BJJHeroes) - WHITE / Master 2 / Male / Medium Heavy (Place 2)\n 2025-07-05: Curitiba BJJ Pro IBJJF Championship 2025 - BLUE / Master 3 / Male / Medium Heavy (Place 2)\n 2023-11-11: Curitiba BJJ Pro IBJJF Championship 2023 (BJJHeroes) - WHITE / Master 1 / Male / Medium Heavy (Place 3)\n 2024-04-21: Campeonato Brasileiro de Jiu-Jitsu 2024 (Flo) - BLUE / Master 3 / Male / Middle (Place 3)\n 2024-07-07: Curitiba BJJ Pro IBJJF Championship 2024 (BJJHeroes) - BLUE / Master 3 / Male / Middle (Place 3) [...] 2024-09-13: São Paulo BJJ Pro IBJJF Championship 2024 (Archive) - BLUE / Master 3 / Male / Middle (Place 3)",
@@ -78,29 +85,22 @@
         "raw_content": null
       },
       {
+        "url": "https://www.jiujitsu.net/athlete/enderson-dias-de-almeida",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "# Enderson Dias de Almeida\n\nRating: 2,431 | Belt: BLACK | Team: Elementum Jiu-Jitsu | Country: br\n\n## Ranks\n\n Male / Adult / BLACK / : Rank 13, Rating 2431\n Male / Adult / BLACK / Heavy: Rank 3, Rating 2431\n Male / Adult / BLACK / Medium Heavy: Rank 2, Rating 2431\n\n## Registrations\n\n 2026-07-23: Orlando Summer International Open IBJJF Jiu-Jitsu Championship 2026 - BLACK / Adult / Male / Heavy\n\n## Medals [...] 2023-10-21: Miami Fall International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLACK / Adult / Male / Open Class (Place 2)\n 2024-05-05: Atlanta Spring International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLACK / Adult / Male / Heavy (Place 2)\n 2024-05-05: Atlanta Spring International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLACK / Adult / Male / Open Class (Place 2)\n 2024-07-25: Orlando Summer International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLACK / Adult / Male / Open Class (Place 2)\n 2026-05-31: World IBJJF Jiu-Jitsu Championship 2026 - BLACK / Adult / Male / Medium Heavy (Place 2)\n 2019-01-01: South American Jiu-Jitsu IBJJF Championship 2019 - PURPLE / Adult / Male / Middle (Place 3) [...] 2023-08-12: New Haven International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLACK / Adult / Male / Heavy (Place 1)\n 2023-10-07: Charlotte International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLACK / Adult / Male / Heavy (Place 1)\n 2023-10-07: Charlotte International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLACK / Adult / Male / Open Class (Place 1)\n 2023-10-21: Miami Fall International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLACK / Adult / Male / Super Heavy (Place 1)\n 2024-02-03: Miami International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLACK / Adult / Male / Heavy (Place 1)\n 2024-07-25: Orlando Summer International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLACK / Adult / Male / Heavy (Place 1)",
+        "score": 0.6747586,
+        "raw_content": null
+      },
+      {
         "url": "https://jiujitsu.net/athlete/maria-eduarda-da-silva-3",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
         "content": "# Maria Eduarda L. M. da Silva\n\nRating: 1,589 | Belt: PURPLE | Team: Academia OCS BJJ | Country:\n\n## Ranks\n\n No ranks available\n\n## Registrations\n\n 2026-04-24: Campeonato Brasileiro de Jiu-Jitsu 2026 - PURPLE / Adult / Female / Heavy\n\n## Medals\n\n 2025-05-17: Floripa Fall International Open IBJJF Jiu-Jitsu Championship 2025 - PURPLE / Adult / Female / Heavy (Place 1)",
         "score": 0.6745014,
         "raw_content": null
-      },
-      {
-        "url": "https://jiujitsu.net/athlete/josef-jacinto",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Josef F E Jacinto\n\nRating: 1,494 | Belt: PURPLE | Team: Lansang Brazilian Jiu-Jitsu | Country:\n\n## Ranks\n\n No ranks available\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] 2019-01-01: Long Beach International Open IBJJF Jiu-Jitsu Championship 2019 - WHITE / Master 1 / Male / Light (Place 1)\n 2024-04-21: Orange County International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Master 2 / Male / Light (Place 2)\n 2024-05-29: Master International Jiu-Jitsu Championship - North America 2024 (Flo) - PURPLE / Master 2 / Male / Light (Place 2)\n 2024-06-27: American National IBJJF Jiu-Jitsu Championship 2024 (Flo) - PURPLE / Master 2 / Male / Light (Place 2)\n 2018-01-01: Long Beach International Open IBJJF Jiu-Jitsu Championship 2018 - WHITE / Master 1 / Male / Light (Place 3)\n 2023-06-01: Master International Jiu-Jitsu Championship - North America 2023 (Flo) - BLUE / Master 1 / Male / Feather (Place 3) [...] 2025-05-28: Master International Jiu-Jitsu Championship - North America 2025 - PURPLE / Master 2 / Male / Light (Place 3)",
-        "score": 0.6685563,
-        "raw_content": null
-      },
-      {
-        "url": "https://jiujitsu.net/athlete/eduardo-alexandre-machado",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Eduardo Alexandre Machado\n\nRating: 1,786 | Belt: BLACK | Team: Tonicão Team BJJ | Country:\n\n## Ranks\n\n No ranks available\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] ## Registrations\n\n No upcoming registrations\n\n## Medals\n\n 2013-01-01: European Jiu-Jitsu IBJJF Championship 2013 - BLACK / Master 3 / Male / Medium Heavy (Place 1)\n 2013-01-01: European Jiu-Jitsu IBJJF Championship 2013 - BLACK / Master 3 / Male / Open Class (Place 1)\n 2015-01-01: Nice International Open IBJJF Jiu-Jitsu Championship 2015 - BLACK / Adult / Male / Super Heavy (Place 2)\n 2018-01-01: World Master Jiu-Jitsu IBJJF Championship 2018 - BLACK / Master 4 / Male / Open Class (Place 2)\n 2022-02-15: European IBJJF Jiu-Jitsu Championship 2022 (Flo) - BLACK / Master 5 / Male / Heavy (Place 2)\n 2018-01-01: World Master Jiu-Jitsu IBJJF Championship 2018 - BLACK / Master 4 / Male / Heavy (Place 3)",
-        "score": 0.62824833,
-        "raw_content": null
       }
     ],
-    "response_time": 2.28,
-    "request_id": "256dd969-f186-4cad-b72f-9e9f82043224"
+    "response_time": 2.79,
+    "request_id": "aaedb58f-36de-4460-9069-2c93ef6a6e0b"
   },
   "errors": []
 }
