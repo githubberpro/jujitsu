@@ -1,5 +1,5 @@
 window.RANKINGS = {
-  "updated": "2026-07-24T08:29:29.132Z",
+  "updated": "2026-07-25T08:08:14.067Z",
   "source": "jiujitsu.net (unofficial IBJJF · Weisshart Elo) via Tavily",
   "scope": "Gi · Pound-for-Pound (top of the open ranking)",
   "count": 50,
@@ -74,7 +74,7 @@ window.RANKINGS = {
     {
       "rank": 14,
       "name": "Enderson Dias \"Varão\"",
-      "rating": 2431
+      "rating": 2407
     },
     {
       "rank": 15,
@@ -98,12 +98,12 @@ window.RANKINGS = {
     },
     {
       "rank": 19,
-      "name": "Gabriel Ribeiro \"Veloso\"",
+      "name": "Samuel Nagai \"Samurai\"",
       "rating": 2376
     },
     {
       "rank": 19,
-      "name": "Samuel Nagai \"Samurai\"",
+      "name": "Gabriel Ribeiro \"Veloso\"",
       "rating": 2376
     },
     {
@@ -118,12 +118,12 @@ window.RANKINGS = {
     },
     {
       "rank": 23,
-      "name": "Nolan Stuart",
+      "name": "Kennedy Maciel \"Cobrinha Jr\"",
       "rating": 2351
     },
     {
       "rank": 23,
-      "name": "Kennedy Maciel \"Cobrinha Jr\"",
+      "name": "Nolan Stuart",
       "rating": 2351
     },
     {
@@ -148,12 +148,12 @@ window.RANKINGS = {
     },
     {
       "rank": 29,
-      "name": "Horlando Monteiro",
+      "name": "Pedro Maia",
       "rating": 2327
     },
     {
       "rank": 29,
-      "name": "Pedro Maia",
+      "name": "Horlando Monteiro",
       "rating": 2327
     },
     {
@@ -203,12 +203,12 @@ window.RANKINGS = {
     },
     {
       "rank": 40,
-      "name": "Joao Mendes \"Bisnaga\"",
+      "name": "Marcos Gomes",
       "rating": 2306
     },
     {
       "rank": 40,
-      "name": "Marcos Gomes",
+      "name": "Joao Mendes \"Bisnaga\"",
       "rating": 2306
     },
     {
