@@ -1,5 +1,5 @@
 window.RANKINGS = {
-  "updated": "2026-07-25T08:08:14.067Z",
+  "updated": "2026-07-26T08:28:11.974Z",
   "source": "jiujitsu.net (unofficial IBJJF · Weisshart Elo) via Tavily",
   "scope": "Gi · Pound-for-Pound (top of the open ranking)",
   "count": 50,
