@@ -1,5 +1,5 @@
 window.RANKINGS = {
-  "updated": "2026-07-26T08:28:11.974Z",
+  "updated": "2026-07-27T09:54:56.527Z",
   "source": "jiujitsu.net (unofficial IBJJF · Weisshart Elo) via Tavily",
   "scope": "Gi · Pound-for-Pound (top of the open ranking)",
   "count": 50,
@@ -33,12 +33,12 @@ window.RANKINGS = {
     },
     {
       "rank": 6,
-      "name": "Andy Murasaki",
+      "name": "Tarcísio Santos",
       "rating": 2465
     },
     {
       "rank": 6,
-      "name": "Tarcísio Santos",
+      "name": "Andy Murasaki",
       "rating": 2465
     },
     {
@@ -98,12 +98,12 @@ window.RANKINGS = {
     },
     {
       "rank": 19,
-      "name": "Samuel Nagai \"Samurai\"",
+      "name": "Gabriel Ribeiro \"Veloso\"",
       "rating": 2376
     },
     {
       "rank": 19,
-      "name": "Gabriel Ribeiro \"Veloso\"",
+      "name": "Samuel Nagai \"Samurai\"",
       "rating": 2376
     },
     {
@@ -148,12 +148,12 @@ window.RANKINGS = {
     },
     {
       "rank": 29,
-      "name": "Pedro Maia",
+      "name": "Horlando Monteiro",
       "rating": 2327
     },
     {
       "rank": 29,
-      "name": "Horlando Monteiro",
+      "name": "Pedro Maia",
       "rating": 2327
     },
     {
@@ -203,12 +203,12 @@ window.RANKINGS = {
     },
     {
       "rank": 40,
-      "name": "Marcos Gomes",
+      "name": "Joao Mendes \"Bisnaga\"",
       "rating": 2306
     },
     {
       "rank": 40,
-      "name": "Joao Mendes \"Bisnaga\"",
+      "name": "Marcos Gomes",
       "rating": 2306
     },
     {
