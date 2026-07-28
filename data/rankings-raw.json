@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-27T09:54:56.527Z",
+  "fetchedAt": "2026-07-28T08:36:14.250Z",
   "extract": {
     "results": [
       {
@@ -21,8 +21,8 @@
         "error": "Failed to fetch url"
       }
     ],
-    "response_time": 5.98,
-    "request_id": "7283f8ce-ee4b-46b1-8e99-774ffbdfe6e3"
+    "response_time": 6.36,
+    "request_id": "665614b0-5830-4915-9127-4faca4cb0173"
   },
   "search": {
     "query": "jiujitsu.net current pound for pound BJJ rankings top ranked athletes by division",
@@ -30,6 +30,20 @@
     "answer": null,
     "images": [],
     "results": [
+      {
+        "url": "https://jiujitsu.net",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "| Rank | Athlete | Country | Rating | Matches |\n ---  --- \n| 1 | Tainan Dalpra | br | 2574 |\n| 2 | Erich Munis | br | 2534 |\n| 3 | Adam Wardziński | pl | 2507 |\n| 4 | Diego Oliveira \"Pato\" | br | 2506 |\n| 5 | Cole Abate | us | 2493 |\n| 6 | Tarcísio Santos | br | 2465 |\n| 6 | Andy Murasaki | br | 2465 |\n| 8 | Jackson Nagai | br | 2463 |\n| 9 | Jansen Gomes \"Nenego\" | br | 2462 |\n| 10 | Vinicius Liberati | br | 2450 |\n| 11 | Matheus Gabriel | br | 2446 |\n| 12 | Meyram Maquine | br | 2438 |\n| 13 | Fellipe Andrew | br | 2437 |\n| 14 | Enderson Dias \"Varão\" | br | 2407 |\n| 15 | Mica Galvão | br | 2401 |\n| 16 | Gabriel Galvao \"Caboja\" | br | 2400 |\n| 17 | Leo Ferreira | br | 2397 |\n| 18 | Rider Zuchi | br | 2389 |\n| 19 | Gabriel Ribeiro \"Veloso\" | br | 2376 | [...] | 19 | Gabriel Ribeiro \"Veloso\" | br | 2376 |\n| 19 | Samuel Nagai \"Samurai\" | br | 2376 |\n| 21 | Pablo Lavaselli | ar | 2373 |\n| 22 | Edu Alves | br | 2370 |\n| 23 | Kennedy Maciel \"Cobrinha Jr\" | br | 2351 |\n| 23 | Nolan Stuart | us | 2351 |\n| 25 | Gustavo Batista \"Braguinha\" | br | 2344 |\n| 26 | Pedro Machado | br | 2342 |\n| 27 | Gutemberg Pereira | br | 2339 |\n| 28 | Rerisson Gabriel | br | 2335 |\n| 29 | Horlando Monteiro | br | 2327 |\n| 29 | Pedro Maia | br | 2327 |\n| 31 | Uanderson Ferreira | br | 2326 |\n| 32 | Alex Sodré | br | 2324 |\n| 33 | Luiz Victor | br | 2322 |\n| 34 | Helder Rodrigues \"Tropeço\" | br | 2320 |\n| 35 | Pablo Oliveira | br | 2319 |\n| 36 | Diego Sodré | br | 2314 |\n| 37 | Elijah Dorsey \"Big Breakfast\" | us | 2310 |\n| 38 | Mateo Cardona | us | 2309 | [...] | 38 | Mateo Cardona | us | 2309 |\n| 39 | José Steve \"The Ice Man\" | be | 2307 |\n| 40 | Joao Mendes \"Bisnaga\" | br | 2306 |\n| 40 | Marcos Gomes | br | 2306 |\n| 42 | Lucas Protasio | br | 2303 |\n| 43 | Ademir Barreto | br | 2302 |\n| 44 | Paulo Merlin | br | 2299 |\n| 44 | Luis Oliveira \"Cantareira\" | br | 2299 |\n| 46 | Richar Nogueira | br | 2298 |\n| 47 | Thalison Soares | br | 2297 |\n| 48 | Gabriel Cardoso | br | 2296 |\n| 49 | Murilo Amaral | br | 2295 |\n| 49 | Manuel Ribamar | br | 2295 |",
+        "score": 0.80126834,
+        "raw_content": null
+      },
+      {
+        "url": "https://jiujitsu.net/athlete/ryan-christopher-wunderlich",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "# Ryan Christopher Wunderlich\n\nRating: 1,545 | Belt: BLUE | Team: Rodrigo Vaghi BJJ | Country: us\n\n## Ranks\n\n Male / Adult / BLUE / : Rank 146, Rating 1545\n Male / Adult / BLUE / Heavy: Rank 11, Rating 1545\n Male / Adult / BLUE / Medium Heavy: Rank 22, Rating 1545\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] ## Registrations\n\n No upcoming registrations\n\n## Medals\n\n 2024-09-28: St. Louis International Open IBJJF Jiu-Jitsu Championship 2024 (Results) - WHITE / Adult / Male / Heavy (Place 1)\n 2026-03-07: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Heavy (Place 1)\n 2026-04-18: Chicago Spring International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Heavy (Place 1)\n 2026-03-07: Indianapolis International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Open Class (Place 3)\n 2026-06-20: St. Louis International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Male / Open Class (Place 3)",
+        "score": 0.7769112,
+        "raw_content": null
+      },
       {
         "url": "https://jiujitsu.net/athlete/niklas-josef-heyer",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
@@ -59,27 +73,6 @@
         "raw_content": null
       },
       {
-        "url": "https://jiujitsu.net/athlete/jared-alec-wade",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Jared Alec Wade\n\nRating: 1,843 | Belt: PURPLE | Team: AOJ | Country: us\n\n## Ranks\n\n Male / Adult / PURPLE / : Rank 54, Rating 1843\n Male / Adult / PURPLE / Light: Rank 17, Rating 1843\n Male / Adult / PURPLE / Middle: Rank 19, Rating 1843\n\n## Registrations\n\n 2026-07-11: Los Angeles Summer International Open IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Adult / Male / Middle\n\n## Medals [...] 2023-07-29: Phoenix International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 2)\n 2023-11-18: Atlanta Fall International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 2)\n 2024-03-20: Pan IBJJF Jiu-Jitsu Championship 2024 (Flo) - BLUE / Adult / Male / Light (Place 2)\n 2024-05-30: World IBJJF Jiu-Jitsu Championship 2024 (Flo) - BLUE / Adult / Male / Light (Place 2)\n 2024-07-12: Phoenix International Open IBJJF Jiu-Jitsu Championship 2024 (Archive) - PURPLE / Adult / Male / Middle (Place 2)\n 2024-07-13: Orange County Summer International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Adult / Male / Middle (Place 2) [...] 2023-08-05: San Diego Summer International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 1)\n 2023-08-31: Jiu-Jitsu CON International 2023 (Flo) - BLUE / Adult / Male / Light (Place 1)\n 2023-10-21: Orange County International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 1)\n 2023-12-02: Waco International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Light (Place 1)\n 2023-12-02: Waco International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Adult / Male / Open Class (Place 1)\n 2024-05-18: San Diego Spring International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLUE / Adult / Male / Middle (Place 1)",
-        "score": 0.64880073,
-        "raw_content": null
-      },
-      {
-        "url": "https://jiujitsu.net/athlete/rasean-donte-edwards",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# RaSean Donte Edwards\n\nRating: 1,567 | Belt: PURPLE | Team: RMNU Team | Country:\n\n## Ranks\n\n Male / Master 2 / PURPLE / : Rank 88, Rating 1567\n Male / Master 2 / PURPLE / Feather: Rank 7, Rating 1567\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] 2024-06-22: Charlotte Summer International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - PURPLE / Master 1 / Male / Feather (Place 2)\n 2022-10-01: Charlotte International Open IBJJF Jiu-Jitsu Championship 2022 (BJJHeroes) - BLUE / Master 1 / Male / Feather (Place 3)\n 2023-03-22: Pan IBJJF Jiu-Jitsu Championship 2023 (Flo) - BLUE / Master 1 / Male / Feather (Place 3)\n 2025-03-19: Pan IBJJF Jiu-Jitsu Championship 2025 - PURPLE / Master 2 / Male / Feather (Place 3) [...] 2022-04-06: Pan IBJJF Jiu-Jitsu Championship 2022 (Flo) - WHITE / Master 1 / Male / Feather (Place 1)\n 2024-02-10: Atlanta Winter International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLUE / Master 1 / Male / Feather (Place 1)\n 2024-03-20: Pan IBJJF Jiu-Jitsu Championship 2024 (Flo) - BLUE / Master 1 / Male / Feather (Place 1)\n 2025-03-01: Virginia International Open IBJJF Jiu-Jitsu Championship 2025 - PURPLE / Master 2 / Male / Feather (Place 1)\n 2026-03-26: Pan IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Master 2 / Male / Feather (Place 1)\n 2023-10-07: Charlotte International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLUE / Master 1 / Male / Feather (Place 2)",
-        "score": 0.6296157,
-        "raw_content": null
-      },
-      {
-        "url": "https://jiujitsu.net/athlete/erin-victoria-bradley",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Erin Victoria Bradley\n\nRating: 1,379 | Belt: BLUE | Team: Pedigo Submission Fighting | Country:\n\n## Ranks\n\n Female / Master 1 / BLUE / : Rank 81, Rating 1379\n Female / Master 1 / BLUE / Light: Rank 15, Rating 1379\n\n## Registrations\n\n 2026-08-08: Chicago Summer International Open IBJJF Jiu-Jitsu Championship 2026 - BLUE / Adult / Female / Feather\n\n## Medals [...] ## Medals\n\n 2023-07-02: St. Louis International Open IBJJF Jiu-Jitsu Championship 2023 (Results) - WHITE / Master 1 / Female / Feather (Place 1)\n 2023-07-19: Orlando Summer International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - WHITE / Master 1 / Female / Feather (Place 1)\n 2026-03-25: Pan IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Female / Feather (Place 1)\n 2023-03-22: Pan IBJJF Jiu-Jitsu Championship 2023 (Flo) - WHITE / Master 1 / Female / Feather (Place 2)\n 2023-08-31: Jiu-Jitsu CON Novice International 2023 (Flo) - WHITE / Master 1 / Female / Feather (Place 2)",
-        "score": 0.58237284,
-        "raw_content": null
-      },
-      {
         "url": "https://jiujitsu.net/about",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
         "content": "# About This App\n\nJiuJitsu.net ranks competitors and provides a comprehensive database of matches in events run by the International Brazilian Jiu-Jitsu Federation. We are an independant site and are not affiliated with the IBJJF.\n\nCompetitors are rated using the Elo rating system, which is a method for calculating the relative skill levels of players in competitive games. We allow users to search for competitors, view their ratings, and see their match history.\n\nThis app is a work in progress and is being developed by Dan Lukehart and Will Weisser. The source code is available on GitHub. Ratings may be subject to change as the app is developed and improved. [...] We host and maintain this app as a free service to the jiu-jitsu community. If you would like to support us, please consider donating.\n\nIf you would like a copy of our source data for research purposes, contact us and we'll be happy to help. You have permission to use data or screenshots from this site in articles, blog posts, and other media, but we ask that you credit JiuJitsu.net. All other uses of our data, including commercial use, is prohibited without an explicit license.\n\n# Full Disclaimer\n\nWhile we only rank athletes who compete in the International Brazilian Jiu-Jitsu Federation, this site is not affiliated, endorsed by, or associated with the IBJJF. [...] Q: Are you going to track kids divisions?\n\nA: We have decided to store a searchable list of teen matches as some of these athletes are beginning their serious competitive journey in the sport. However, we do not compute ratings for teens and we do not track younger divisions in order to promote a healthy competitive environment for children.\n\nQ: What are the \"Elite\" badges on some athlete profiles?\n\nA: We assign an \"Elite\" badge to athletes whose ratings are among the top competitors in the same belt, weight and age divisions (or across all weights in the same age, a.k.a. Pound-for-Pound / P4P). These badges are a mark of achievement and allow fans to easily recognize when an elite athlete is competing and follow their progress.\n\nThere are three levels of Elite badges:",
@@ -99,10 +92,17 @@
         "content": "This site is not affiliated, endorsed by, or associated with the International Brazilian Jiu-Jitsu Federation. More Info\n\n## Yearly Team Awards - 2026 Gi\n\nClick to see our top-ranked teams for the 2026 gi season\n\n## Elite Athlete Lists\n\nSearch for a team to view elite athletes who have represented that team.\n\n## Team Event Awards\n\nSearch for a past event in our database to view our team rankings based on match outcomes and opponent rating. To encourage competitive participation without pressure, white belts and teens are not included in team rankings.",
         "score": 0.43323857,
         "raw_content": null
+      },
+      {
+        "url": "https://jiujitsu.net/research",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "# JiuJitsu.net Elo Match Calculator\n\nResearch expected outcomes, Elo gain and loss, and weight handicaps for head-to-head IBJJF matchups using our calculator.\n\nChoose belt, age, and weights to see projected results before the interactive app loads.",
+        "score": 0.30532485,
+        "raw_content": null
       }
     ],
-    "response_time": 1.76,
-    "request_id": "05564eeb-a6df-4a57-8b6e-9d9483e8d222"
+    "response_time": 2.64,
+    "request_id": "43044b64-ac42-4ffc-80e8-3c2ccbea400a"
   },
   "errors": []
 }
