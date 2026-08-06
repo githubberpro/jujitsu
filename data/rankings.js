@@ -1,5 +1,5 @@
 window.RANKINGS = {
-  "updated": "2026-08-05T08:37:58.903Z",
+  "updated": "2026-08-06T08:38:08.441Z",
   "source": "jiujitsu.net (unofficial IBJJF · Weisshart Elo) via Tavily",
   "scope": "Gi · Pound-for-Pound (top of the open ranking)",
   "count": 50,
@@ -33,12 +33,12 @@ window.RANKINGS = {
     },
     {
       "rank": 6,
-      "name": "Tarcísio Santos",
+      "name": "Andy Murasaki",
       "rating": 2465
     },
     {
       "rank": 6,
-      "name": "Andy Murasaki",
+      "name": "Tarcísio Santos",
       "rating": 2465
     },
     {
@@ -148,12 +148,12 @@ window.RANKINGS = {
     },
     {
       "rank": 29,
-      "name": "Horlando Monteiro",
+      "name": "Pedro Maia",
       "rating": 2327
     },
     {
       "rank": 29,
-      "name": "Pedro Maia",
+      "name": "Horlando Monteiro",
       "rating": 2327
     },
     {
@@ -208,12 +208,12 @@ window.RANKINGS = {
     },
     {
       "rank": 41,
-      "name": "Joao Mendes \"Bisnaga\"",
+      "name": "Marcos Gomes",
       "rating": 2306
     },
     {
       "rank": 41,
-      "name": "Marcos Gomes",
+      "name": "Joao Mendes \"Bisnaga\"",
       "rating": 2306
     },
     {
@@ -228,12 +228,12 @@ window.RANKINGS = {
     },
     {
       "rank": 45,
-      "name": "Luis Oliveira \"Cantareira\"",
+      "name": "Paulo Merlin",
       "rating": 2299
     },
     {
       "rank": 45,
-      "name": "Paulo Merlin",
+      "name": "Luis Oliveira \"Cantareira\"",
       "rating": 2299
     },
     {
