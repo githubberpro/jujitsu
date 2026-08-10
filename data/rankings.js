@@ -1,5 +1,5 @@
 window.RANKINGS = {
-  "updated": "2026-08-09T06:58:12.775Z",
+  "updated": "2026-08-10T07:43:55.840Z",
   "source": "jiujitsu.net (unofficial IBJJF · Weisshart Elo) via Tavily",
   "scope": "Gi · Pound-for-Pound (top of the open ranking)",
   "count": 50,
@@ -33,12 +33,12 @@ window.RANKINGS = {
     },
     {
       "rank": 6,
-      "name": "Andy Murasaki",
+      "name": "Tarcísio Santos",
       "rating": 2465
     },
     {
       "rank": 6,
-      "name": "Tarcísio Santos",
+      "name": "Andy Murasaki",
       "rating": 2465
     },
     {
@@ -58,18 +58,18 @@ window.RANKINGS = {
     },
     {
       "rank": 11,
+      "name": "Fellipe Andrew",
+      "rating": 2448
+    },
+    {
+      "rank": 12,
       "name": "Matheus Gabriel",
       "rating": 2446
     },
     {
-      "rank": 12,
+      "rank": 13,
       "name": "Meyram Maquine",
       "rating": 2438
-    },
-    {
-      "rank": 13,
-      "name": "Fellipe Andrew",
-      "rating": 2437
     },
     {
       "rank": 14,
@@ -98,12 +98,12 @@ window.RANKINGS = {
     },
     {
       "rank": 19,
-      "name": "Samuel Nagai \"Samurai\"",
+      "name": "Gabriel Ribeiro \"Veloso\"",
       "rating": 2376
     },
     {
       "rank": 19,
-      "name": "Gabriel Ribeiro \"Veloso\"",
+      "name": "Samuel Nagai \"Samurai\"",
       "rating": 2376
     },
     {
@@ -113,18 +113,18 @@ window.RANKINGS = {
     },
     {
       "rank": 22,
-      "name": "Edu Alves",
-      "rating": 2370
-    },
-    {
-      "rank": 23,
       "name": "Kennedy Maciel \"Cobrinha Jr\"",
       "rating": 2351
     },
     {
-      "rank": 23,
+      "rank": 22,
       "name": "Nolan Stuart",
       "rating": 2351
+    },
+    {
+      "rank": 24,
+      "name": "Edu Alves",
+      "rating": 2347
     },
     {
       "rank": 25,
@@ -148,33 +148,38 @@ window.RANKINGS = {
     },
     {
       "rank": 29,
-      "name": "Pedro Maia",
-      "rating": 2327
+      "name": "Pablo Oliveira",
+      "rating": 2328
     },
     {
-      "rank": 29,
+      "rank": 30,
       "name": "Horlando Monteiro",
       "rating": 2327
     },
     {
-      "rank": 31,
+      "rank": 30,
+      "name": "Pedro Maia",
+      "rating": 2327
+    },
+    {
+      "rank": 32,
       "name": "Uanderson Ferreira",
       "rating": 2326
     },
     {
-      "rank": 32,
+      "rank": 33,
       "name": "Luiz Victor",
       "rating": 2322
     },
     {
-      "rank": 33,
+      "rank": 34,
       "name": "Helder Rodrigues \"Tropeço\"",
       "rating": 2320
     },
     {
-      "rank": 34,
-      "name": "Pablo Oliveira",
-      "rating": 2319
+      "rank": 35,
+      "name": "Mateus Moraes",
+      "rating": 2314
     },
     {
       "rank": 35,
@@ -182,79 +187,74 @@ window.RANKINGS = {
       "rating": 2314
     },
     {
-      "rank": 36,
+      "rank": 35,
+      "name": "Marcos Gomes",
+      "rating": 2314
+    },
+    {
+      "rank": 38,
       "name": "Alex Sodré",
       "rating": 2311
     },
     {
-      "rank": 37,
-      "name": "Elijah Dorsey \"Big Breakfast\"",
-      "rating": 2310
-    },
-    {
-      "rank": 37,
+      "rank": 39,
       "name": "Manuel Ribamar",
       "rating": 2310
     },
     {
       "rank": 39,
+      "name": "Elijah Dorsey \"Big Breakfast\"",
+      "rating": 2310
+    },
+    {
+      "rank": 41,
       "name": "Mateo Cardona",
       "rating": 2309
     },
     {
-      "rank": 40,
+      "rank": 42,
       "name": "José Steve \"The Ice Man\"",
       "rating": 2307
     },
     {
-      "rank": 41,
-      "name": "Marcos Gomes",
-      "rating": 2306
-    },
-    {
-      "rank": 41,
+      "rank": 43,
       "name": "Joao Mendes \"Bisnaga\"",
       "rating": 2306
     },
     {
-      "rank": 43,
+      "rank": 44,
       "name": "Lucas Protasio",
       "rating": 2303
     },
     {
-      "rank": 44,
+      "rank": 45,
       "name": "Ademir Barreto",
       "rating": 2302
     },
     {
-      "rank": 45,
+      "rank": 46,
       "name": "Paulo Merlin",
       "rating": 2299
     },
     {
-      "rank": 45,
+      "rank": 46,
       "name": "Luis Oliveira \"Cantareira\"",
       "rating": 2299
     },
     {
-      "rank": 47,
+      "rank": 48,
       "name": "Richar Nogueira",
       "rating": 2298
     },
     {
-      "rank": 48,
+      "rank": 49,
       "name": "Thalison Soares",
       "rating": 2297
     },
     {
-      "rank": 49,
+      "rank": 50,
       "name": "Gabriel Cardoso",
       "rating": 2296
-    },
-    {
-      "rank": 50,
-      "name": "Murilo Amaral",
-      "rating": 2295
     }
   ]
 };
