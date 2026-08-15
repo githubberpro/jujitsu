@@ -1,8 +1,8 @@
 window.RANKINGS = {
-  "updated": "2026-08-14T07:25:53.687Z",
+  "updated": "2026-08-15T06:39:16.726Z",
   "source": "jiujitsu.net (unofficial IBJJF · Weisshart Elo) via Tavily",
   "scope": "Gi · Pound-for-Pound (top of the open ranking)",
-  "count": 50,
+  "count": 30,
   "note": "",
   "errors": [],
   "athletes": [
@@ -98,12 +98,12 @@ window.RANKINGS = {
     },
     {
       "rank": 19,
-      "name": "Gabriel Ribeiro \"Veloso\"",
+      "name": "Samuel Nagai \"Samurai\"",
       "rating": 2376
     },
     {
       "rank": 19,
-      "name": "Samuel Nagai \"Samurai\"",
+      "name": "Gabriel Ribeiro \"Veloso\"",
       "rating": 2376
     },
     {
@@ -113,12 +113,12 @@ window.RANKINGS = {
     },
     {
       "rank": 22,
-      "name": "Kennedy Maciel \"Cobrinha Jr\"",
+      "name": "Nolan Stuart",
       "rating": 2351
     },
     {
       "rank": 22,
-      "name": "Nolan Stuart",
+      "name": "Kennedy Maciel \"Cobrinha Jr\"",
       "rating": 2351
     },
     {
@@ -155,106 +155,6 @@ window.RANKINGS = {
       "rank": 30,
       "name": "Horlando Monteiro",
       "rating": 2327
-    },
-    {
-      "rank": 30,
-      "name": "Pedro Maia",
-      "rating": 2327
-    },
-    {
-      "rank": 32,
-      "name": "Uanderson Ferreira",
-      "rating": 2326
-    },
-    {
-      "rank": 33,
-      "name": "Luiz Victor",
-      "rating": 2322
-    },
-    {
-      "rank": 34,
-      "name": "Helder Rodrigues \"Tropeço\"",
-      "rating": 2320
-    },
-    {
-      "rank": 35,
-      "name": "Mateus Moraes",
-      "rating": 2314
-    },
-    {
-      "rank": 35,
-      "name": "Diego Sodré",
-      "rating": 2314
-    },
-    {
-      "rank": 35,
-      "name": "Marcos Gomes",
-      "rating": 2314
-    },
-    {
-      "rank": 38,
-      "name": "Alex Sodré",
-      "rating": 2311
-    },
-    {
-      "rank": 39,
-      "name": "Manuel Ribamar",
-      "rating": 2310
-    },
-    {
-      "rank": 39,
-      "name": "Elijah Dorsey \"Big Breakfast\"",
-      "rating": 2310
-    },
-    {
-      "rank": 41,
-      "name": "Mateo Cardona",
-      "rating": 2309
-    },
-    {
-      "rank": 42,
-      "name": "José Steve \"The Ice Man\"",
-      "rating": 2307
-    },
-    {
-      "rank": 43,
-      "name": "Joao Mendes \"Bisnaga\"",
-      "rating": 2306
-    },
-    {
-      "rank": 44,
-      "name": "Lucas Protasio",
-      "rating": 2303
-    },
-    {
-      "rank": 45,
-      "name": "Ademir Barreto",
-      "rating": 2302
-    },
-    {
-      "rank": 46,
-      "name": "Paulo Merlin",
-      "rating": 2299
-    },
-    {
-      "rank": 46,
-      "name": "Luis Oliveira \"Cantareira\"",
-      "rating": 2299
-    },
-    {
-      "rank": 48,
-      "name": "Richar Nogueira",
-      "rating": 2298
-    },
-    {
-      "rank": 49,
-      "name": "Thalison Soares",
-      "rating": 2297
-    },
-    {
-      "rank": 50,
-      "name": "Gabriel Cardoso",
-      "rating": 2296
     }
   ]
 };
