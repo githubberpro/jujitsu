@@ -1,5 +1,5 @@
 window.RANKINGS = {
-  "updated": "2026-08-27T17:24:55.737Z",
+  "updated": "2026-08-28T18:18:10.610Z",
   "source": "jiujitsu.net (unofficial IBJJF · Weisshart Elo) via Tavily",
   "scope": "Gi · Pound-for-Pound (top of the open ranking)",
   "count": 50,
@@ -98,12 +98,12 @@ window.RANKINGS = {
     },
     {
       "rank": 19,
-      "name": "Samuel Nagai \"Samurai\"",
+      "name": "Gabriel Ribeiro \"Veloso\"",
       "rating": 2376
     },
     {
       "rank": 19,
-      "name": "Gabriel Ribeiro \"Veloso\"",
+      "name": "Samuel Nagai \"Samurai\"",
       "rating": 2376
     },
     {
@@ -113,12 +113,12 @@ window.RANKINGS = {
     },
     {
       "rank": 22,
-      "name": "Kennedy Maciel \"Cobrinha Jr\"",
+      "name": "Nolan Stuart",
       "rating": 2351
     },
     {
       "rank": 22,
-      "name": "Nolan Stuart",
+      "name": "Kennedy Maciel \"Cobrinha Jr\"",
       "rating": 2351
     },
     {
@@ -138,12 +138,12 @@ window.RANKINGS = {
     },
     {
       "rank": 27,
-      "name": "Gutemberg Pereira",
+      "name": "Pablo Oliveira",
       "rating": 2339
     },
     {
       "rank": 27,
-      "name": "Pablo Oliveira",
+      "name": "Gutemberg Pereira",
       "rating": 2339
     },
     {
@@ -153,12 +153,12 @@ window.RANKINGS = {
     },
     {
       "rank": 30,
-      "name": "Horlando Monteiro",
+      "name": "Pedro Maia",
       "rating": 2327
     },
     {
       "rank": 30,
-      "name": "Pedro Maia",
+      "name": "Horlando Monteiro",
       "rating": 2327
     },
     {
@@ -178,22 +178,22 @@ window.RANKINGS = {
     },
     {
       "rank": 35,
-      "name": "Diego Sodré",
-      "rating": 2314
-    },
-    {
-      "rank": 35,
       "name": "Marcos Gomes",
       "rating": 2314
     },
     {
       "rank": 35,
-      "name": "Cleison Santos",
+      "name": "Diego Sodré",
       "rating": 2314
     },
     {
       "rank": 35,
       "name": "Mateus Moraes",
+      "rating": 2314
+    },
+    {
+      "rank": 35,
+      "name": "Cleison Santos",
       "rating": 2314
     },
     {
@@ -203,12 +203,12 @@ window.RANKINGS = {
     },
     {
       "rank": 40,
-      "name": "Elijah Dorsey \"Big Breakfast\"",
+      "name": "Manuel Ribamar",
       "rating": 2310
     },
     {
       "rank": 40,
-      "name": "Manuel Ribamar",
+      "name": "Elijah Dorsey \"Big Breakfast\"",
       "rating": 2310
     },
     {
@@ -243,12 +243,12 @@ window.RANKINGS = {
     },
     {
       "rank": 48,
-      "name": "Luis Oliveira \"Cantareira\"",
+      "name": "Paulo Merlin",
       "rating": 2299
     },
     {
       "rank": 48,
-      "name": "Paulo Merlin",
+      "name": "Luis Oliveira \"Cantareira\"",
       "rating": 2299
     },
     {
