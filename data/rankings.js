@@ -1,5 +1,5 @@
 window.RANKINGS = {
-  "updated": "2026-09-03T10:49:52.663Z",
+  "updated": "2026-09-04T10:48:56.377Z",
   "source": "jiujitsu.net (unofficial IBJJF · Weisshart Elo) via Tavily",
   "scope": "Gi · Pound-for-Pound (top of the open ranking)",
   "count": 50,
@@ -98,12 +98,12 @@ window.RANKINGS = {
     },
     {
       "rank": 19,
-      "name": "Gabriel Ribeiro \"Veloso\"",
+      "name": "Samuel Nagai \"Samurai\"",
       "rating": 2376
     },
     {
       "rank": 19,
-      "name": "Samuel Nagai \"Samurai\"",
+      "name": "Gabriel Ribeiro \"Veloso\"",
       "rating": 2376
     },
     {
@@ -113,12 +113,12 @@ window.RANKINGS = {
     },
     {
       "rank": 22,
-      "name": "Nolan Stuart",
+      "name": "Kennedy Maciel \"Cobrinha Jr\"",
       "rating": 2351
     },
     {
       "rank": 22,
-      "name": "Kennedy Maciel \"Cobrinha Jr\"",
+      "name": "Nolan Stuart",
       "rating": 2351
     },
     {
@@ -138,12 +138,12 @@ window.RANKINGS = {
     },
     {
       "rank": 27,
-      "name": "Pablo Oliveira",
+      "name": "Gutemberg Pereira",
       "rating": 2339
     },
     {
       "rank": 27,
-      "name": "Gutemberg Pereira",
+      "name": "Pablo Oliveira",
       "rating": 2339
     },
     {
@@ -178,17 +178,17 @@ window.RANKINGS = {
     },
     {
       "rank": 35,
-      "name": "Marcos Gomes",
-      "rating": 2314
-    },
-    {
-      "rank": 35,
       "name": "Diego Sodré",
       "rating": 2314
     },
     {
       "rank": 35,
       "name": "Mateus Moraes",
+      "rating": 2314
+    },
+    {
+      "rank": 35,
+      "name": "Marcos Gomes",
       "rating": 2314
     },
     {
@@ -243,12 +243,12 @@ window.RANKINGS = {
     },
     {
       "rank": 48,
-      "name": "Paulo Merlin",
+      "name": "Luis Oliveira \"Cantareira\"",
       "rating": 2299
     },
     {
       "rank": 48,
-      "name": "Luis Oliveira \"Cantareira\"",
+      "name": "Paulo Merlin",
       "rating": 2299
     },
     {
