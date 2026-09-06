@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-05T10:06:51.626Z",
+  "fetchedAt": "2026-09-06T10:27:35.453Z",
   "extract": {
     "results": [
       {
@@ -21,8 +21,8 @@
         "error": "Failed to fetch url"
       }
     ],
-    "response_time": 6.81,
-    "request_id": "8681319d-d9ba-4deb-9804-af149e76daf1"
+    "response_time": 7.33,
+    "request_id": "2d13ac7d-dc7c-42cc-876d-07df1b5fe5b8"
   },
   "search": {
     "query": "jiujitsu.net current pound for pound BJJ rankings top ranked athletes by division",
@@ -31,20 +31,28 @@
     "images": [],
     "results": [
       {
-        "url": "https://jiujitsu.net/team/fabin-rosa-brazilian-jiujitsu",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "| Rank | Athlete | Country | Rating | Matches |\n ---  --- \n| 1 | Tainan Dalpra | br | 2574 |\n| 2 | Erich Munis | br | 2534 |\n| 3 | Adam Wardziński | pl | 2507 |\n| 4 | Diego Oliveira \"Pato\" | br | 2506 |\n| 5 | Tarcísio Santos | br | 2504 |\n| 6 | Cole Abate | us | 2493 |\n| 7 | Andy Murasaki | br | 2465 |\n| 8 | Jackson Nagai | br | 2463 |\n| 9 | Jansen Gomes \"Nenego\" | br | 2462 |\n| 10 | Fellipe Andrew | br | 2455 |\n| 11 | Vinicius Liberati | br | 2450 |\n| 12 | Matheus Gabriel | br | 2446 |\n| 13 | Meyram Maquine | br | 2438 |\n| 14 | Enderson Dias \"Varão\" | br | 2407 |\n| 15 | Mica Galvão | br | 2401 |\n| 16 | Gabriel Galvao \"Caboja\" | br | 2400 |\n| 17 | Leo Ferreira | br | 2397 |\n| 18 | Rider Zuchi | br | 2389 |\n| 19 | Samuel Nagai \"Samurai\" | br | 2376 | [...] | 19 | Samuel Nagai \"Samurai\" | br | 2376 |\n| 19 | Gabriel Ribeiro \"Veloso\" | br | 2376 |\n| 21 | Pablo Lavaselli | ar | 2373 |\n| 22 | Horlando Monteiro | br | 2356 |\n| 23 | Nolan Stuart | us | 2351 |\n| 23 | Kennedy Maciel \"Cobrinha Jr\" | br | 2351 |\n| 23 | Uanderson Ferreira | br | 2351 |\n| 26 | Edu Alves | br | 2347 |\n| 27 | Gustavo Batista \"Braguinha\" | br | 2344 |\n| 28 | Pedro Machado | br | 2342 |\n| 29 | Gutemberg Pereira | br | 2339 |\n| 29 | Pablo Oliveira | br | 2339 |\n| 31 | Rerisson Gabriel | br | 2335 |\n| 32 | Richar Nogueira | br | 2333 |\n| 33 | Pedro Maia | br | 2327 |\n| 34 | Mateus Moraes | br | 2323 |\n| 35 | Helder Rodrigues \"Tropeço\" | br | 2320 |\n| 36 | Cleison Santos | br | 2314 |\n| 36 | Marcos Gomes | br | 2314 |\n| 36 | Diego Sodré | br | 2314 | [...] | 36 | Diego Sodré | br | 2314 |\n| 39 | Alex Sodré | br | 2311 |\n| 40 | Manuel Ribamar | br | 2310 |\n| 40 | Elijah Dorsey \"Big Breakfast\" | us | 2310 |\n| 42 | José Steve \"The Ice Man\" | be | 2307 |\n| 43 | Joao Mendes \"Bisnaga\" | br | 2306 |\n| 44 | Leo Santos | br | 2305 |\n| 45 | Lucas Protasio | br | 2303 |\n| 46 | Ademir Barreto | br | 2302 |\n| 47 | Luis Oliveira \"Cantareira\" | br | 2299 |\n| 47 | Paulo Merlin | br | 2299 |\n| 49 | Thalison Soares | br | 2297 |\n| 50 | Gabriel Cardoso | br | 2296 |",
-        "score": 0.80844593,
-        "raw_content": null,
-        "id": "4d8287-00"
-      },
-      {
         "url": "https://jiujitsu.net/team/carlson-gracie-team",
         "title": "JiuJitsu.net — Rankings, Videos, News and More",
         "content": "| Rank | Athlete | Country | Rating | Matches |\n ---  --- \n| 1 | Tainan Dalpra | br | 2574 |\n| 2 | Erich Munis | br | 2534 |\n| 3 | Adam Wardziński | pl | 2507 |\n| 4 | Diego Oliveira \"Pato\" | br | 2506 |\n| 5 | Tarcísio Santos | br | 2504 |\n| 6 | Cole Abate | us | 2493 |\n| 7 | Andy Murasaki | br | 2465 |\n| 8 | Jackson Nagai | br | 2463 |\n| 9 | Jansen Gomes \"Nenego\" | br | 2462 |\n| 10 | Fellipe Andrew | br | 2455 |\n| 11 | Vinicius Liberati | br | 2450 |\n| 12 | Matheus Gabriel | br | 2446 |\n| 13 | Meyram Maquine | br | 2438 |\n| 14 | Enderson Dias \"Varão\" | br | 2407 |\n| 15 | Mica Galvão | br | 2401 |\n| 16 | Gabriel Galvao \"Caboja\" | br | 2400 |\n| 17 | Leo Ferreira | br | 2397 |\n| 18 | Rider Zuchi | br | 2389 |\n| 19 | Samuel Nagai \"Samurai\" | br | 2376 | [...] | 19 | Samuel Nagai \"Samurai\" | br | 2376 |\n| 19 | Gabriel Ribeiro \"Veloso\" | br | 2376 |\n| 21 | Pablo Lavaselli | ar | 2373 |\n| 22 | Horlando Monteiro | br | 2356 |\n| 23 | Nolan Stuart | us | 2351 |\n| 23 | Kennedy Maciel \"Cobrinha Jr\" | br | 2351 |\n| 23 | Uanderson Ferreira | br | 2351 |\n| 26 | Edu Alves | br | 2347 |\n| 27 | Gustavo Batista \"Braguinha\" | br | 2344 |\n| 28 | Pedro Machado | br | 2342 |\n| 29 | Gutemberg Pereira | br | 2339 |\n| 29 | Pablo Oliveira | br | 2339 |\n| 31 | Rerisson Gabriel | br | 2335 |\n| 32 | Richar Nogueira | br | 2333 |\n| 33 | Pedro Maia | br | 2327 |\n| 34 | Mateus Moraes | br | 2323 |\n| 35 | Helder Rodrigues \"Tropeço\" | br | 2320 |\n| 36 | Cleison Santos | br | 2314 |\n| 36 | Marcos Gomes | br | 2314 |\n| 36 | Diego Sodré | br | 2314 | [...] | 36 | Diego Sodré | br | 2314 |\n| 39 | Alex Sodré | br | 2311 |\n| 40 | Manuel Ribamar | br | 2310 |\n| 40 | Elijah Dorsey \"Big Breakfast\" | us | 2310 |\n| 42 | José Steve \"The Ice Man\" | be | 2307 |\n| 43 | Joao Mendes \"Bisnaga\" | br | 2306 |\n| 44 | Leo Santos | br | 2305 |\n| 45 | Lucas Protasio | br | 2303 |\n| 46 | Ademir Barreto | br | 2302 |\n| 47 | Luis Oliveira \"Cantareira\" | br | 2299 |\n| 47 | Paulo Merlin | br | 2299 |\n| 49 | Thalison Soares | br | 2297 |\n| 50 | Gabriel Cardoso | br | 2296 |",
         "score": 0.80844593,
         "raw_content": null,
-        "id": "62299a-01"
+        "id": "c5b62a-00"
+      },
+      {
+        "url": "https://jiujitsu.net/team/r1ng-bjj",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "| Rank | Athlete | Country | Rating | Matches |\n ---  --- \n| 1 | Tainan Dalpra | br | 2574 |\n| 2 | Erich Munis | br | 2534 |\n| 3 | Adam Wardziński | pl | 2507 |\n| 4 | Diego Oliveira \"Pato\" | br | 2506 |\n| 5 | Tarcísio Santos | br | 2504 |\n| 6 | Cole Abate | us | 2493 |\n| 7 | Andy Murasaki | br | 2465 |\n| 8 | Jackson Nagai | br | 2463 |\n| 9 | Jansen Gomes \"Nenego\" | br | 2462 |\n| 10 | Fellipe Andrew | br | 2455 |\n| 11 | Vinicius Liberati | br | 2450 |\n| 12 | Matheus Gabriel | br | 2446 |\n| 13 | Meyram Maquine | br | 2438 |\n| 14 | Enderson Dias \"Varão\" | br | 2407 |\n| 15 | Mica Galvão | br | 2401 |\n| 16 | Gabriel Galvao \"Caboja\" | br | 2400 |\n| 17 | Leo Ferreira | br | 2397 |\n| 18 | Rider Zuchi | br | 2389 |\n| 19 | Samuel Nagai \"Samurai\" | br | 2376 | [...] | 19 | Samuel Nagai \"Samurai\" | br | 2376 |\n| 19 | Gabriel Ribeiro \"Veloso\" | br | 2376 |\n| 21 | Pablo Lavaselli | ar | 2373 |\n| 22 | Horlando Monteiro | br | 2356 |\n| 23 | Nolan Stuart | us | 2351 |\n| 23 | Kennedy Maciel \"Cobrinha Jr\" | br | 2351 |\n| 23 | Uanderson Ferreira | br | 2351 |\n| 26 | Edu Alves | br | 2347 |\n| 27 | Gustavo Batista \"Braguinha\" | br | 2344 |\n| 28 | Pedro Machado | br | 2342 |\n| 29 | Gutemberg Pereira | br | 2339 |\n| 29 | Pablo Oliveira | br | 2339 |\n| 31 | Rerisson Gabriel | br | 2335 |\n| 32 | Richar Nogueira | br | 2333 |\n| 33 | Pedro Maia | br | 2327 |\n| 34 | Mateus Moraes | br | 2323 |\n| 35 | Helder Rodrigues \"Tropeço\" | br | 2320 |\n| 36 | Cleison Santos | br | 2314 |\n| 36 | Marcos Gomes | br | 2314 |\n| 36 | Diego Sodré | br | 2314 | [...] | 36 | Diego Sodré | br | 2314 |\n| 39 | Alex Sodré | br | 2311 |\n| 40 | Manuel Ribamar | br | 2310 |\n| 40 | Elijah Dorsey \"Big Breakfast\" | us | 2310 |\n| 42 | José Steve \"The Ice Man\" | be | 2307 |\n| 43 | Joao Mendes \"Bisnaga\" | br | 2306 |\n| 44 | Leo Santos | br | 2305 |\n| 45 | Lucas Protasio | br | 2303 |\n| 46 | Ademir Barreto | br | 2302 |\n| 47 | Luis Oliveira \"Cantareira\" | br | 2299 |\n| 47 | Paulo Merlin | br | 2299 |\n| 49 | Thalison Soares | br | 2297 |\n| 50 | Gabriel Cardoso | br | 2296 |",
+        "score": 0.80844593,
+        "raw_content": null,
+        "id": "82644d-01"
+      },
+      {
+        "url": "https://jiujitsu.net/team/jiujitsu-methods",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "| Rank | Athlete | Country | Rating | Matches |\n ---  --- \n| 1 | Tainan Dalpra | br | 2574 |\n| 2 | Erich Munis | br | 2534 |\n| 3 | Adam Wardziński | pl | 2507 |\n| 4 | Diego Oliveira \"Pato\" | br | 2506 |\n| 5 | Tarcísio Santos | br | 2504 |\n| 6 | Cole Abate | us | 2493 |\n| 7 | Andy Murasaki | br | 2465 |\n| 8 | Jackson Nagai | br | 2463 |\n| 9 | Jansen Gomes \"Nenego\" | br | 2462 |\n| 10 | Fellipe Andrew | br | 2455 |\n| 11 | Vinicius Liberati | br | 2450 |\n| 12 | Matheus Gabriel | br | 2446 |\n| 13 | Meyram Maquine | br | 2438 |\n| 14 | Enderson Dias \"Varão\" | br | 2407 |\n| 15 | Mica Galvão | br | 2401 |\n| 16 | Gabriel Galvao \"Caboja\" | br | 2400 |\n| 17 | Leo Ferreira | br | 2397 |\n| 18 | Rider Zuchi | br | 2389 |\n| 19 | Samuel Nagai \"Samurai\" | br | 2376 | [...] | 19 | Samuel Nagai \"Samurai\" | br | 2376 |\n| 19 | Gabriel Ribeiro \"Veloso\" | br | 2376 |\n| 21 | Pablo Lavaselli | ar | 2373 |\n| 22 | Horlando Monteiro | br | 2356 |\n| 23 | Kennedy Maciel \"Cobrinha Jr\" | br | 2351 |\n| 23 | Nolan Stuart | us | 2351 |\n| 23 | Uanderson Ferreira | br | 2351 |\n| 26 | Edu Alves | br | 2347 |\n| 27 | Gustavo Batista \"Braguinha\" | br | 2344 |\n| 28 | Pedro Machado | br | 2342 |\n| 29 | Pablo Oliveira | br | 2339 |\n| 29 | Gutemberg Pereira | br | 2339 |\n| 31 | Rerisson Gabriel | br | 2335 |\n| 32 | Richar Nogueira | br | 2333 |\n| 33 | Pedro Maia | br | 2327 |\n| 34 | Mateus Moraes | br | 2323 |\n| 35 | Helder Rodrigues \"Tropeço\" | br | 2320 |\n| 36 | Diego Sodré | br | 2314 |\n| 36 | Marcos Gomes | br | 2314 |\n| 36 | Cleison Santos | br | 2314 | [...] | 36 | Cleison Santos | br | 2314 |\n| 39 | Alex Sodré | br | 2311 |\n| 40 | Elijah Dorsey \"Big Breakfast\" | us | 2310 |\n| 40 | Manuel Ribamar | br | 2310 |\n| 42 | José Steve \"The Ice Man\" | be | 2307 |\n| 43 | Joao Mendes \"Bisnaga\" | br | 2306 |\n| 44 | Leo Santos | br | 2305 |\n| 45 | Lucas Protasio | br | 2303 |\n| 46 | Ademir Barreto | br | 2302 |\n| 47 | Paulo Merlin | br | 2299 |\n| 47 | Luis Oliveira \"Cantareira\" | br | 2299 |\n| 49 | Thalison Soares | br | 2297 |\n| 50 | Gabriel Cardoso | br | 2296 |",
+        "score": 0.80844593,
+        "raw_content": null,
+        "id": "0abc5b-02"
       },
       {
         "url": "https://jiujitsu.net/team/pound-for-pound-deutschland",
@@ -52,15 +60,7 @@
         "content": "| Rank | Athlete | Country | Rating | Matches |\n ---  --- \n| 1 | Tainan Dalpra | br | 2574 |\n| 2 | Erich Munis | br | 2534 |\n| 3 | Adam Wardziński | pl | 2507 |\n| 4 | Diego Oliveira \"Pato\" | br | 2506 |\n| 5 | Cole Abate | us | 2493 |\n| 6 | Andy Murasaki | br | 2465 |\n| 6 | Tarcísio Santos | br | 2465 |\n| 8 | Jackson Nagai | br | 2463 |\n| 9 | Jansen Gomes \"Nenego\" | br | 2462 |\n| 10 | Vinicius Liberati | br | 2450 |\n| 11 | Fellipe Andrew | br | 2448 |\n| 12 | Matheus Gabriel | br | 2446 |\n| 13 | Meyram Maquine | br | 2438 |\n| 14 | Enderson Dias \"Varão\" | br | 2407 |\n| 15 | Mica Galvão | br | 2401 |\n| 16 | Gabriel Galvao \"Caboja\" | br | 2400 |\n| 17 | Leo Ferreira | br | 2397 |\n| 18 | Rider Zuchi | br | 2389 |\n| 19 | Samuel Nagai \"Samurai\" | br | 2376 | [...] | 19 | Samuel Nagai \"Samurai\" | br | 2376 |\n| 19 | Gabriel Ribeiro \"Veloso\" | br | 2376 |\n| 21 | Pablo Lavaselli | ar | 2373 |\n| 22 | Kennedy Maciel \"Cobrinha Jr\" | br | 2351 |\n| 22 | Nolan Stuart | us | 2351 |\n| 24 | Edu Alves | br | 2347 |\n| 25 | Gustavo Batista \"Braguinha\" | br | 2344 |\n| 26 | Pedro Machado | br | 2342 |\n| 27 | Gutemberg Pereira | br | 2339 |\n| 27 | Pablo Oliveira | br | 2339 |\n| 29 | Rerisson Gabriel | br | 2335 |\n| 30 | Pedro Maia | br | 2327 |\n| 30 | Horlando Monteiro | br | 2327 |\n| 32 | Uanderson Ferreira | br | 2326 |\n| 33 | Luiz Victor | br | 2322 |\n| 34 | Helder Rodrigues \"Tropeço\" | br | 2320 |\n| 35 | Diego Sodré | br | 2314 |\n| 35 | Mateus Moraes | br | 2314 |\n| 35 | Marcos Gomes | br | 2314 |\n| 35 | Cleison Santos | br | 2314 | [...] | 35 | Cleison Santos | br | 2314 |\n| 39 | Alex Sodré | br | 2311 |\n| 40 | Manuel Ribamar | br | 2310 |\n| 40 | Elijah Dorsey \"Big Breakfast\" | us | 2310 |\n| 42 | Mateo Cardona | us | 2309 |\n| 43 | José Steve \"The Ice Man\" | be | 2307 |\n| 44 | Joao Mendes \"Bisnaga\" | br | 2306 |\n| 45 | Leo Santos | br | 2305 |\n| 46 | Lucas Protasio | br | 2303 |\n| 47 | Ademir Barreto | br | 2302 |\n| 48 | Luis Oliveira \"Cantareira\" | br | 2299 |\n| 48 | Paulo Merlin | br | 2299 |\n| 50 | Richar Nogueira | br | 2298 |",
         "score": 0.8047902,
         "raw_content": null,
-        "id": "22ab74-02"
-      },
-      {
-        "url": "https://jiujitsu.net",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "| Rank | Athlete | Country | Rating | Matches |\n ---  --- \n| 1 | Tainan Dalpra | br | 2574 |\n| 2 | Erich Munis | br | 2534 |\n| 3 | Adam Wardziński | pl | 2507 |\n| 4 | Diego Oliveira \"Pato\" | br | 2506 |\n| 5 | Cole Abate | us | 2493 |\n| 6 | Andy Murasaki | br | 2465 |\n| 6 | Tarcísio Santos | br | 2465 |\n| 8 | Jackson Nagai | br | 2463 |\n| 9 | Jansen Gomes \"Nenego\" | br | 2462 |\n| 10 | Vinicius Liberati | br | 2450 |\n| 11 | Fellipe Andrew | br | 2448 |\n| 12 | Matheus Gabriel | br | 2446 |\n| 13 | Meyram Maquine | br | 2438 |\n| 14 | Enderson Dias \"Varão\" | br | 2407 |\n| 15 | Mica Galvão | br | 2401 |\n| 16 | Gabriel Galvao \"Caboja\" | br | 2400 |\n| 17 | Leo Ferreira | br | 2397 |\n| 18 | Rider Zuchi | br | 2389 |\n| 19 | Samuel Nagai \"Samurai\" | br | 2376 | [...] | 19 | Samuel Nagai \"Samurai\" | br | 2376 |\n| 19 | Gabriel Ribeiro \"Veloso\" | br | 2376 |\n| 21 | Pablo Lavaselli | ar | 2373 |\n| 22 | Kennedy Maciel \"Cobrinha Jr\" | br | 2351 |\n| 22 | Nolan Stuart | us | 2351 |\n| 24 | Edu Alves | br | 2347 |\n| 25 | Gustavo Batista \"Braguinha\" | br | 2344 |\n| 26 | Pedro Machado | br | 2342 |\n| 27 | Gutemberg Pereira | br | 2339 |\n| 27 | Pablo Oliveira | br | 2339 |\n| 29 | Rerisson Gabriel | br | 2335 |\n| 30 | Pedro Maia | br | 2327 |\n| 30 | Horlando Monteiro | br | 2327 |\n| 32 | Uanderson Ferreira | br | 2326 |\n| 33 | Luiz Victor | br | 2322 |\n| 34 | Helder Rodrigues \"Tropeço\" | br | 2320 |\n| 35 | Diego Sodré | br | 2314 |\n| 35 | Mateus Moraes | br | 2314 |\n| 35 | Marcos Gomes | br | 2314 |\n| 35 | Cleison Santos | br | 2314 | [...] | 35 | Cleison Santos | br | 2314 |\n| 39 | Alex Sodré | br | 2311 |\n| 40 | Manuel Ribamar | br | 2310 |\n| 40 | Elijah Dorsey \"Big Breakfast\" | us | 2310 |\n| 42 | Mateo Cardona | us | 2309 |\n| 43 | José Steve \"The Ice Man\" | be | 2307 |\n| 44 | Joao Mendes \"Bisnaga\" | br | 2306 |\n| 45 | Leo Santos | br | 2305 |\n| 46 | Lucas Protasio | br | 2303 |\n| 47 | Ademir Barreto | br | 2302 |\n| 48 | Luis Oliveira \"Cantareira\" | br | 2299 |\n| 48 | Paulo Merlin | br | 2299 |\n| 50 | Richar Nogueira | br | 2298 |",
-        "score": 0.8047902,
-        "raw_content": null,
-        "id": "fe7d84-03"
+        "id": "1dfcf8-03"
       },
       {
         "url": "https://jiujitsu.net/team/8020-jiujitsu",
@@ -68,23 +68,7 @@
         "content": "| Rank | Athlete | Country | Rating | Matches |\n ---  --- \n| 1 | Tainan Dalpra | br | 2574 |\n| 2 | Erich Munis | br | 2534 |\n| 3 | Adam Wardziński | pl | 2507 |\n| 4 | Diego Oliveira \"Pato\" | br | 2506 |\n| 5 | Cole Abate | us | 2493 |\n| 6 | Andy Murasaki | br | 2465 |\n| 6 | Tarcísio Santos | br | 2465 |\n| 8 | Jackson Nagai | br | 2463 |\n| 9 | Jansen Gomes \"Nenego\" | br | 2462 |\n| 10 | Vinicius Liberati | br | 2450 |\n| 11 | Fellipe Andrew | br | 2448 |\n| 12 | Matheus Gabriel | br | 2446 |\n| 13 | Meyram Maquine | br | 2438 |\n| 14 | Enderson Dias \"Varão\" | br | 2407 |\n| 15 | Mica Galvão | br | 2401 |\n| 16 | Gabriel Galvao \"Caboja\" | br | 2400 |\n| 17 | Leo Ferreira | br | 2397 |\n| 18 | Rider Zuchi | br | 2389 |\n| 19 | Samuel Nagai \"Samurai\" | br | 2376 | [...] | 19 | Samuel Nagai \"Samurai\" | br | 2376 |\n| 19 | Gabriel Ribeiro \"Veloso\" | br | 2376 |\n| 21 | Pablo Lavaselli | ar | 2373 |\n| 22 | Kennedy Maciel \"Cobrinha Jr\" | br | 2351 |\n| 22 | Nolan Stuart | us | 2351 |\n| 24 | Edu Alves | br | 2347 |\n| 25 | Gustavo Batista \"Braguinha\" | br | 2344 |\n| 26 | Pedro Machado | br | 2342 |\n| 27 | Gutemberg Pereira | br | 2339 |\n| 27 | Pablo Oliveira | br | 2339 |\n| 29 | Rerisson Gabriel | br | 2335 |\n| 30 | Horlando Monteiro | br | 2327 |\n| 30 | Pedro Maia | br | 2327 |\n| 32 | Uanderson Ferreira | br | 2326 |\n| 33 | Luiz Victor | br | 2322 |\n| 34 | Helder Rodrigues \"Tropeço\" | br | 2320 |\n| 35 | Cleison Santos | br | 2314 |\n| 35 | Mateus Moraes | br | 2314 |\n| 35 | Diego Sodré | br | 2314 |\n| 35 | Marcos Gomes | br | 2314 | [...] | 35 | Marcos Gomes | br | 2314 |\n| 39 | Alex Sodré | br | 2311 |\n| 40 | Manuel Ribamar | br | 2310 |\n| 40 | Elijah Dorsey \"Big Breakfast\" | us | 2310 |\n| 42 | Mateo Cardona | us | 2309 |\n| 43 | José Steve \"The Ice Man\" | be | 2307 |\n| 44 | Joao Mendes \"Bisnaga\" | br | 2306 |\n| 45 | Leo Santos | br | 2305 |\n| 46 | Lucas Protasio | br | 2303 |\n| 47 | Ademir Barreto | br | 2302 |\n| 48 | Paulo Merlin | br | 2299 |\n| 48 | Luis Oliveira \"Cantareira\" | br | 2299 |\n| 50 | Richar Nogueira | br | 2298 |",
         "score": 0.8047902,
         "raw_content": null,
-        "id": "f74c48-04"
-      },
-      {
-        "url": "https://jiujitsu.net/athlete/vinicios-naoto-higa",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Vinicios Naoto Higa\n\nRating: 1,531 | Belt: BLUE | Team: Carlos Toyota BJJ Academy | Country: br\n\n## Ranks\n\n Male / Juvenile / BLUE / : Rank 106, Rating 1531\n Male / Juvenile / BLUE / Middle: Rank 36, Rating 1531\n\n## Registrations\n\n No upcoming registrations\n\n## Medals\n\n 2025-06-19: Asian Jiu-Jitsu IBJJF Championship 2025 - BLUE / Juvenile / Male / Medium Heavy (Place 1)\n 2025-06-19: Asian Jiu-Jitsu IBJJF Championship 2025 - BLUE / Juvenile / Male / Open Class Heavy (Place 1)\n 2026-07-11: Asian Jiu-Jitsu IBJJF Championship 2026 - BLUE / Juvenile 2 / Male / Middle (Place 2)\n 2025-01-17: European IBJJF Jiu-Jitsu Championship 2025 - BLUE / Juvenile / Male / Medium Heavy (Place 3)",
-        "score": 0.78944516,
-        "raw_content": null,
-        "id": "9750b5-05"
-      },
-      {
-        "url": "https://jiujitsu.net/team/jiujitsu-methods",
-        "title": "Jiu-Jitsu Methods - JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "Current Team Rating Tier 1 Elite (Top 2%) Ivan Valencia 🟣 Marcio Andre Jiu-Jitsu 1870 Tier 3 Elite (Top 10%) Sophia Montenegro 🟣 Vills Bros",
-        "score": 0.7507177,
-        "raw_content": null,
-        "id": "87557e-06"
+        "id": "a0f866-04"
       },
       {
         "url": "https://jiujitsu.net/database",
@@ -92,15 +76,7 @@
         "content": "|  | Winner | Rating | Loser | Rating | Tournament | Division | Date / Location | Notes |\n ---  ---  ---  --- \n|  | Jamie Wayne Riedinger | 1898 → 1904 | Minuk Park | 1830 → 1818 | Asian Jiu-Jitsu IBJJF Championsh... | Master 4 / Male / BLACK / Open Class | Jul 12 2026, 4:02pm Mat 6 | Heavy vs Light (3 classes apart, adjustment: 2030 (+132) vs 1830 |\n|  | Brent Michael Te Kawa | 1704 → 1734 | Kyung Woo Han | 1858 → 1843 | Asian Jiu-Jitsu IBJJF Championsh... | Master 6 / Male / BLACK / Heavy | Jul 12 2026, 3:53pm Mat 1 |  |\n|  | Jessica Ng | 1740 → 1755 | Yoko Abe | 1822 → 1807 | Asian Jiu-Jitsu IBJJF Championsh... | Master 4 / Female / BLACK / Open Class | Jul 12 2026, 3:53pm Mat 8 | Heavy vs Heavy, no adjustment | [...] |  | Serena Gabrielli | 2186 → 2190 | Melissa Wu | 1873 → 1865 | Asian Jiu-Jitsu IBJJF Championsh... | Master 2 / Female / BLACK / Open Class | Jul 12 2026, 3:43pm Mat 3 | Light Feather vs Light Feather, no adjustment |\n|  | Alexander Redvanov | 1909 → 1947 | Gyeongsoo Kim | 1874 → 1836 | Asian Jiu-Jitsu IBJJF Championsh... | Master 1 / Male / BLACK / Open Class | Jul 12 2026, 3:43pm Mat 5 | Feather vs Heavy (4 classes apart, adjustment: 1909 vs 2043 (+169) |\n|  | Si Man Un | 1866 → 1893 | Tegan Jayne Krarup | 1826 → 1813 | Asian Jiu-Jitsu IBJJF Championsh... | Master 3 / Female / BLACK / Open Class | Jul 12 2026, 3:39pm Mat 8 | Feather vs Middle (2 classes apart, adjustment: 1866 vs 1890 (+64) | [...] |  | Brent Michael Te Kawa | 1704 → 1704\\ | Mark Shawn Smith | 1704 → 1704\\ | Asian Jiu-Jitsu IBJJF Championsh... | Master 6 / Male / BLACK / Heavy | Jul 12 2026, 3:49pm Mat 1 | Disqualified by no show |\n|  | Alexsandro dos Santos Machado | 1970 → 1984 | Gilhan Bae | 1927 → 1900 | Asian Jiu-Jitsu IBJJF Championsh... | Master 3 / Male / BLACK / Open Class | Jul 12 2026, 3:46pm Mat 7 | Light vs Medium Heavy (2 classes apart, adjustment: 1970 vs 1991 (+64) |\n|  | Minuk Park | 1811 → 1830 | Ivan Yuryevich Berezovskii | 1605 → 1595 | Asian Jiu-Jitsu IBJJF Championsh... | Master 4 / Male / BLACK / Open Class | Jul 12 2026, 3:45pm Mat 6 | Light vs Heavy (3 classes apart, adjustment: 1811 vs 1737 (+132), Disqualified by technical desc. |",
         "score": 0.72348577,
         "raw_content": null,
-        "id": "7c50ed-07"
-      },
-      {
-        "url": "https://jiujitsu.net/athlete/gabriel-de-jesus-dos-santos",
-        "title": "JiuJitsu.net — Rankings, Videos, News and More",
-        "content": "# Gabriel de Jesus dos Santos\n\nRating: 1,924 | Belt: BROWN | Team: Soul Fighters BJJ | Country: br\n\n## Ranks\n\n Male / Adult / BROWN / : Rank 124, Rating 1924\n Male / Adult / BROWN / Medium Heavy: Rank 29, Rating 1924\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] 2026-08-01: Dallas Summer International Open IBJJF Jiu-Jitsu Championship 2026 - BROWN / Adult / Male / Medium Heavy (Place 2)\n 2017-10-26: Salvador Spring International Open IBJJF Jiu-Jitsu Championship 2017 - BLUE / Adult / Male / Middle (Place 3)\n 2018-03-08: Salvador Fall International Open IBJJF Jiu-Jitsu Championship 2018 - BLUE / Adult / Male / Middle (Place 3)\n 2018-10-26: Salvador Spring International Open IBJJF Jiu-Jitsu Championship 2018 - BLUE / Adult / Male / Middle (Place 3)\n 2024-11-22: New Jersey Fall International Open IBJJF Jiu-Jitsu Championship 2024 (Archive) - PURPLE / Adult / Male / Medium Heavy (Place 3)\n 2025-08-02: Dallas Summer International Open IBJJF Jiu-Jitsu Championship 2025 - PURPLE / Adult / Male / Open Class (Place 3) [...] 2026-05-09: San Antonio International Open IBJJF Jiu-Jitsu Championship 2026 - PURPLE / Adult / Male / Medium Heavy (Place 1)\n 2018-06-18: Rio International Open IBJJF Jiu-Jitsu Championship 2018 - BLUE / Adult / Male / Light (Place 2)\n 2025-01-25: Dallas Winter International Open IBJJF Jiu-Jitsu Championship 2025 - PURPLE / Adult / Male / Heavy (Place 2)\n 2025-02-22: Austin Winter International Open IBJJF Jiu-Jitsu Championship 2025 - PURPLE / Adult / Male / Medium Heavy (Place 2)\n 2025-07-24: Orlando Summer International Open IBJJF Jiu-Jitsu Championship 2025 - PURPLE / Adult / Male / Medium Heavy (Place 2)\n 2025-11-09: Kansas City International Open IBJJF Jiu-Jitsu Championship 2025 - PURPLE / Adult / Male / Open Class (Place 2)",
-        "score": 0.72184175,
-        "raw_content": null,
-        "id": "f7c24e-08"
+        "id": "0e23be-05"
       },
       {
         "url": "https://jiujitsu.net/athlete/pablo-lavaselli",
@@ -108,11 +84,35 @@
         "content": "# Pablo Lavaselli\n\nRating: 2,373 | Belt: BLACK | Team: AOJ | Country: ar\n\n## Ranks\n\n Male / Adult / BLACK / : Rank 21, Rating 2373\n Male / Adult / BLACK / Light: Rank 7, Rating 2373\n Male / Adult / BLACK / Medium Heavy: Rank 5, Rating 2373\n Male / Adult / BLACK / Middle: Rank 6, Rating 2373\n Male / Master 1 / BLACK / : Rank 4, Rating 2373\n Male / Master 1 / BLACK / Light: Rank 1, Rating 2373\n\n## Registrations\n\n No upcoming registrations\n\n## Medals [...] 2022-10-29: Pan Pacific IBJJF Jiu-Jitsu Championship 2022 (BJJHeroes) - BLACK / Adult / Male / Open Class (Place 3)\n 2023-03-05: Dallas International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLACK / Adult / Male / Light (Place 3)\n 2023-12-03: Dublin Fall International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLACK / Adult / Male / Middle (Place 3)\n 2024-01-20: European IBJJF Jiu-Jitsu Championship 2024 (Flo) - BLACK / Adult / Male / Light (Place 3)\n 2024-03-03: Los Angeles International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLACK / Adult / Male / Light (Place 3)\n 2024-03-03: Los Angeles International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLACK / Adult / Male / Open Class (Place 3) [...] 2023-03-03: Los Angeles International Open IBJJF Jiu-Jitsu Championship 2023 (Archive) - BLACK / Adult / Male / Light (Place 1)\n 2023-10-21: Orange County International Open IBJJF Jiu-Jitsu Championship 2023 (BJJHeroes) - BLACK / Adult / Male / Light (Place 1)\n 2024-02-24: Sacramento International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - BLACK / Adult / Male / Light (Place 1)\n 2024-10-18: Nashville Fall International Open IBJJF Jiu-Jitsu Championship 2024 (Archive) - BLACK / Adult / Male / Middle (Place 1)\n 2025-04-19: Orange County Spring International Open IBJJF Jiu-Jitsu Championship 2025 - BLACK / Adult / Male / Middle (Place 1)\n 2025-06-26: American National IBJJF Jiu-Jitsu Championship 2025 - BLACK / Adult / Male / Middle (Place 1)",
         "score": 0.7062922,
         "raw_content": null,
-        "id": "317632-09"
+        "id": "604820-06"
+      },
+      {
+        "url": "https://jiujitsu.net/athlete/samuel-madrid-villegas",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "# Samuel Madrid Villegas\n\nRating: 1,520 | Belt: BLUE | Team: R1NG BJJ | Country:\n\n## Ranks\n\n## Registrations\n\n## Medals",
+        "score": 0.64746445,
+        "raw_content": null,
+        "id": "dee828-07"
+      },
+      {
+        "url": "https://jiujitsu.net/athlete/lucas-lopez-vida",
+        "title": "JiuJitsu.net — Rankings, Videos, News and More",
+        "content": "# Lucas Lopez Vida\n\nRating: 1,491 | Belt: BLUE | Team: Jiu-Jitsu AZcademy | Country:\n\n## Ranks\n\n Male / Adult / BLUE / : Rank 321, Rating 1491\n Male / Adult / BLUE / Feather: Rank 78, Rating 1491\n Male / Adult / BLUE / Light Feather: Rank 55, Rating 1491\n\n## Registrations\n\n 2026-10-28: European IBJJF Jiu-Jitsu No-Gi Championship 2026 - BLUE / Adult / Male / Light Feather\n\n## Medals [...] 2026-02-22: London International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Light Feather (Place 1)\n 2026-03-08: Madrid International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Light Feather (Place 1)\n 2026-04-12: Milan International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Light Feather (Place 1)\n 2026-04-18: Dublin International Open IBJJF Jiu-Jitsu Championship 2026 - WHITE / Adult / Male / Feather (Place 1)\n 2024-10-25: Lisbon International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - WHITE / Adult / Male / Light Feather (Place 2)\n 2024-10-13: London Fall International Open IBJJF Jiu-Jitsu Championship 2024 (BJJHeroes) - WHITE / Adult / Male / Light Feather (Place 3)",
+        "score": 0.644248,
+        "raw_content": null,
+        "id": "a610db-08"
+      },
+      {
+        "url": "https://jiujitsu.net/athlete/arapovic-muamer",
+        "title": "Arapovic Muamer - Rankings - JiuJitsu.net",
+        "content": "Track athlete progress, compare competitors, and analyze BJJ rankings globally ... Arapovic Muamer. Pound for Pound Deutschland. 1270. Blue",
+        "score": 0.64182705,
+        "raw_content": null,
+        "id": "592b42-09"
       }
     ],
-    "response_time": 1.77,
-    "request_id": "73f5c9c2-6315-40b0-aa0c-8d45ba5758eb"
+    "response_time": 2.47,
+    "request_id": "4657a33f-7a6c-4e23-9296-f044cf68357d"
   },
   "errors": []
 }
