@@ -1,5 +1,5 @@
 window.RANKINGS = {
-  "updated": "2026-09-29T12:19:16.226Z",
+  "updated": "2026-09-30T12:04:51.104Z",
   "source": "jiujitsu.net (unofficial IBJJF · Weisshart Elo) via Tavily",
   "scope": "Gi · Pound-for-Pound (top of the open ranking)",
   "count": 50,
@@ -14,7 +14,7 @@ window.RANKINGS = {
     {
       "rank": 2,
       "name": "Erich Munis",
-      "rating": 2534
+      "rating": 2538
     },
     {
       "rank": 3,
@@ -38,78 +38,78 @@ window.RANKINGS = {
     },
     {
       "rank": 7,
+      "name": "Vinicius Liberati",
+      "rating": 2484
+    },
+    {
+      "rank": 8,
       "name": "Andy Murasaki",
       "rating": 2465
     },
     {
-      "rank": 8,
+      "rank": 9,
       "name": "Jackson Nagai",
       "rating": 2463
     },
     {
-      "rank": 9,
+      "rank": 10,
       "name": "Jansen Gomes \"Nenego\"",
       "rating": 2462
     },
     {
-      "rank": 10,
-      "name": "Fellipe Andrew",
-      "rating": 2455
-    },
-    {
       "rank": 11,
-      "name": "Vinicius Liberati",
-      "rating": 2450
-    },
-    {
-      "rank": 12,
       "name": "Matheus Gabriel",
       "rating": 2446
     },
     {
-      "rank": 13,
+      "rank": 12,
       "name": "Meyram Maquine",
       "rating": 2438
     },
     {
-      "rank": 14,
+      "rank": 13,
       "name": "Enderson Dias \"Varão\"",
       "rating": 2407
     },
     {
+      "rank": 14,
+      "name": "Leo Ferreira",
+      "rating": 2406
+    },
+    {
       "rank": 15,
+      "name": "Gabriel Galvao \"Caboja\"",
+      "rating": 2403
+    },
+    {
+      "rank": 16,
       "name": "Mica Galvão",
       "rating": 2401
     },
     {
-      "rank": 16,
-      "name": "Gabriel Galvao \"Caboja\"",
-      "rating": 2400
-    },
-    {
       "rank": 17,
-      "name": "Leo Ferreira",
-      "rating": 2397
+      "name": "Fellipe Andrew",
+      "rating": 2399
     },
     {
       "rank": 18,
-      "name": "Rider Zuchi",
-      "rating": 2389
-    },
-    {
-      "rank": 19,
-      "name": "Gabriel Ribeiro \"Veloso\"",
-      "rating": 2376
-    },
-    {
-      "rank": 19,
       "name": "Samuel Nagai \"Samurai\"",
       "rating": 2376
     },
     {
-      "rank": 21,
+      "rank": 18,
+      "name": "Gabriel Ribeiro \"Veloso\"",
+      "rating": 2376
+    },
+    {
+      "rank": 20,
       "name": "Pablo Lavaselli",
       "rating": 2373
+    },
+    {
+      "rank": 21,
+      "name": "Edu Alves",
+      "rating": 2363
     },
     {
       "rank": 22,
@@ -119,77 +119,72 @@ window.RANKINGS = {
     {
       "rank": 23,
       "name": "Nolan Stuart",
-      "rating": 2351
+      "rating": 2355
     },
     {
-      "rank": 23,
+      "rank": 24,
       "name": "Uanderson Ferreira",
       "rating": 2351
     },
     {
-      "rank": 23,
+      "rank": 24,
       "name": "Kennedy Maciel \"Cobrinha Jr\"",
       "rating": 2351
     },
     {
       "rank": 26,
-      "name": "Edu Alves",
-      "rating": 2347
-    },
-    {
-      "rank": 27,
       "name": "Gustavo Batista \"Braguinha\"",
       "rating": 2344
     },
     {
-      "rank": 28,
+      "rank": 27,
       "name": "Pedro Machado",
       "rating": 2342
     },
     {
-      "rank": 29,
+      "rank": 28,
       "name": "Gutemberg Pereira",
       "rating": 2339
     },
     {
-      "rank": 29,
+      "rank": 28,
       "name": "Pablo Oliveira",
       "rating": 2339
     },
     {
-      "rank": 31,
+      "rank": 30,
       "name": "Rerisson Gabriel",
       "rating": 2335
     },
     {
-      "rank": 32,
+      "rank": 31,
       "name": "Richar Nogueira",
       "rating": 2333
     },
     {
-      "rank": 33,
+      "rank": 32,
       "name": "Pedro Maia",
       "rating": 2327
     },
     {
-      "rank": 34,
+      "rank": 33,
       "name": "Murilo Amaral",
       "rating": 2324
     },
     {
-      "rank": 35,
+      "rank": 34,
       "name": "Mateus Moraes",
       "rating": 2323
     },
     {
-      "rank": 36,
+      "rank": 35,
       "name": "Helder Rodrigues \"Tropeço\"",
       "rating": 2320
     },
     {
-      "rank": 37,
-      "name": "Cleison Santos",
-      "rating": 2314
+      "rank": 36,
+      "name": "Felipinho Assis",
+      "rating": 2317
     },
     {
       "rank": 37,
@@ -200,6 +195,11 @@ window.RANKINGS = {
       "rank": 37,
       "name": "Marcos Gomes",
       "rating": 2314
+    },
+    {
+      "rank": 39,
+      "name": "Luis Oliveira \"Cantareira\"",
+      "rating": 2312
     },
     {
       "rank": 40,
@@ -243,18 +243,18 @@ window.RANKINGS = {
     },
     {
       "rank": 48,
+      "name": "Ricardo Evangelista \"Jegue\"",
+      "rating": 2301
+    },
+    {
+      "rank": 49,
       "name": "Paulo Merlin",
       "rating": 2299
     },
     {
-      "rank": 48,
-      "name": "Luis Oliveira \"Cantareira\"",
-      "rating": 2299
-    },
-    {
       "rank": 50,
-      "name": "Thalison Soares",
-      "rating": 2297
+      "name": "Emerson Victor",
+      "rating": 2298
     }
   ]
 };
